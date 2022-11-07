@@ -183,8 +183,25 @@
       font-size: 16px;
       line-height: 140%;
 
+<<<<<<< HEAD
       &:first-child {
         color: #A3A3A3;
+=======
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 12px;
+        @include bp(xs) {
+          left: -1px;
+          top: -4px;
+        }
+>>>>>>> a09776d37201271faa0e5eb1cabe25022e8ba003
       }
     }
   }

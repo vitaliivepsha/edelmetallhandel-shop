@@ -99,11 +99,6 @@
     right: 69px;
     width: 54px;
     height: 54px;
-    background: url("../images/icons/star.svg") no-repeat center;
-    @include bp(sm) {
-      top: -16px;
-      background: url("../images/icons/star-sm.svg") no-repeat center;
-    }
     @media (max-width: 420px) {
       top: -17px;
       right: 34px;
@@ -120,10 +115,6 @@
     transform: translateX(-50%);
     width: 10px;
     height: 74px;
-    background: url("../images/icons/line.svg") no-repeat center;
-    @include bp(sm) {
-      background: url("../images/icons/line-sm.svg") no-repeat center;
-    }
     @media (max-width: 420px) {
       top: calc(100% - 37px);
     }
@@ -290,7 +281,6 @@
           left: -20px;
           width: 24px;
           height: 24px;
-          background: url("../images/icons/mark.svg") no-repeat center;
           background-size: contain;
           @include bp(sm) {
             left: -7px;
