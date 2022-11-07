@@ -1,0 +1,309 @@
+.investment-section{
+  padding: 60px 0 95px;
+  @include bp(md) {
+    padding: 40px 0 60px;
+  }
+  @include bp(xs) {
+    padding: 30px 0 50px;
+  }
+}
+
+.investment-title{
+  display: block;
+  font-size: 42px;
+  line-height: 100%;
+  margin-bottom: 40px;
+  font-family: $title;
+  @include bp(xs) {
+    font-size: 28px;
+    margin-bottom: 37px;
+  }
+}
+
+.investment-wrapper{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include bp(xs) {
+    flex-direction: column;
+  }
+}
+
+.investment-main{
+  width: calc(100% - 420px);
+  @media only screen and (max-width: 1699px) {
+    width: calc(100% - 320px);
+  }
+  @include bp(lg) {
+    width: calc(100% - 270px);
+  }
+  @include bp(md) {
+    width: calc(100% - 265px);
+  }
+  @include bp(xs) {
+    width: 100%;
+  }
+}
+
+.investment-head{
+  width: 100%;
+  background-color: $accent;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  border-radius: 3px 3px 0 0;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  @include bp(lg) {
+    font-size: 14px;
+    height: 60px;
+  }
+  @include bp(md) {
+    display: none;
+  }
+}
+
+.investment-left{
+  width: calc(100% - 240px);
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 1699px) {
+    width: 82%;
+  }
+  @include bp(xxl) {
+    width: 78%;
+  }
+  @media only screen and (max-width: 1299px) {
+    width: 75%;
+  }
+  @include bp(md) {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .img{
+    width: 220px;
+    @media only screen and (max-width: 1699px) {
+      width: 20%;
+    }
+    @include bp(md) {
+      width: 94px;
+    }
+  }
+}
+
+.investment-mid{
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 1699px) {
+    width: 80%;
+  }
+  @include bp(md) {
+    flex-direction: column;
+    width: calc(100% - 94px);
+    padding-left: 20px;
+    align-items: flex-start;
+  }
+  @include bp(xxs) {
+    padding-left: 15px;
+  }
+  >div{
+    &.bar{
+      width: 276px;
+      padding-right: 10px;
+      @media only screen and (max-width: 1699px) {
+        width: 31%;
+      }
+      @include bp(md) {
+        width: 100%;
+        padding-right: 0;
+        color: $main;
+      }
+      @include bp(sm) {
+        margin-bottom: 7px;
+      }
+    }
+    &.gold{
+      width: 163px;
+      padding-right: 10px;
+      @media only screen and (max-width: 1699px) {
+        width: 23%;
+      }
+      @include bp(md) {
+        display: flex;
+        width: 100%;
+        padding-right: 0;
+      }
+      @include bp(sm) {
+        margin-bottom: 5px;
+      }
+    }
+    &.facon{
+      width: 191px;
+      padding-right: 10px;
+      @media only screen and (max-width: 1699px) {
+        width: 23%;
+      }
+      @include bp(md) {
+        display: flex;
+        width: 100%;
+        padding-right: 0;
+      }
+      @include bp(sm) {
+        margin-bottom: 5px;
+      }
+    }
+    &.price{
+      width: 148px;
+      padding-right: 10px;
+      @media only screen and (max-width: 1699px) {
+        width: 23%;
+      }
+      @include bp(md) {
+        display: flex;
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    >span{
+      display: none;
+      @include bp(md) {
+        display: block;
+        width: 140px;
+        @include bp(sm) {
+          width: 85px;
+        }
+        @include bp(xxs) {
+          width: 80px;
+        }
+      }
+      +span{
+        display: block;
+        @include bp(md) {
+          width: auto;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.investment-right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 240px;
+  @media only screen and (max-width: 1699px) {
+    width: 18%;
+  }
+  @include bp(xxl) {
+    width: 22%;
+  }
+  @media only screen and (max-width: 1299px) {
+    width: 25%;
+  }
+  @include bp(md) {
+    width: 100%;
+  }
+  .btn{
+    width: 190px;
+    max-width: 100%;
+    @include bp(lg) {
+      font-size: 16px;
+      height: 50px;
+      width: 150px;
+    }
+    @include bp(md) {
+      margin: 15px auto 0;
+    }
+    @include bp(sm) {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+.investment-body{
+  border-radius: 0 0 3px 3px;
+  border: 1px solid $accent;
+  @include bp(md) {
+    border-radius: 3px;
+  }
+  .investment-item{
+    &:last-child{
+      border: none;
+    }
+  }
+}
+
+.investment-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba($accent, .5);
+  @include bp(md) {
+    flex-direction: column;
+    padding: 14px 15px 30px;
+  }
+  .investment-left{
+    .img{
+      img{
+        display: block;
+        margin: 0 auto;
+        width: 94px;
+        height: 94px;
+        object-fit: contain;
+        @include bp(lg) {
+          width: 70px;
+          height: 70px;
+        }
+        @include bp(md) {
+          width: 94px;
+          height: 94px;
+        }
+      }
+    }
+  }
+  .investment-mid{
+    font-size: 18px;
+    line-height: 140%;
+    color: $text;
+    @include bp(lg) {
+      font-size: 16px;
+    }
+    @include bp(sm) {
+      font-size: 12px;
+    }
+  }
+}
+
+.investment-chart{
+  width: 400px;
+  position: sticky;
+  top: 170px;
+  transition: linear .3s;
+  @media only screen and (max-width: 1699px) {
+    width: 300px;
+  }
+  @include bp(lg) {
+    width: 250px;
+  }
+  @include bp(md) {
+    top: 65px;
+  }
+  @include bp(xs) {
+    position: static;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .calc-right__chart-wrap{
+    @include bp(lg) {
+      padding: 24px;
+    }
+    @include bp(sm) {
+      margin-top: 0;
+    }
+  }
+}

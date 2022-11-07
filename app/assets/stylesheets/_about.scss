@@ -1,0 +1,204 @@
+.about-top{
+  padding: 82px 0 66px;
+  @include bp(xs) {
+    padding: 20px 0 42px;
+  }
+}
+
+.about-top__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-title{
+  width: 400px;
+  height: 137px;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $main;
+  border-radius: 50% / 50%;
+  margin: 0 auto 72px;
+  font-size: 42px;
+  line-height: 100%;
+  font-family: $title;
+  top: -6px;
+  @include bp(xs) {
+    width: 290px;
+    height: 100px;
+    top: auto;
+    font-size: 28px;
+    margin-bottom: 37px;
+  }
+  >svg{
+    position: absolute;
+    top: -14px;
+    right: 54px;
+    @include bp(xs) {
+      width: 35px;
+      height: 35px;
+      top: -10px;
+      right: 44px;
+    }
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid $main;
+    background-color: #fff;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include bp(xs) {
+      width: 7px;
+      height: 7px;
+      bottom: 8px;
+    }
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    top: calc(100% - 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 65px;
+    background-color: $main;
+    @include bp(xs) {
+      height: 45px;
+      top: calc(100% - 8px);
+    }
+  }
+}
+
+.about-text{
+  font-size: 16px;
+  line-height: 140%;
+  color: $text;
+  padding-right: 30px;
+  @include bp(xs) {
+    padding: 0;
+    font-size: 12px;
+  }
+  >img{
+    width: 300px;
+    height: 162px;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    @include bp(xs) {
+      width: 200px;
+      height: 108px;
+      margin-bottom: 16px;
+    }
+  }
+  ul{
+    list-style-type: disc;
+    margin-bottom: 12px;
+    padding-left: 18px;
+    @include bp(xs) {
+      margin-bottom: 7px;
+    }
+  }
+  ol{
+    list-style-type: decimal;
+    margin-bottom: 12px;
+    padding-left: 18px;
+    @include bp(xs) {
+      margin-bottom: 7px;
+    }
+  }
+  p{
+    margin-bottom: 12px;
+    @include bp(xs) {
+      margin-bottom: 7px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about-form{
+  border: 1px solid $main;
+  @include bp(xs) {
+    margin-top: 40px;
+    height: auto;
+    padding: 35px 10px 40px;
+  }
+  .contacts-form__descr{
+    @include bp(xs) {
+      max-width: 204px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.about-pics{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 30px;
+  @include bp(xs) {
+    padding-bottom: 46px;
+    flex-direction: column;
+  }
+  div{
+    @include bp(xl) {
+      max-width: 30%;
+    }
+    @include bp(xs) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  img{
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    @include bp(xs) {
+      margin: 0 auto;
+    }
+    &.pic1{
+      width: 400px;
+      height: 341px;
+      @include bp(lg) {
+        height: auto;
+      }
+      @include bp(xs) {
+        width: 201px;
+        height: 169px;
+        margin-bottom: 28px;
+      }
+    }
+    &.pic2{
+      width: 500px;
+      height: 328px;
+      @include bp(lg) {
+        height: auto;
+      }
+      @include bp(xs) {
+        width: 268px;
+        height: 176px;
+        margin-bottom: 10px;
+      }
+    }
+    &.pic3{
+      width: 360px;
+      height: 480px;
+      @include bp(lg) {
+        height: auto;
+      }
+      @include bp(xs) {
+        width: 198px;
+        height: 264px;
+      }
+    }
+  }
+}

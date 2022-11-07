@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "FiraSansCondensed";
+  src: url("../fonts/FiraSansCondensed-Regular.eot");
+  src: url("../fonts/FiraSansCondensed-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FiraSansCondensed-Regular.woff") format("woff"), url("../fonts/FiraSansCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSansCondensed-Italic";
+  src: url("../fonts/FiraSansCondensed-Italic.eot");
+  src: url("../fonts/FiraSansCondensed-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FiraSansCondensed-Italic.woff") format("woff"), url("../fonts/FiraSansCondensed-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans-Regular.eot");
+  src: url("../fonts/FiraSans-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FiraSans-Regular.woff") format("woff"), url("../fonts/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMSerifDisplay";
+  src: url("../fonts/DMSerifDisplay-Regular.eot");
+  src: url("../fonts/DMSerifDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/DMSerifDisplay-Regular.woff") format("woff"), url("../fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

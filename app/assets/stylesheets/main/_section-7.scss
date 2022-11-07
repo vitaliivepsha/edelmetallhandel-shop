@@ -1,0 +1,160 @@
+.section-benefits{
+  height: 745px;
+  background: #E4E4E4;
+  overflow: hidden;
+  @include bp(lg) {
+    height: auto;
+    padding: 60px 0;
+  }
+  @include bp(xs) {
+    padding: 40px 0 50px;
+  }
+  >.container{
+    position: relative;
+    height: inherit;
+  }
+}
+
+.benefits-wrapper{
+  position: absolute;
+  left: 75px;
+  top: 108px;
+  width: 1485px;
+  max-width: calc(100% - 30px);
+  @media only screen and (max-width: 1679px) {
+    width: auto;
+    right: 60px;
+  }
+  @include bp(lg) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.benefits-item{
+  position: absolute;
+  width: 490px;
+  @include bp(lg) {
+    position: static;
+    max-width: 100%;
+  }
+  +.benefits-item{
+    @include bp(lg) {
+      margin-top: 40px;
+    }
+    @include bp(xs) {
+      margin-top: 20px;
+    }
+  }
+  &__01{
+    left: 0;
+    top: 0;
+  }
+  &__02{
+    right: 0;
+    top: 0;
+  }
+  &__03{
+    top: 226px;
+    left: 50%;
+    transform: translateX(calc(-50% + 55px));
+    @include bp(lg) {
+      transform: none;
+    }
+  }
+  >i{
+    display: flex;
+    margin-bottom: 18px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
+    svg{
+      @include bp(xs) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  >span{
+    display: block;
+    margin-bottom: 18px;
+    font-size: 21px;
+    line-height: 100%;
+    font-family: $title;
+    color: $main;
+    @include bp(xs) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  }
+  >div{
+    color: $text;
+    font-size: 16px;
+    line-height: 140%;
+    @include bp(xs) {
+      font-size: 12px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+    a{
+      color: $text;
+      text-decoration: underline;
+      &:hover{
+        color: $main;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.benefits-line{
+  position: absolute;
+  pointer-events: none;
+  @include bp(xl) {
+    display: none;
+  }
+  &__01{
+    top: -130px;
+    left: 340px;
+    @media only screen and (max-width: 1599px) {
+      top: -120px;
+      transform: rotate(10deg);
+    }
+    @media only screen and (max-width: 1539px) {
+      left: 270px;
+      transform: rotate(17deg);
+    }
+    @include bp(xxl) {
+      left: 220px;
+    }
+    @media only screen and (max-width: 1299px) {
+      left: 155px;
+      transform: rotate(20deg);
+    }
+  }
+  &__02{
+    top: 226px;
+    right: 230px;
+    @media only screen and (max-width: 1599px) {
+      top: 206px;
+      right: 210px;
+    }
+    @media only screen and (max-width: 1539px) {
+      top: 195px;
+      right: 160px;
+      transform: rotate(-5deg);
+    }
+    @include bp(xxl) {
+      top: 190px;
+      right: 140px;
+      transform: rotate(-7deg);
+    }
+    @media only screen and (max-width: 1299px) {
+      top: 170px;
+      right: 120px;
+    }
+  }
+}

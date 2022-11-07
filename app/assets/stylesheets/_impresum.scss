@@ -1,0 +1,195 @@
+.impresum {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1690px;
+  margin: 0 auto;
+  margin-bottom: 158px;
+  padding: 0 15px;
+  @include bp(sm) {
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+  @include bp(xs) {
+    margin-top: -4px;
+  }
+}
+
+// ======== info ========
+
+.impresum-info {
+  width: 100%;
+  max-width: 1380px;
+  padding-top: 27px;
+  @include bp(sm) {
+    max-width: 100%;
+    margin-bottom: 19px;
+    padding: 0 15px;
+    padding-top: 0;
+    padding-bottom: 51px;
+    border-bottom: 1px solid #D9D9D9;
+
+  }
+}
+
+.impresum-info__inner {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 14px;
+    font-family: $title;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    @include bp(xs) {
+      margin-bottom: 13px;
+      font-size: 24px;
+      word-break: break-word;
+    }
+
+    & ~ h2 {
+      margin-top: 25px;
+      @include bp(xs) {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  & p {
+    margin: 0;
+
+    & + p {
+      margin-top: 11px;
+      @include bp(xs) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  & span {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+    @include bp(xs) {
+      font-size: 12px;
+    }
+
+    & > a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $text;
+      @include bp(xs) {
+        font-size: 12px;
+      }
+
+      &:hover {
+        color: $text;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & b {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $main;
+    @include bp(xs) {
+      font-size: 12px;
+    }
+  }
+}
+
+
+// ======== links ========
+
+
+.impresum-links {
+  width: 100%;
+  max-width: 260px;
+  padding-top: 5px;
+  @include bp(md) {
+    display: flex;
+    justify-content: center;
+  }
+  @include bp(sm) {
+    justify-content: start;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  @media (max-width: 420px) {
+    justify-content: end;
+  }
+
+  & span,
+  & a {
+    display: block;
+    font-family: $default;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+  }
+
+  & a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.impresum-links__inner {
+  @include bp(xs) {
+    width: fit-content;
+    min-width: 140px;
+  }
+}
+
+.btn-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgba(#fff, 0.8);
+  border: 1px solid rgba($main, 0.5);
+  transition: border linear 0.2s, background-color linear 0.2s;
+  &:hover {
+    border: 1px solid rgba($main, 0);
+    background-color:rgba($main, 0.5);
+    & svg path {
+      fill: #fff;
+    }
+  }
+  @include bp(xs) {
+    right: 35px;
+    bottom: 35px;
+    width: 45px;
+    height: 45px;
+    }
+}
+
+
+
+
+
+
+
+
+

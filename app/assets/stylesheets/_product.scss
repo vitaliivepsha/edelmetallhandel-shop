@@ -1,0 +1,1014 @@
+.product-buying {
+  min-height: 470px;
+  padding-top: 10px;
+  padding-bottom: 79px;
+  @include bp(xs) {
+    padding-bottom: 39px;
+  }
+
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.product-buying__desc {
+  max-width: 654px;
+  min-height: 470px;
+  @include bp(lg) {
+    position: relative;
+    margin: 0 auto;
+    min-height: auto;
+    margin-bottom: 60px;
+    @include bp(xs) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: -29px;
+    right: -15px;
+    left: -15px;
+    height: 1px;
+    background-color: #D9D9D9;
+    @include bp(xs) {
+      display: block;
+    }
+  }
+
+}
+
+.product-buying__desc-about {
+  & p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+    @include bp(xs) {
+      font-size: 12px;
+    }
+
+    & + p {
+      margin-top: 7px;
+      @include bp(xs) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.product-buying__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 72px;
+  flex-shrink: 0;
+  min-height: 470px;
+  @include bp(lg) {
+    display: block;
+    min-height: auto;
+    padding-top: 0;
+  }
+  @include bp(sm) {
+    display: block;
+    height: unset;
+
+  }
+}
+
+.product-buying__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+  min-height: 470px;
+  @media (min-width: 1199px) and (max-width: 1441px) {
+    justify-content: center;
+  }
+  @include bp(lg) {
+    min-height: auto;
+  }
+
+
+  & + .product-buying__inner {
+    position: relative;
+    @include bp(lg) {
+      margin-top: 50px;
+    }
+    @include bp(xs) {
+      margin-top: 76px;
+    }
+
+    &:after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: -40px;
+      right: -15px;
+      left: -15px;
+      height: 1px;
+      background-color: #D9D9D9;
+      @include bp(xs) {
+        display: block;
+      }
+    }
+
+  }
+
+  & a {
+    //margin-top: auto;
+    width: 100%;
+    @include bp(lg) {
+      max-width: 500px;
+    }
+  }
+}
+
+.product-buying__pic {
+  display: flex;
+  align-items: center;
+  //height: 100%;
+  height: 25em;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  margin-top: unset;
+  padding: 0 20px;
+  @include bp(lg) {
+    margin-bottom: 40px;
+  }
+  @include bp(sm) {
+    height: unset;
+  }
+  @include bp(xs) {
+    margin-bottom: 28px;
+    padding: 0 36px;
+  }
+
+  & picture {
+    width: 100%;
+    height: 100%;
+
+    & img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+
+// ======== product-shipping ========
+
+.product-shipping {
+  padding: 80px 0;
+  background-color: #E4E4E4;
+  @include bp(md) {
+    padding: 38px 0;
+  }
+  @include bp(xs) {
+    padding: 50px 0;
+    padding-bottom: 0;
+  }
+
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > div:first-child {
+      @include bp(lg) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.product-shipping__cards {
+
+  @include bp(lg) {
+    width: 100%;
+    max-width: 757px;
+    margin-bottom: 25px;
+  }
+  @include bp(sm) {
+    max-width: 661px;
+  }
+  @include bp(xs) {
+    margin-bottom: 15px;
+  }
+
+  & > span {
+    display: block;
+    max-width: 380px;
+    margin: 0 auto;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    font-family: $title;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 100%;
+    text-align: center;
+    @include bp(xs) {
+      max-width: 240px;
+      margin-bottom: 13px;
+      font-size: 24px;
+    }
+  }
+
+  & > small {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 36px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    color: $main;
+    @include bp(xs) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.card-items {
+  margin-top: 3px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  @include bp(xs) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}
+
+.card-item {
+  position: relative;
+  min-height: 233px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 73px 55px 30px 55px;
+  overflow: hidden;
+  @media (min-width: 1199px) and (max-width: 1441px) {
+    padding: 72px 30px 30px 30px;
+  }
+  @include bp(sm) {
+    padding: 72px 30px 30px 30px;
+  }
+  @include bp(xs) {
+    min-height: 200px;
+    padding: 52px 25px 20px 25px;
+  }
+
+
+  &:nth-child(1) {
+    & .card-item__text {
+      max-width: 216px;
+      @include bp(xs) {
+        max-width: 220px;
+      }
+    }
+
+    & .card-item__pic {
+      top: 27px;
+      @include bp(xs) {
+        top: 6px;
+        right: -17px;
+      }
+
+      & picture {
+        @include bp(xs) {
+          max-height: 47px;
+        }
+
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    & .card-item__text {
+      max-width: 200px;
+      @include bp(xs) {
+        max-width: 200px;
+      }
+    }
+
+    & .card-item__pic {
+      top: 31px;
+      right: 9px;
+      @include bp(xs) {
+        top: 8px;
+        right: -8px;
+      }
+
+      & picture {
+        width: 170px;
+        @include bp(xs) {
+          max-height: 42px;
+        }
+
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    & .card-item__text {
+      @include bp(xs) {
+        max-width: 240px;
+      }
+
+    }
+
+    & .card-item__pic {
+      right: -20px;
+      @include bp(xs) {
+        top: 10px;
+        right: -27px;
+      }
+
+    }
+
+    & picture {
+      @include bp(xs) {
+        max-height: 61px;
+      }
+
+    }
+  }
+
+  &:nth-child(4) {
+    & .card-item__text {
+      max-width: 185px;
+      @include bp(xs) {
+        max-width: 240px;
+      }
+
+    }
+
+    & .card-item__pic {
+      top: 23px;
+      right: -3px;
+      @include bp(xs) {
+        top: 1px;
+        right: -18px;
+      }
+    }
+
+    & picture {
+      @include bp(xs) {
+        max-height: 46px;
+      }
+    }
+  }
+
+  & .card-item__num {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $title;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 100%;
+    color: $main;
+    text-align: left;
+
+  }
+
+  & .card-item__text {
+    max-width: 220px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+
+    & > a {
+      color: #000;
+      text-decoration: underline;
+      &:hover {
+        color: $main;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.card-item__pic {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 209px;
+  height: 81px;
+
+  & picture {
+    width: 100%;
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+  }
+}
+
+.product-shipping__form {
+  padding-left: 22px;
+  @media (max-width: 1441px) {
+    padding-left: 0;
+  }
+
+  & .order-form {
+    margin-top: 0;
+    padding: 31px 80px 50px;
+    @media (min-width: 1199px) and (max-width: 1441px) {
+      padding: 31px 32px 50px;
+
+    }
+    @include bp(sm) {
+      width: 100%;
+      padding: 31px 32px 50px;
+    }
+    @include bp(xs) {
+      margin-bottom: 40px;
+      padding: 25px 10px 34px;
+    }
+
+    & .order-title {
+      margin-bottom: 7px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 100%;
+      text-align: center;
+      @include bp(xs) {
+        margin: 0 auto;
+        margin-bottom: 28px;
+        max-width: 260px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  & .main-form .form-row.two-inputs.lg .input-wrapper {
+    width: calc(50% - 5px);
+  }
+
+  & .main-form .form-row.three-inputs .input-wrapper {
+    width: calc(33% - 5px);
+  }
+
+  & .main-form .form-row.two-inputs.sm .input-wrapper {
+    width: calc(78% - 3px);
+    @include bp(xs) {
+      width: calc(67% - 3px);
+    }
+  }
+
+  & .main-form .form-row.two-inputs.sm .input-wrapper + .input-wrapper {
+    width: calc(23% - 15px);
+    @include bp(xs) {
+      width: calc(35% - 12px);
+    }
+  }
+
+  .order-form .main-form .checkbox-wrapper {
+    margin-top: 4px;
+    max-width: 400px;
+  }
+
+  & .order-form .main-form .form-footer {
+    @include bp(xs) {
+      margin-top: -8px;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  & .form-footer .checkbox-wrapper {
+    @include bp(xs) {
+      padding-right: 0;
+    }
+  }
+
+  & .checkbox-wrapper input + label {
+    @include bp(xs) {
+      padding-left: 34px;
+      padding-top: 3px;
+    }
+  }
+
+  & .checkbox-wrapper input + label:before {
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  & .checkbox-wrapper input:checked + label:after {
+    @include bp(xs) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  & .form-row .textarea {
+    @include bp(xs) {
+      height: 76px;
+    }
+  }
+
+
+  & .main-form .btn {
+    width: 70%;
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
+}
+
+// ======== product-tips ========
+
+.product-tips {
+  & .tips-wrapper {
+    padding-top: 124px;
+    padding-bottom: 90px;
+    @include bp(sm) {
+      display: block;
+    }
+    @include bp(xs) {
+      padding-bottom: 50px;
+      padding-top: 54px;
+    }
+  }
+
+  & .tips-item {
+    @include bp(sm) {
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    @include bp(xs) {
+      min-height: 100%;
+      padding: 51px 40px 45px 15px;
+    }
+
+    & > i {
+      @include bp(xs) {
+        left: 15px;
+        width: 55px;
+        height: 55px;
+      }
+
+      & svg {
+        @include bp(xs) {
+          width: 30px;
+        }
+      }
+    }
+
+    & + .tips-item {
+      @include bp(sm) {
+        margin-top: 40px;
+      }
+
+      & > i {
+        @include bp(xs) {
+          width: 55px;
+          height: 55px;
+        }
+
+        & svg {
+          @include bp(xs) {
+            width: 17px;
+          }
+        }
+      }
+
+    }
+
+    & > span {
+      @include bp(xs) {
+        margin-bottom: 11px;
+        font-size: 16px;
+      }
+    }
+
+    & li {
+      position: relative;
+      padding-left: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: $text;
+      @include bp(xs) {
+        font-size: 12px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/icons/mark.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 12px;
+        @include bp(xs) {
+          left: -1px;
+          top: -4px;
+        }
+      }
+
+    }
+  }
+}
+
+// ======== product-text ========
+
+.product-text {
+  padding-top: 108px;
+  padding-bottom: 96px;
+  background-color: #E4E4E4;
+  @include bp(xs) {
+    padding-top: 33px;
+    padding-bottom: 35px;
+  }
+}
+
+.product-text__wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  columns: 2;
+  column-width: 500px;
+  column-gap: 70px;
+  @include bp(lg) {
+    column-width: 340px;
+  }
+
+  & i {
+    & svg {
+      @include bp(xs) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  & i ~ i {
+    display: block;
+    margin-top: 30px;
+
+  }
+
+  & span {
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    font-family: $title;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 100%;
+    color: $main;
+    @include bp(xs) {
+      margin-top: 11px;
+      font-size: 16px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+    @include bp(xs) {
+      font-size: 12px;
+    }
+
+    & + p {
+      margin-top: 6px;
+      @include bp(xs) {
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+// ======== product-consult ========
+
+.product-consult {
+  padding: 90px 0;
+  @include bp(xs) {
+    padding: 50px 0;
+  }
+
+  & .main-form .checkbox-wrapper {
+    max-width: 454px;
+  }
+
+  & .form-row.two-inputs.lg .input-wrapper {
+    width: calc(50% - 5px);
+
+  }
+
+  & .form-row.two-inputs.lg .input-wrapper + .input-wrapper {
+    width: calc(50% - 5px);
+  }
+
+}
+
+
+.product-consult-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 150px 100px 150px;
+  background: #FFFFFF;
+  border: 1px solid $main;
+  border-radius: 3px;
+  @include bp(lg) {
+    padding: 48px 80px 50px 80px;
+  }
+  @include bp(md) {
+    padding: 30px 40px 30px 40px;
+  }
+  @include bp(xs) {
+    padding: 34px 9px 43px 9px;
+  }
+
+  .order-form .main-form .checkbox-wrapper {
+    margin-top: 4px;
+    max-width: 400px;
+  }
+
+  & .order-form .main-form .form-footer {
+    @include bp(xs) {
+      margin-top: 23px;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  & .form-footer .checkbox-wrapper {
+    @include bp(xs) {
+      padding-right: 0;
+    }
+  }
+
+  & .checkbox-wrapper input + label {
+    @include bp(xs) {
+      padding-left: 34px;
+      padding-top: 3px;
+    }
+  }
+
+  & .checkbox-wrapper input + label:before {
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  & .checkbox-wrapper input:checked + label:after {
+    @include bp(xs) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  & .form-row .textarea {
+    @include bp(xs) {
+      height: 76px;
+    }
+  }
+
+  & .main-form .form-footer {
+    @include bp(xs) {
+      margin-top: 20px;
+    }
+  }
+
+  & .main-form .btn {
+    width: 70%;
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
+
+}
+
+.consult-form__title {
+  display: block;
+  margin-bottom: 10px;
+  font-family: $title;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  text-align: center;
+  color: #000000;
+  @include bp(xs) {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+}
+
+.consult-form__subtitle {
+  display: block;
+  margin-bottom: 22px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  color: #CC950C;
+  @include bp(xs) {
+    font-size: 12px;
+  }
+}
+
+.form-note {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: right;
+  color: $main;
+  @include bp(xs) {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+}
+
+// ======== block ========
+
+.form-upload__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  @include bp(xs) {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  & i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 23px;
+    @include bp(xs) {
+      width: 14px;
+      height: 14px;
+    }
+
+    & svg {
+      @include bp(xs) {
+        width: 12px;
+        height: 14px;
+      }
+    }
+  }
+
+  & span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #464646;
+    @include bp(xs) {
+      padding-top: 3px;
+      font-size: 12px;
+    }
+  }
+}
+
+.form-upload__body {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.input-file {
+  flex-shrink: 0;
+
+  & input {
+    display: none;
+  }
+
+  & > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    border: 1px dashed $text;
+    background-color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    color: #464646;
+    cursor: pointer;
+    transition: color linear 0.2s, border linear 0.2s;
+    @include bp(xs) {
+      height: 35px;
+    }
+
+    &:hover {
+      color: $main;
+      border: 1px dashed $main;
+    }
+  }
+}
+
+.uploaded-files {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  cursor: pointer;
+  transition: opacity linear 0.2s;
+  width: 100%;
+  @include bp(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include bp(xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  & .file {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 5px 19px;
+    width: 100%;
+    height: 45px;
+    background-color: #EFEFEF;
+    border-radius: 3px;
+    white-space: nowrap;
+    transition: opacity linear 0.2s;
+    @include bp(xs) {
+      height: 35px;
+    }
+
+    & span {
+      font-weight: 400;
+      font-size: 12px;
+      color: $text;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    & .delete-file {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      svg {
+        opacity: 0;
+
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

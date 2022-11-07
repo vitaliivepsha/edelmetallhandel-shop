@@ -1,0 +1,558 @@
+@import "variables";
+@import "vendor";
+@import "fonts";
+@import "mixin";
+
+body {
+  min-width: 320px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: #000;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  line-height: 150%;
+  background: #fff;
+  font-family: $default;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include bp(md) {
+    display: block;
+  }
+  &.menu-opened{
+    height: 100vh;
+    overflow: hidden;
+    .mobile-menu__wrapper{
+      display: block;
+    }
+  }
+  &.hidden-header{
+    .investment-chart{
+      top: 20px;
+      @include bp(md) {
+        top: 20px;
+      }
+    }
+  }
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+a,
+.slick-slide {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  transition: 0.2s linear;
+  &:not([class]){
+    color: $main;
+    text-decoration: none;
+    &:hover{
+      color: $accent;
+    }
+  }
+}
+
+svg {
+  * {
+    transition: linear 0.2s;
+  }
+}
+
+main {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.section {
+  clear: both;
+  position: relative;
+}
+
+.container,
+.row {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+.container{
+  width: 1690px;
+  max-width: calc(100vw - 60px);
+  @include bp(lg) {
+    width: 1170px;
+  }
+  @include bp(md) {
+    width: 970px;
+  }
+  @include bp(sm) {
+    width: 750px;
+    max-width: 100%;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0 20px;
+  border-radius: 300px;
+  height: 60px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: linear 0.2s;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid $main;
+  background-color: $main;
+  box-shadow: none;
+  outline: none !important;
+  position: relative;
+  @include bp(xs) {
+    height: 50px;
+    font-size: 16px;
+  }
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+  }
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    color: $main;
+    background-color: transparent;
+  }
+  &-tr{
+    color: $main;
+    background-color: transparent;
+    &:hover {
+      color: #fff !important;
+      background-color: $main;
+    }
+    &:focus {
+      color: $main;
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  &.filled{
+    .input{
+      +label{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .textarea{
+      +label{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  .input, .textarea{
+    +label{
+      position: absolute;
+      left: 15px;
+      top: 13px;
+      color: $text;
+      font-size: 16px;
+      line-height: 140%;
+      font-weight: 400;
+      margin-bottom: 0;
+      pointer-events: none;
+      @include bp(xs) {
+        font-size: 12px;
+        left: 10px;
+        top: 10px;
+      }
+      span{
+        color: $main;
+      }
+    }
+    &:focus{
+      +label{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &.select-wrapper{
+    select{
+      display: none;
+    }
+    &.required-select{
+      .SumoSelect{
+        >.CaptionCont{
+          span{
+            font-size: 16px;
+            @include bp(xs) {
+              font-size: 12px;
+            }
+            &.placeholder{
+              font-size: 16px;
+             @include bp(xs) {
+               font-size: 12px;
+               }
+              &:after{
+                content: ' *';
+                color: $main;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.chosen{
+      .SumoSelect{
+        >.CaptionCont{
+          span{
+            color: $main;
+          }
+        }
+      }
+    }
+    .SumoSelect{
+      display: flex;
+      width: 100%;
+      &:hover, &:focus, &.open{
+        >.CaptionCont{
+          box-shadow: none;
+        }
+      }
+      &.open{
+        >.optWrapper{
+          top: calc(100% + 1px);
+        }
+      }
+      >.CaptionCont{
+        border: 1px solid $border;
+        border-radius: 3px;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 0 15px;
+        cursor: pointer;
+        @include bp(xs) {
+          height: 35px;
+          padding: 0 10px;
+          font-size: 12px;
+        }
+        span{
+          color: $text;
+          cursor: pointer;
+          &.placeholder{
+            font-style: normal;
+          }
+        }
+        >label{
+          margin-bottom: 0;
+          width: 44px;
+          cursor: pointer;
+          @include bp(xs) {
+            width: 29px;
+          }
+          >i{
+            width: 8px;
+            height: 8px;
+            -webkit-mask: url('../images/icons/select-arrow.svg');
+            mask: url('../images/icons/select-arrow.svg');
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            background: $text;
+            @include bp(xs) {
+              width: 7px;
+              height: 7px;
+            }
+          }
+        }
+      }
+      >.optWrapper{
+        &.isFloating{
+          position: absolute;
+          bottom: auto;
+          width: 100%;
+          max-height: unset;
+        }
+        >.options{
+          li{
+            &.opt{
+              @include bp(xs) {
+                font-size: 12px;
+                padding: 5px 10px;
+              }
+              &.disabled{
+                display: none;
+              }
+              label{
+                font-weight: 400;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.err{
+    .input, .textarea{
+      border-color: #FEA362;
+    }
+    .SumoSelect{
+      >.CaptionCont{
+        border-color: #FEA362;
+      }
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid $border;
+  border-radius: 3px;
+  color: $main;
+  font-size: 16px;
+  line-height: 140%;
+  background-color: transparent;
+  outline: none !important;
+  box-shadow: none !important;
+  @include bp(xs) {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  &::placeholder {
+    color: $text;
+  }
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.textarea {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  resize: none;
+  border: 1px solid $border;
+  border-radius: 3px;
+  color: $main;
+  font-size: 16px;
+  line-height: 140%;
+  background-color: transparent;
+  outline: none !important;
+  box-shadow: none !important;
+  @include bp(xs) {
+    font-size: 12px;
+    padding: 10px;
+    height: 76px;
+  }
+  &::placeholder {
+    color: $text;
+  }
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
+  -webkit-text-fill-color: $main;
+  -webkit-box-shadow: inset 0 0 0 1000px transparent;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: $main;
+}
+
+.checkbox-wrapper{
+  input{
+    display: none;
+    +label{
+      display: block;
+      align-items: flex-start;
+      font-weight: 400;
+      margin-bottom: 0;
+      position: relative;
+      font-size: 12px;
+      line-height: 140%;
+      color: $text;
+      cursor: pointer;
+      padding-left: 40px;
+      @include bp(xs) {
+        padding-left: 35px;
+      }
+      a{
+        color: $text;
+        text-decoration: underline;
+        &:hover, &:focus{
+          color: $main;
+          text-decoration: none;
+        }
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        border: 1px solid $border;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        left: 0;
+        top: 4px;
+        @include bp(xs) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    &:checked{
+      +label{
+        &:after{
+          position: absolute;
+          content: '';
+          width: 6px;
+          height: 10px;
+          border: 2px solid $main;
+          border-left: none;
+          border-top: none;
+          transform: rotate(45deg);
+          top: 7px;
+          left: 7px;
+          @include bp(xs) {
+            width: 9px;
+            height: 13px;
+            border-width: 3px;
+            top: 8px;
+            left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.validate-error {
+  font-family: $default, -apple-system, BlinkMacSystemFont, sans-serif;
+  transform: none;
+  width: calc(100% - 2px);
+  left: 1px;
+  top: 8px;
+  bottom: auto;
+  color: #FEA362;
+  background: #fff;
+  padding: 5px 14px;
+  font-size: 16px;
+  line-height: 140%;
+  pointer-events: none;
+  z-index: 2;
+  @include bp(xs) {
+    font-size: 12px;
+    padding: 5px 9px;
+    top: 5px;
+  }
+}
+
+.overlay {
+  background: rgba(0, 49, 116, 0.5);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: linear 0.2s;
+}
+
+.hide-mob{
+  @include bp(xs) {
+    display: none;
+  }
+}
+
+.show-mob{
+  display: none;
+  @include bp(xs) {
+    display: flex;
+  }
+}
+
+::selection {
+  background: rgba(#000, 0.35);
+  color: #fff;
+  text-shadow: none;
+}
+
+// Header
+@import "header";
+
+// Popup
+@import "popup";
+
+// Main
+@import "main/section-1";
+@import "main/section-2";
+@import "main/section-3";
+@import "main/section-4";
+@import "main/section-5";
+@import "main/section-6";
+@import "main/section-7";
+
+// Footer
+@import "footer";
+
+// Pages
+@import "contacts";
+@import "404";
+@import "about";
+@import "impresum";
+@import "privacy";
+@import "product";
+@import "shipping";
+@import "investment";

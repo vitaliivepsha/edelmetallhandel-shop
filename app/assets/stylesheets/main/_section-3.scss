@@ -1,0 +1,120 @@
+.section-purchase{
+  background-color: #F5F5F5;
+  padding-top: 50px;
+  padding-bottom: 85px;
+  @include bp(xs) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.purchase-title__wrapper{
+  margin-bottom: 28px;
+  @include bp(xs) {
+    margin-bottom: 13px;
+  }
+  >i{
+    width: 87px;
+    height: 87px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main;
+    margin: 0 auto 24px;
+    @include bp(xs) {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 14px;
+    }
+    svg{
+      margin-top: -3px;
+      @include bp(xs) {
+        width: 18px;
+        height: 22px;
+        margin-top: -1px;
+      }
+    }
+  }
+  >span{
+    display: block;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    font-family: $title;
+    @include bp(xs) {
+      font-size: 28px;
+    }
+  }
+}
+
+.purchase-wrapper{
+  display: flex;
+  justify-content: center;
+  @include bp(lg) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.purchase-block{
+  background: #fff;
+  border: 1px solid $main;
+  border-radius: 3px;
+  width: 400px;
+  height: 200px;
+  margin: 0 10px;
+  position: relative;
+  padding: 40px 45px;
+  @include bp(xs) {
+    width: 100%;
+    border: none;
+    padding: 40px 43px 50px;
+  }
+  +.purchase-block{
+    @include bp(lg) {
+      margin-top: 20px;
+    }
+  }
+  >span{
+    display: block;
+    font-family: $title;
+    font-size: 21px;
+    line-height: 100%;
+    color: $main;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+  }
+  >div{
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    width: 167px;
+    position: relative;
+    z-index: 1;
+    a{
+      color: #000;
+      text-decoration: underline;
+      &:hover, &:focus{
+        color: $main;
+        text-decoration: none
+      }
+    }
+  }
+  >img{
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    max-width: 122px;
+    object-fit: contain;
+    @include bp(xs) {
+      bottom: auto;
+      top: 25px;
+      right: 13px;
+      width: 82px;
+      max-width: 82px;
+      height: 67px;
+    }
+  }
+}

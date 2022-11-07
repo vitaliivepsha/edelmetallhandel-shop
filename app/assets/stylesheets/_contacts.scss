@@ -1,0 +1,243 @@
+.contacts-top{
+  padding: 60px 0;
+  @include bp(xs) {
+    padding: 23px 0 30px;
+  }
+}
+
+.contacts-title{
+  display: block;
+  text-align: center;
+  font-size: 42px;
+  line-height: 100%;
+  margin-bottom: 15px;
+  font-family: $title;
+  @include bp(xs) {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts-descr{
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 80px;
+  color: $main;
+  text-align: center;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 44px;
+    padding: 0 10px;
+  }
+}
+
+.contacts-top__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  .col-xs-12{
+    +.col-xs-12{
+      @include bp(md) {
+        margin-top: 40px;
+      }
+    }
+    &:first-child{
+      .contacts-top__item{
+        >span{
+          @include bp(xs) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts-top__item{
+  background: #F5F5F5;
+  border-radius: 3px;
+  min-height: 293px;
+  position: relative;
+  padding: 77px 30px 30px;
+  @include bp(md) {
+    min-height: 200px;
+    padding: 45px 30px;
+  }
+  @include bp(xs) {
+    min-height: 140px;
+    padding: 26px 20px 20px;
+  }
+  >i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 79px;
+    height: 79px;
+    background-color: $main;
+    position: absolute;
+    left: 24px;
+    top: -30px;
+    @include bp(xs) {
+      width: 55px;
+      height: 55px;
+      top: -24px;
+      left: 15px;
+    }
+    svg{
+      @include bp(xs) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  >span{
+    font-size: 21px;
+    line-height: 140%;
+    display: block;
+    text-align: center;
+    font-family: $title;
+    margin-bottom: 18px;
+    @include bp(xs) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  >div{
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+    text-align: center;
+    @include bp(xs) {
+      font-size: 12px;
+    }
+    +div{
+      margin-top: 22px;
+      @include bp(xs) {
+        margin-top: 0;
+      }
+    }
+    a{
+      color: $text;
+      &:hover{
+        color: $main;
+      }
+    }
+  }
+}
+
+.contacts-bot{
+  background: #E4E4E4;
+  padding: 70px 0 100px;
+  @include bp(xs) {
+    padding: 40px 0;
+  }
+}
+
+.contacts-bot__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  @include bp(xs) {
+    flex-direction: column-reverse;
+  }
+}
+
+.contacts-map{
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 45px 45px 40px;
+  height: 100%;
+  @include bp(xs) {
+    padding: 20px 20px 10px;
+  }
+  iframe{
+    width: 100%;
+    height: 570px;
+    @media only screen and (max-width: 1699px) {
+      height: 28vw;
+    }
+    @media only screen and (max-width: 1599px) {
+      height: 29vw;
+    }
+    @include bp(lg) {
+      height: 400px;
+    }
+    @include bp(xs) {
+      height: calc(97vw - 70px);
+    }
+  }
+  a{
+    display: block;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+    margin-top: 15px;
+    @include bp(xs) {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    &:hover{
+      color: $main;
+    }
+  }
+}
+
+.contacts-form{
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 48px 62px;
+  height: 100%;
+  @include bp(lg) {
+    margin-top: 40px;
+  }
+  @include bp(xs) {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 35px 10px 30px;
+  }
+  & .main-form{
+    width: 800px;
+    max-width: 100%;
+    @include bp(lg) {
+      width: 100%;
+      }
+    .form-upload{
+      margin-top: 25px;
+      @include bp(xs) {
+        margin-top: 10px;
+      }
+    }
+    .form-footer{
+      margin-top: 40px;
+      @include bp(xs) {
+        margin-top: 22px;
+      }
+    }
+    .checkbox-wrapper{
+      max-width: 465px;
+    }
+  }
+}
+
+.contacts-form__title{
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  line-height: 100%;
+  margin-bottom: 10px;
+  font-family: $title;
+  @include bp(xs) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts-form__descr{
+  font-size: 12px;
+  line-height: 140%;
+  color: $main;
+  margin-bottom: 24px;
+  text-align: center;
+  @include bp(xs) {
+    margin-bottom: 18px;
+  }
+}

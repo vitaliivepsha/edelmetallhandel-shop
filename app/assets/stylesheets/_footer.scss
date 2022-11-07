@@ -1,0 +1,155 @@
+.footer-main{
+  background-color: $main;
+  min-height: 230px;
+  padding: 45px 0;
+  color: #fff;
+  @include bp(xs) {
+    padding: 20px 0 36px;
+  }
+  a{
+    &:not(.footer-logo){
+      opacity: .8;
+      color: #fff;
+      text-decoration: none;
+      &:hover, &:focus{
+        opacity: 1;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  .footer-menu{
+    >ul{
+      li{
+        a{
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-wrapper{
+  display: flex;
+  justify-content: space-between;
+  @include bp(sm) {
+    flex-direction: column;
+  }
+}
+
+.footer-left{
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-logo{
+  display: flex;
+  width: 115px;
+  height: 115px;
+  margin-right: 50px;
+  opacity: 1;
+  @include bp(lg) {
+    margin-right: 30px;
+  }
+  @include bp(xs) {
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    margin-right: 12px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.footer-info{
+  >div{
+    display: flex;
+    font-size: 16px;
+    line-height: 140%;
+    @include bp(xs) {
+      font-size: 12px;
+      flex-direction: column;
+    }
+    >div{
+      @include bp(xs) {
+        margin-top: 1px;
+      }
+      &:first-child{
+        width: 140px;
+        padding-right: 20px;
+        @include bp(xs) {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+      span{
+        display: block;
+        opacity: .8;
+      }
+      a{
+        display: block;
+      }
+    }
+  }
+}
+
+.footer-title{
+  display: block;
+  font-size: 16px;
+  line-height: 140%;
+  margin-bottom: 14px;
+  font-family: $title;
+  @include bp(xs) {
+    font-size: 14px;
+    margin-top: -2px;
+    margin-bottom: 0;
+  }
+}
+
+.footer-right{
+  display: flex;
+  gap: 128px;
+  @include bp(lg) {
+    gap: 72px;
+  }
+  @include bp(sm) {
+    margin-top: 36px;
+  }
+}
+
+.footer-menu{
+  >span{
+    font-family: $title;
+    font-size: 16px;
+    line-height: 140%;
+    display: block;
+    margin-bottom: 13px;
+    @include bp(xs) {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+  >ul{
+    font-size: 16px;
+    line-height: 140%;
+    @include bp(xs) {
+      font-size: 12px;
+      line-height: 180%;
+    }
+  }
+}
+
+.footer-copyright{
+  padding: 13px 0;
+  font-size: 12px;
+  line-height: 140%;
+  color: $text;
+  @include bp(xs) {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,75 @@
+.privacy {
+  margin-bottom: 135px;
+  @include bp(sm) {
+    margin-bottom: 80px;
+    }
+}
+
+.privacy__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  & h2,
+  & h3,
+  & h4 {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: $title;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    @include bp(sm) {
+      font-size: 24px;
+    }
+    @include bp(xs) {
+      font-size: 24px;
+
+    }
+
+  }
+
+  & ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    & li {
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color:$text;
+       color:$text;
+      }
+    }
+  }
+  & p,
+  & span,
+  & li,
+  & a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text;
+    @include bp(sm) {
+      font-size: 14px;
+      }
+    @include bp(xs) {
+      font-size: 12px;
+    }
+  }
+
+  & p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  & a {
+    word-break: break-word;
+   }
+}
