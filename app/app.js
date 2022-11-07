@@ -11,12 +11,10 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/404-search-nf.html');
     require('./assets/templates/layouts/impresum.html');
     require('./assets/templates/layouts/privacy.html');
-    require('./assets/templates/layouts/product-diamonds.html');
-    require('./assets/templates/layouts/product-luxusuhren.html');
-    require('./assets/templates/layouts/product-muenzen.html');
-    require('./assets/templates/layouts/product-schmuck.html');
     require('./assets/templates/layouts/shipping.html');
     require('./assets/templates/layouts/investment.html');
+
+    require('./assets/templates/layouts/product.html');
 }
 
 // Depends
@@ -57,7 +55,7 @@ $(function () {
         }
         e.preventDefault();
         var pos = $id.offset().top;
-        $("body, html").animate({ scrollTop: pos }, 500);
+        $("body, html").animate({scrollTop: pos}, 500);
     });
     $(document).on("click", 'a[href*="#"]', function (e) {
         e.preventDefault();
@@ -74,11 +72,11 @@ $(function () {
         if (scrolled > 200 && scrolled > scrollPrev) {
             header.addClass('top');
             $('body').addClass('hidden-header');
-        }
-        else {
+        } else {
             header.removeClass('top');
             $('body').removeClass('hidden-header');
-        };
+        }
+        ;
         if (scrolled > 200) {
             header.addClass('fixed');
         } else {
@@ -97,6 +95,7 @@ $(function () {
             $wrap.removeClass('filled');
         }
     });
+
 
     // checkbox change
 
@@ -228,14 +227,14 @@ $(function () {
     });
 
     // btn go top
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 400) {
             $("#gotop").fadeIn();
         } else {
             $("#gotop").fadeOut();
         }
     });
-    $("#gotop").click(function() {
+    $("#gotop").click(function () {
         $('body, html').animate({
             scrollTop: 0
         }, 500);
@@ -266,6 +265,30 @@ $(function () {
         });
     };
     $(window).scroll(lazyload);
+
+    // shop =====
+
+    $(window).resize(function () {
+        $(".lightgallery").lightGallery({
+            tumbnail: true
+        });
+    });
+
+    $('.product-pic__main .slick-arrow').append('<svg width="20" height="8" viewBox="0 0 20 8" fill="none"' +
+        ' xmlns="http://www.w3.org/2000/svg">\n' +
+        '<line y1="4.10001" x2="13.0769" y2="4.10001" stroke="black"/>\n' +
+        '<path d="M19 4L13 -2.62268e-07L13 8L19 4Z" fill="black"/>\n' +
+        '</svg>');
+    $('.product-pic__small .slick-arrow').append('<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M0.146606 9.51952L4.29363 5.37249L0.146606 1.22546L1.06817 0.303903L6.13675 5.37249L1.06817 10.4411L0.146606 9.51952ZM4.75441 9.51952L8.90144 5.37249L4.75441 1.22546L5.67597 0.303903L10.7446 5.37249L5.67597 10.4411L4.75441 9.51952Z" fill="white"/>\n' +
+        '</svg>\n');
+
+    // spoiler product-details
+
+    $(".product-about__details-header").click(function () {
+        $(this).toggleClass("active").next(".product-about__details-body").slideToggle();
+    });
+
 
     // zoom product
 
