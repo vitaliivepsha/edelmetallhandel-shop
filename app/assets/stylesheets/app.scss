@@ -90,7 +90,7 @@ main {
 }
 
 .container{
-  width: 1690px;
+  width: 1680px;
   max-width: calc(100vw - 60px);
   @include bp(lg) {
     width: 1170px;
@@ -543,6 +543,7 @@ textarea:-webkit-autofill:hover {
 @import "main/section-5";
 @import "main/section-6";
 @import "main/section-7";
+@import "main/section-8";
 
 // Footer
 @import "footer";

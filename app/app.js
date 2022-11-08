@@ -29,6 +29,7 @@ var Slider = require('_modules/slider');
 require('../node_modules/sumoselect/jquery.sumoselect.min');
 //require('../node_modules/ez-plus/src/jquery.ez-plus');
 require('../node_modules/sweetalert2/dist/sweetalert2');
+require('_modules/succinct');
 
 // Stylesheet entrypoint
 require('_stylesheets/app.scss');
@@ -68,21 +69,22 @@ $(function () {
 
     $(window).scroll(function () {
         var scrolled = $(window).scrollTop();
-
-        if (scrolled > 200 && scrolled > scrollPrev) {
-            header.addClass('top');
-            $('body').addClass('hidden-header');
-        } else {
-            header.removeClass('top');
-            $('body').removeClass('hidden-header');
-        }
-        ;
         if (scrolled > 200) {
             header.addClass('fixed');
         } else {
             header.removeClass('fixed');
         }
         scrollPrev = scrolled;
+    });
+
+    // truncate text
+
+    $('.catalog-item__title').succinct({
+        size: 70
+    });
+
+    $('.news-item__descr').succinct({
+        size: 580
     });
 
     // input filled

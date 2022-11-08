@@ -214,9 +214,9 @@ ${require('../parts/header.html')}
     <div class="section related-section">
         <div class="container">
             <div class="section-title">Neu eingestellt</div>
-            <div class="related-wrapper">
+            <div class="row related-wrapper">
                 <div class="slider-arrow slider-nav related-nav">
-                    <div class="slider-prev related-slider__prev">
+                    <div class="slider-arrow slider-prev related-slider__prev">
                         <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="19" y1="4" x2="2" y2="4" stroke="#CC950C"/>
                             <path d="M5.24537e-07 4L6 8L6 7.86805e-07L5.24537e-07 4Z" fill="#CC950C"/>
@@ -229,183 +229,608 @@ ${require('../parts/header.html')}
                         </svg>
                     </div>
                 </div>
-                <div class="related-slider slick-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "arrows": true, "prevArrow": ".related-slider__prev", "nextArrow": ".related-slider__next", "dots": false, "infinite": true, "responsive":[{"breakpoint":574,"settings":{"adaptiveHeight": true}}]}'>
+                <div class="related-slider slick-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "arrows": true, "prevArrow": ".related-slider__prev", "nextArrow": ".related-slider__next", "dots": false, "infinite": false, "responsive":[{"breakpoint":574,"settings":{"adaptiveHeight": true}}]}'>
                     <div class="slide">
-
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-01.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Sehr schöne Fortis B-42 Official Cosmonauts Automatic Nr. 190234 Automatic</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-02.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Schöner Anhänger aus 585/- Gelbgold Brillant Nr.184058 M2 neuwertig</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-03.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Sehr Schöner Ring aus 750/- Gelbgold mit Brillant Nr.0190 M1 neuwertig</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-04.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">7 Schreibgeräte Nr. 193135</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-01.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Sehr schöne Fortis B-42 Official Cosmonauts Automatic Nr. 190234</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section calc-section">
+    <div class="section categories-section">
         <div class="container">
-            <div class="row calc-wrap">
-                <div class="col-md-6">
-                    <div class="calc-left">
-                        <span class="calc-left__title">Ankaufs-Rechner</span>
-                        <span class="calc-left__date">Ankaufspreise Stand: 12.06.2022 16:55</span>
-                        <span class="calc-left__descr">Geben Sie einfach in die Tabelle die Gewichte Ihrer Edelmetalle ein und Ihr Gesamtankaufswert wird automatisch berechnet.</span>
-                        <div class="row calc-main__wrapper">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="calc-main calc-main__left">
-                                    <div class="calc-main__head">
-                                        Gold Je gr
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>999er Feingold handelsfähig</span>
-                                        <span>57.32 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row light">
-                                        <span>999er Feingold</span>
-                                        <span>55.82 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>916er Gold</span>
-                                        <span>51.13 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row light">
-                                        <span>900er Gold</span>
-                                        <span>50.24 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>750er Gold</span>
-                                        <span>41.87 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row light">
-                                        <span>585er Gold</span>
-                                        <span>32.66 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>333er Gold</span>
-                                        <span>18.59 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row light last">
-                                        <span>Zahngold (ohne Zahnreste)</span>
-                                        <span>31.62 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
+            <div class="categories-section__title">
+                <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.9405 0.791285L29.7342 17.615L39.6508 3.50501L34.5243 19.9716L50.1673 12.7103L37.4944 24.4076L54.6723 25.9406L37.8486 29.7343L51.9585 39.6508L35.4919 34.5244L42.7533 50.1674L31.056 37.4944L29.523 54.6723L25.7293 37.8486L15.8127 51.9586L20.9392 35.492L5.2962 42.7533L17.9691 31.056L0.791235 29.523L17.6149 25.7293L3.50496 15.8128L19.9716 20.9392L12.7102 5.29625L24.4075 17.9692L25.9405 0.791285Z" fill="#CC950C"/>
+                </svg>
+                <div class="section-title">Kategorien</div>
+            </div>
+            <div class="row categories-slider__wrapper">
+                <div class="slider-arrow slider-nav categories-slider__nav">
+                    <div class="slider-arrow slider-prev categories-slider__prev">
+                        <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19" y1="4" x2="2" y2="4" stroke="#CC950C"/>
+                            <path d="M5.24537e-07 4L6 8L6 7.86805e-07L5.24537e-07 4Z" fill="#CC950C"/>
+                        </svg>
+                    </div>
+                    <div class="slider-arrow slider-next categories-slider__next">
+                        <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="4" x2="17" y2="4" stroke="#CC950C"/>
+                            <path d="M19 4L13 -2.62268e-07L13 8L19 4Z" fill="#CC950C"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="categories-slider slick-slider" data-slick='{"slidesToShow": 12, "slidesToScroll": 1, "arrows": true, "prevArrow": ".categories-slider__prev", "nextArrow": ".categories-slider__next", "dots": false, "infinite": false, "responsive":[{"breakpoint":574,"settings":{"adaptiveHeight": true}}]}'>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-01.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Goldmünzen</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-02.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Gold</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-03.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Silber</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-04.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Brillanten</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-05.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Bronzefiguren</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-06.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Versilbertes</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-07.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Zinn</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-08.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Schreibgeräte</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-09.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Militaria</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-10.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Porzellan</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-11.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Uhren</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-12.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Bruchgold</span>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="categories-slider__item">
+                            <div class="categories-slider__pic">
+                                <img src="../../images/categories-11.jpg" class="lazy" alt="">
+                            </div>
+                            <span class="categories-slider__title">Uhren</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section related-section">
+        <div class="container">
+            <div class="section-title">Empfohlen</div>
+            <div class="row related-wrapper">
+                <div class="slider-arrow slider-nav related-nav">
+                    <div class="slider-arrow slider-prev related-slider__prev">
+                        <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19" y1="4" x2="2" y2="4" stroke="#CC950C"/>
+                            <path d="M5.24537e-07 4L6 8L6 7.86805e-07L5.24537e-07 4Z" fill="#CC950C"/>
+                        </svg>
+                    </div>
+                    <div class="slider-arrow slider-next related-slider__next">
+                        <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="4" x2="17" y2="4" stroke="#CC950C"/>
+                            <path d="M19 4L13 -2.62268e-07L13 8L19 4Z" fill="#CC950C"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="related-slider slick-slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 1, "arrows": true, "prevArrow": ".related-slider__prev", "nextArrow": ".related-slider__next", "dots": false, "infinite": false, "responsive":[{"breakpoint":574,"settings":{"adaptiveHeight": true}}]}'>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-01.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Sehr schöne Fortis B-42 Official Cosmonauts Automatic Nr. 190234 Automatic</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-02.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Schöner Anhänger aus 585/- Gelbgold Brillant Nr.184058 M2 neuwertig</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-03.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Sehr Schöner Ring aus 750/- Gelbgold mit Brillant Nr.0190 M1 neuwertig</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-04.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">7 Schreibgeräte Nr. 193135</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="javascript:void(0)" class="catalog-item">
+                            <div class="catalog-item__pic">
+                                <img src="../../images/cat-item-01.jpg" class="lazy" alt="">
+                            </div>
+                            <div class="catalog-item__info">
+                                <span class="catalog-item__title">Sehr schöne Fortis B-42 Official Cosmonauts Automatic Nr. 190234</span>
+                                <span class="catalog-item__price">3454.00 CHF</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section about-section">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-pic">
+                    <img src="../../images/about-pic.jpg" class="lazy" alt="">
+                </div>
+                <div class="about-info">
+                    <i class="about-icon">
+                        <svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M37.9443 0.000348317H0.910663C0.40736 0.000348317 0 0.407708 0 0.911011V4.74856C0 5.25187 0.40736 5.65923 0.910663 5.65923H4.18905C4.14541 5.70042 4.09852 5.73755 4.05543 5.78011C1.91647 7.91907 1.91647 11.3994 4.05543 13.5386C4.9466 14.4298 6.11717 14.8754 7.28775 14.8754C8.14256 14.8754 8.99549 14.635 9.74109 14.1601V32.0882C9.74109 32.5909 10.1484 32.9988 10.6518 32.9988C11.1551 32.9988 11.5624 32.5909 11.5624 32.0882V11.5998C11.8126 10.3778 11.4665 9.05676 10.5201 8.11085C9.73138 7.32105 8.60771 6.99314 7.51782 7.23349C7.02672 7.34163 6.71582 7.82732 6.82399 8.31845C6.93213 8.81009 7.4208 9.12045 7.90894 9.01228C8.38975 8.90713 8.88385 9.0505 9.23181 9.3985C10.0186 10.1853 10.0186 11.4651 9.23181 12.2519C8.15962 13.3241 6.41552 13.3241 5.34278 12.2519C3.91361 10.8227 3.91361 8.49762 5.34278 7.06901C6.25101 6.16077 7.45843 5.66045 8.74314 5.66045C10.0279 5.66045 11.2353 6.16077 12.1435 7.06901C13.2 8.12552 13.841 9.52485 13.9526 11.0122V32.089C13.9526 32.5917 14.36 32.9996 14.8633 32.9996C15.3666 32.9996 15.7739 32.5917 15.7739 32.089V10.9671C15.7739 10.9555 15.771 10.9452 15.771 10.9343C15.7704 10.9235 15.7729 10.9132 15.7715 10.9021C15.633 8.97016 14.8026 7.1521 13.4312 5.78121C13.3886 5.73866 13.342 5.7018 13.2976 5.66033H18.5168V32.0893C18.5168 32.5921 18.9242 33 19.4275 33C19.9308 33 20.3382 32.5921 20.3382 32.0893V5.66033H25.5563C25.5132 5.70153 25.4663 5.73812 25.4232 5.78121C24.0518 7.15154 23.22 8.97044 23.0829 10.9028C23.0824 10.9137 23.084 10.924 23.084 10.9343C23.0835 10.9459 23.0805 10.9562 23.0805 10.9671V32.0889C23.0805 32.5917 23.4884 32.9996 23.9911 32.9996C24.4939 32.9996 24.9018 32.5917 24.9018 32.0889V11.0108C25.0129 9.52334 25.6539 8.12457 26.7109 7.06813C27.6192 6.15989 28.8266 5.65956 30.1113 5.65956C31.396 5.65956 32.6029 6.15989 33.5116 7.06813C34.9408 8.4973 34.9408 10.8224 33.5116 12.251C32.4395 13.3232 30.6954 13.3232 29.6226 12.251C29.2413 11.8697 29.0312 11.3634 29.0312 10.8244C29.0312 10.2853 29.2413 9.77902 29.6226 9.39769C29.9698 9.04969 30.4642 8.90414 30.9474 9.01228C31.4399 9.11907 31.9242 8.80901 32.0318 8.31761C32.14 7.82651 31.8291 7.34083 31.3372 7.23266C30.2492 6.99334 29.1237 7.32074 28.3349 8.11002C27.3871 9.05697 27.0418 10.3794 27.293 11.6028V32.0884C27.293 32.5911 27.7009 32.9991 28.2037 32.9991C28.7065 32.9991 29.1144 32.5911 29.1144 32.0884V14.1603C29.8605 14.6351 30.7129 14.8747 31.5672 14.8747C32.7384 14.8747 33.9081 14.4292 34.7995 13.538C36.9385 11.399 36.9385 7.91872 34.7995 5.77948C34.757 5.73693 34.7104 5.70007 34.6659 5.6586H37.9443C38.4471 5.6586 38.855 5.25124 38.855 4.74794V0.910663C38.855 0.407901 38.4471 0 37.9443 0L37.9443 0.000348317ZM37.0336 3.83839H1.82133V1.82167H37.0336V3.83839Z" fill="white"/>
+                        </svg>
+                    </i>
+                    <div class="section-title">Über Uns</div>
+                    <span class="about-subtitle">Der Edelmetallhandel Schweiz stellt sich vor.</span>
+                    <div class="about-description">
+                        <p>Wir freuen uns, dass Sie uns Ihr Vertrauen entgegenbringen. Unsere jahrelange Erfahrung im Handel und Ankauf von Edelmetallen macht uns zu einem verlässlichen Ansprechpartner, wenn es um Ihre Wertsachen geht. Wir legen besonders großen Wert auf faire Preise, die sich an den tagesaktuellen Kursen orientieren.</p>
+                        <p>Uns liegt außerdem die Rückgewinnung von kostbaren Edelmetallen am Herzen, die andernfalls womöglich entsorgt würden. Wir glauben, dass Urban Mining, also das Recycling von Edelmetallen, einen immer größeren Stellenwert in unserer Gesellschaft bekommen wird. Sprechen Sie uns hierzu gerne an.</p>
+                        <p>Unser Team aus kompetenten Mitarbeitern berät Sie gerne telefonisch oder per E-Mail an unserem Standort im schönen Teufen. Sie können uns Ihre Wertgegenstände aus allen Regionen der Schweiz per Post zuschicken.</p>
+                    </div>
+                    <a href="javascript:void(0)" class="btn btn-tr">KONTAKTIEREN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section review-section">
+        <div class="container">
+            <div class="reviews-title">
+                <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.9405 0.791285L29.7342 17.615L39.6508 3.50501L34.5243 19.9716L50.1673 12.7103L37.4944 24.4076L54.6723 25.9406L37.8486 29.7343L51.9585 39.6508L35.4919 34.5244L42.7533 50.1674L31.056 37.4944L29.523 54.6723L25.7293 37.8486L15.8127 51.9586L20.9392 35.492L5.2962 42.7533L17.9691 31.056L0.791235 29.523L17.6149 25.7293L3.50496 15.8128L19.9716 20.9392L12.7102 5.29625L24.4075 17.9692L25.9405 0.791285Z" fill="#CC950C"/>
+                </svg>
+                <div class="section-title">Bewertungen</div>
+                <a href="javascript:void(0)">
+                    Alles bewertungen
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#464646"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="row reviews-slider__wrapper">
+                <div class="slider-arrow slider-nav reviews-nav">
+                    <div class="slider-arrow slider-prev related-slider__prev">
+                        <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="19" y1="4" x2="2" y2="4" stroke="#CC950C"/>
+                            <path d="M5.24537e-07 4L6 8L6 7.86805e-07L5.24537e-07 4Z" fill="#CC950C"/>
+                        </svg>
+                    </div>
+                    <div class="slider-arrow slider-next related-slider__next">
+                        <svg width="19" height="8" viewBox="0 0 19 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="4" x2="17" y2="4" stroke="#CC950C"/>
+                            <path d="M19 4L13 -2.62268e-07L13 8L19 4Z" fill="#CC950C"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reviews-slider slick-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": true, "prevArrow": ".related-slider__prev", "nextArrow": ".related-slider__next", "dots": false, "infinite": false, "responsive":[{"breakpoint":574,"settings":{"adaptiveHeight": true}}]}'>
+                    <div class="slide">
+                        <div class="reviews-item">
+                            <div class="reviews-item__top">
+                                <span class="reviews-item__date">25/11/2021</span>
+                                <div class="rating-stars">
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="calc-main calc-main__right">
-                                    <div class="calc-main__head">
-                                        Silber Je gr
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>999er Feinsilber gestempelt</span>
-                                        <span>0.70 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row light">
-                                        <span>925er silber</span>
-                                        <span>0.58 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>800er silber</span>
-                                        <span>0.51 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row dark">
-                                        Versilbert Je kg
-                                    </div>
-                                    <div class="calc-main__row">
-                                        <span>Versilbert 90/100...</span>
-                                        <span>21.70 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row light">
-                                        <span>Versilberte Messer</span>
-                                        <span>4.38 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row medium">
-                                        <span>ZINN (zinngeschirr) je kg</span>
-                                        <span>7.25 CHF</span>
-                                        <span>
-                                            <input type="text" oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
-                                        </span>
-                                    </div>
-                                    <div class="calc-main__row bot">
-                                        Wir kaufen auch Platin und Palladium
-                                    </div>
+                            <div class="reviews-item__text">
+                                wieder einmal: schöne Ware, blitzschnell abgesendet; guter Kontakt und hilfreiche Intervention bei DHL-Problem; Dankesehr! gerne wieder
+                            </div>
+                            <div class="reviews-item__author">Joana 12 Faria</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="reviews-item">
+                            <div class="reviews-item__top">
+                                <span class="reviews-item__date">25/11/2021</span>
+                                <div class="rating-stars">
+                                    <span class="rating-star">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
                                 </div>
                             </div>
-                            <div class="col-xs-12">
-                                <div class="calc-main__bot">
-                                    <div class="calc-main__footnote">
-                                        <div>Kommen Sie gerne <span>mit termin</span> im Ladengeschäft vorbei.</div>
-                                    </div>
-                                    <div class="calc-main__footer">
-                                        <span>Ihr Erlös:</span>
-                                        <div>
-                                            <span class="calc-main__total">0.00</span> CHF
-                                        </div>
-                                    </div>
+                            <div class="reviews-item__text">
+                                Sehr schneller Versand. Nach Reinigung sieht der Füller (Pelikan M200 Old Style) wie neu aus und die OBB-Feder mag ich sehr. Gerne wieder!
+                            </div>
+                            <div class="reviews-item__author">s@fjrhskfjv</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="reviews-item">
+                            <div class="reviews-item__top">
+                                <span class="reviews-item__date">25/11/2021</span>
+                                <div class="rating-stars">
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
                                 </div>
                             </div>
+                            <div class="reviews-item__text">
+                                sehr schön , schöner als beschrieben ,sauber verpackt und schachtel ist auch dabei,so geht kaufen bei ebay, danke schön!Lg
+                            </div>
+                            <div class="reviews-item__author">Rodrigo Amorales</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="reviews-item">
+                            <div class="reviews-item__top">
+                                <span class="reviews-item__date">25/11/2021</span>
+                                <div class="rating-stars">
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                    <span class="rating-star active">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.90489 0.91074C7.91539 0.878422 7.92943 0.86552 7.9398 0.85845C7.95336 0.849212 7.97426 0.841641 8 0.841641C8.02574 0.841641 8.04664 0.849212 8.0602 0.85845C8.07057 0.865519 8.08461 0.878421 8.09511 0.910739L9.41039 4.95877C9.55765 5.41199 9.98 5.71885 10.4566 5.71885H14.7129C14.7469 5.71885 14.7635 5.72821 14.7734 5.73589C14.7864 5.74593 14.8001 5.76347 14.808 5.78795C14.816 5.81243 14.8152 5.83464 14.8106 5.85039C14.8071 5.86244 14.7992 5.87977 14.7717 5.89975L11.3282 8.40157C10.9427 8.68167 10.7814 9.17818 10.9286 9.6314L12.2439 13.6794C12.2544 13.7117 12.2506 13.7304 12.2464 13.7423C12.2409 13.7577 12.2284 13.7761 12.2076 13.7912C12.1868 13.8064 12.1654 13.8125 12.149 13.813C12.1365 13.8134 12.1175 13.8112 12.09 13.7912L8.64656 11.2894C8.26103 11.0093 7.73897 11.0093 7.35344 11.2894L3.90998 13.7912C3.88249 13.8112 3.86355 13.8134 3.851 13.813C3.83461 13.8125 3.81325 13.8064 3.79242 13.7912C3.7716 13.7761 3.75914 13.7577 3.7536 13.7423C3.74937 13.7304 3.74559 13.7117 3.75609 13.6794L5.07138 9.6314C5.21864 9.17818 5.05732 8.68167 4.67178 8.40157L1.22832 5.89975C1.20083 5.87978 1.1929 5.86244 1.18938 5.85039C1.18478 5.83465 1.18404 5.81243 1.192 5.78795C1.19995 5.76347 1.21361 5.74592 1.22658 5.73589C1.23651 5.72821 1.25312 5.71885 1.2871 5.71885H5.54345C6.02 5.71885 6.44235 5.41199 6.58961 4.95877L7.90489 0.91074Z" stroke="#CC950C"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="reviews-item__text">
+                                wieder einmal: schöne Ware, blitzschnell abgesendet; guter Kontakt und hilfreiche Intervention bei DHL-Problem; Dankesehr! gerne wieder
+                            </div>
+                            <div class="reviews-item__author">Joana 12 Faria</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 hide-mob">
-                    <div class="calc-right">
-                        <div class="row calc-right__wrap">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="calc-right__title-wrap">
-                                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M25.9405 0.790797L29.7342 17.6145L39.6508 3.50452L34.5243 19.9711L50.1673 12.7098L37.4944 24.4071L54.6723 25.9401L37.8486 29.7338L51.9585 39.6503L35.4919 34.5239L42.7533 50.1669L31.056 37.494L29.523 54.6718L25.7293 37.8481L15.8127 51.9581L20.9392 35.4915L5.2962 42.7528L17.9691 31.0555L0.791235 29.5225L17.6149 25.7289L3.50496 15.8123L19.9716 20.9387L12.7102 5.29576L24.4075 17.9687L25.9405 0.790797Z" fill="#CC950C"/>
-                                    </svg>
-                                    <div>Uhren Ankauf</div>
-                                    <span>Machen Sie Ihre Luxusuhren schnell zu Geld.</span>
-                                </div>
-                                <div class="calc-right__watch-wrap">
-                                    <img src="../../images/watch.png" class="lazy" alt="">
-                                    <span>Wir kaufen auch reparaturreife Uhren</span>
-                                    <a href="javascript:void(0)" class="btn btn-tr">mehr erfahren</a>
-                                </div>
+            </div>
+            <span class="btn btn-tr reviews-btn">Schreiben Bewertung</span>
+        </div>
+    </div>
+    <div class="section services-section">
+        <div class="container">
+            <div class="services-title">
+                <i>
+                    <svg width="36" height="42" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.2842 27.0002L26.6357 12.0195L9.33778 12.0195L0.688358 27.0002L9.33751 41.9808L26.6355 41.9808L35.2842 27.0002ZM26.3002 40.0791L19.3747 27.0002L26.3002 13.9204L33.8513 26.9993L26.3002 40.0791ZM25.2465 13.2602L18.2991 26.3798L2.47841 26.3798L10.0531 13.2602L25.2465 13.2602ZM2.47824 27.6205L18.299 27.6205L25.2463 40.7402L10.053 40.7402L2.47824 27.6205Z" fill="white"/>
+                        <path d="M26.6279 26.3799L26.6279 27.6205L25.6355 27.6205L25.6355 26.3799L26.6279 26.3799Z" fill="white"/>
+                        <path d="M32.582 26.3799L32.582 27.6205L31.5896 27.6205L31.5896 26.3799L32.582 26.3799Z" fill="white"/>
+                        <path d="M24.6426 26.3799L24.6426 27.6205L23.6502 27.6205L23.6502 26.3799L24.6426 26.3799Z" fill="white"/>
+                        <path d="M30.5986 26.3799L30.5986 27.6205L29.6062 27.6205L29.6062 26.3799L30.5986 26.3799Z" fill="white"/>
+                        <path d="M22.6592 26.3799L22.6592 27.6205L21.6668 27.6205L21.6668 26.3799L22.6592 26.3799Z" fill="white"/>
+                        <path d="M28.6113 26.3799L28.6113 27.6205L27.6189 27.6205L27.6189 26.3799L28.6113 26.3799Z" fill="white"/>
+                        <path d="M15.4801 30.9322L16.0066 30.0903L17.0586 30.748L16.5321 31.5899L15.4801 30.9322Z" fill="white"/>
+                        <path d="M16.5338 29.2496L17.0603 28.4077L18.1123 29.0654L17.5858 29.9073L16.5338 29.2496Z" fill="white"/>
+                        <path d="M13.3796 34.2987L13.9054 33.4575L14.957 34.1149L14.4312 34.956L13.3796 34.2987Z" fill="white"/>
+                        <path d="M14.4284 32.6148L14.9549 31.7729L16.0068 32.4307L15.4803 33.2725L14.4284 32.6148Z" fill="white"/>
+                        <path d="M10.2194 39.3477L10.7459 38.5059L11.7979 39.1636L11.2713 40.0054L10.2194 39.3477Z" fill="white"/>
+                        <path d="M12.3269 35.9813L12.8527 35.1401L13.9043 35.7975L13.3785 36.6387L12.3269 35.9813Z" fill="white"/>
+                        <path d="M11.2731 37.6651L11.7996 36.8232L12.8516 37.4809L12.3251 38.3228L11.2731 37.6651Z" fill="white"/>
+                        <path d="M15.484 23.1043L16.5356 22.4463L17.0625 23.2881L16.0109 23.9462L15.484 23.1043Z" fill="white"/>
+                        <path d="M17.5858 24.1279L18.1123 24.9698L17.0603 25.6275L16.5338 24.7856L17.5858 24.1279Z" fill="white"/>
+                        <path d="M13.3786 19.7371L14.4302 19.0801L14.9561 19.9212L13.9044 20.5783L13.3786 19.7371Z" fill="white"/>
+                        <path d="M14.4303 21.4217L15.4819 20.7637L16.0088 21.6055L14.9572 22.2636L14.4303 21.4217Z" fill="white"/>
+                        <path d="M10.2213 14.6883L11.273 14.0303L11.7998 14.8721L10.7482 15.5302L10.2213 14.6883Z" fill="white"/>
+                        <path d="M12.3249 18.054L13.3765 17.397L13.9023 18.2381L12.8507 18.8952L12.3249 18.054Z" fill="white"/>
+                        <path d="M11.2741 16.3719L12.3257 15.7139L12.8525 16.5557L11.8009 17.2138L11.2741 16.3719Z" fill="white"/>
+                        <path d="M35.1904 7.41064L35.1904 22.7945L33.9498 22.7945L33.9498 7.41064L35.1904 7.41064Z" fill="white"/>
+                        <path d="M1.93945 7.41064L1.93945 22.7945L0.698821 22.7945L0.698821 7.41064L1.93945 7.41064Z" fill="white"/>
+                        <path d="M18.0527 0.0908203L18.0527 10.0779L16.8121 10.0779L16.8121 0.0908203L18.0527 0.0908203Z" fill="white"/>
+                        <path d="M20.5332 2.38623L20.5332 11.0707L19.2926 11.0707L19.2926 2.38623L20.5332 2.38623Z" fill="white"/>
+                        <path d="M15.5713 2.38623L15.5713 11.0707L14.3307 11.0707L14.3307 2.38623L15.5713 2.38623Z" fill="white"/>
+                    </svg>
+                </i>
+                <div class="section-title">Sonstige Dienstleistungen</div>
+            </div>
+            <div class="row services-wrapper">
+                <div class="col-md-5">
+                    <div class="services-pic">
+                        <img src="../../images/serv-01.jpg" class="lazy" alt="">
+                    </div>
+                    <div class="services-pic">
+                        <img src="../../images/serv-02.jpg" class="lazy" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="services-info">
+                        <div class="services-block">
+                            <div class="services-subtitle">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.2503 0.892443L15.14 9.27244L20.0794 2.24417L17.5259 10.4463L25.3178 6.82937L19.0053 12.6559L27.5618 13.4195L19.1818 15.3091L26.21 20.2486L18.0079 17.6951L21.6248 25.487L15.7983 19.1745L15.0347 27.7309L13.1451 19.3509L8.20559 26.3792L10.7591 18.1771L2.96723 21.794L9.27968 15.9675L0.723279 15.2039L9.10327 13.3142L2.075 8.37475L10.2771 10.9282L6.66021 3.13639L12.4867 9.44885L13.2503 0.892443Z" fill="#CC950C"/>
+                                </svg>
+                                <span>Wir kaufen</span>
                             </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <a href="javascript:void(0)" class="calc-right__chart-wrap" rel="nofollow" target="_blank">
-
+                            <div class="services-description">Wir vom Schweizer Edelmetallhandel stehen Ihnen zur Seite, wenn Sie Ihren Schmuck verkaufen möchten. Sie haben hochwertigen Schmuck zu Hause, möglicherweise alte Erbstücke, die Sie gerne zu Geld machen möchten? Wir schätzen für Sie ganz unverbindlich den Wert, wenn Sie Ihren gebrauchten Schmuck verkaufen möchten.</div>
+                            <div class="services-items">
+                                <a href="javascript:void(0)" class="services-item">
+                                    <div>
+                                        <img src="../../images/serv-item-01.png" class="lazy" alt="">
+                                    </div>
+                                    <span>
+                                        SCHMUK
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#000"/>
+                                        </svg>
+                                    </span>
                                 </a>
-                                <div class="calc-right__contact-wrap">
-                                    <div>Unser Team freut sich auf Ihre Kontaktaufnahme</div>
-                                    <span>Sie können Ihre Wertgegenstände persönlich vorbeibringen oder per Post zusenden</span>
-                                    <a href="javascript:void(0)" class="btn">Kontakt</a>
-                                </div>
+                                <a href="javascript:void(0)" class="services-item">
+                                    <div>
+                                        <img src="../../images/serv-item-02.png" class="lazy" alt="">
+                                    </div>
+                                    <span>
+                                        SCHMUK
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#000"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="javascript:void(0)" class="services-item">
+                                    <div>
+                                        <img src="../../images/serv-item-03.png" class="lazy" alt="">
+                                    </div>
+                                    <span>
+                                        SCHMUK
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#000"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a href="javascript:void(0)" class="services-item">
+                                    <div>
+                                        <img src="../../images/serv-item-04.png" class="lazy" alt="">
+                                    </div>
+                                    <span>
+                                        SCHMUK
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#000"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="services-block">
+                            <div class="services-subtitle">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.2503 0.892443L15.14 9.27244L20.0794 2.24417L17.5259 10.4463L25.3178 6.82937L19.0053 12.6559L27.5618 13.4195L19.1818 15.3091L26.21 20.2486L18.0079 17.6951L21.6248 25.487L15.7983 19.1745L15.0347 27.7309L13.1451 19.3509L8.20559 26.3792L10.7591 18.1771L2.96723 21.794L9.27968 15.9675L0.723279 15.2039L9.10327 13.3142L2.075 8.37475L10.2771 10.9282L6.66021 3.13639L12.4867 9.44885L13.2503 0.892443Z" fill="#CC950C"/>
+                                </svg>
+                                <span>Wir verkaufen auch</span>
+                            </div>
+                            <div class="services-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est</div>
+                            <div class="services-items">
+                                <a href="javascript:void(0)" class="services-item">
+                                    <div>
+                                        <img src="../../images/serv-item-05.png" class="lazy" alt="">
+                                    </div>
+                                    <span>
+                                        SCHMUK
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#000"/>
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -459,87 +884,7 @@ ${require('../parts/header.html')}
             </div>
         </div>
     </div>
-    <div class="section-purchase">
-        <div class="container">
-            <div class="purchase-title__wrapper">
-                <i>
-                    <svg width="36" height="42" viewBox="0 0 36 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M35.2832 27.0002L26.6348 12.0195L9.3368 12.0195L0.687381 27.0002L9.33654 41.9808L26.6345 41.9808L35.2832 27.0002ZM26.2993 40.0791L19.3737 27.0002L26.2993 13.9204L33.8504 26.9993L26.2993 40.0791ZM25.2455 13.2602L18.2982 26.3798L2.47744 26.3798L10.0521 13.2602L25.2455 13.2602ZM2.47726 27.6205L18.298 27.6205L25.2453 40.7402L10.052 40.7402L2.47726 27.6205Z" fill="white"/>
-                        <path d="M26.627 26.3799L26.627 27.6205L25.6345 27.6205L25.6345 26.3799L26.627 26.3799Z" fill="white"/>
-                        <path d="M32.582 26.3799L32.582 27.6205L31.5896 27.6205L31.5896 26.3799L32.582 26.3799Z" fill="white"/>
-                        <path d="M24.6426 26.3799L24.6426 27.6205L23.6502 27.6205L23.6502 26.3799L24.6426 26.3799Z" fill="white"/>
-                        <path d="M30.5977 26.3799L30.5977 27.6205L29.6052 27.6205L29.6052 26.3799L30.5977 26.3799Z" fill="white"/>
-                        <path d="M22.6582 26.3799L22.6582 27.6205L21.6658 27.6205L21.6658 26.3799L22.6582 26.3799Z" fill="white"/>
-                        <path d="M28.6113 26.3799L28.6113 27.6205L27.6189 27.6205L27.6189 26.3799L28.6113 26.3799Z" fill="white"/>
-                        <path d="M15.4801 30.9322L16.0066 30.0903L17.0586 30.748L16.5321 31.5899L15.4801 30.9322Z" fill="white"/>
-                        <path d="M16.5329 29.2496L17.0594 28.4077L18.1113 29.0654L17.5848 29.9073L16.5329 29.2496Z" fill="white"/>
-                        <path d="M13.3796 34.2984L13.9054 33.4573L14.957 34.1146L14.4312 34.9558L13.3796 34.2984Z" fill="white"/>
-                        <path d="M14.4274 32.6148L14.9539 31.7729L16.0059 32.4307L15.4794 33.2725L14.4274 32.6148Z" fill="white"/>
-                        <path d="M10.2184 39.348L10.7449 38.5061L11.7969 39.1638L11.2704 40.0057L10.2184 39.348Z" fill="white"/>
-                        <path d="M12.3269 35.9815L12.8527 35.1404L13.9043 35.7977L13.3785 36.6389L12.3269 35.9815Z" fill="white"/>
-                        <path d="M11.2711 37.6651L11.7976 36.8232L12.8496 37.4809L12.3231 38.3228L11.2711 37.6651Z" fill="white"/>
-                        <path d="M15.4821 23.1046L16.5337 22.4465L17.0605 23.2884L16.0089 23.9464L15.4821 23.1046Z" fill="white"/>
-                        <path d="M17.5848 24.1279L18.1113 24.9698L17.0594 25.6275L16.5329 24.7856L17.5848 24.1279Z" fill="white"/>
-                        <path d="M13.3777 19.7371L14.4293 19.0801L14.9551 19.9212L13.9035 20.5783L13.3777 19.7371Z" fill="white"/>
-                        <path d="M14.4293 21.4217L15.481 20.7637L16.0078 21.6055L14.9562 22.2636L14.4293 21.4217Z" fill="white"/>
-                        <path d="M10.2204 14.6886L11.272 14.0305L11.7988 14.8724L10.7472 15.5304L10.2204 14.6886Z" fill="white"/>
-                        <path d="M12.3249 18.0542L13.3765 17.3972L13.9023 18.2384L12.8507 18.8954L12.3249 18.0542Z" fill="white"/>
-                        <path d="M11.2731 16.3719L12.3247 15.7139L12.8516 16.5557L11.7999 17.2138L11.2731 16.3719Z" fill="white"/>
-                        <path d="M35.1895 7.41064L35.1895 22.7945L33.9488 22.7945L33.9488 7.41064L35.1895 7.41064Z" fill="white"/>
-                        <path d="M1.9375 7.41064L1.9375 22.7945L0.696867 22.7945L0.696868 7.41064L1.9375 7.41064Z" fill="white"/>
-                        <path d="M18.0527 0.0908203L18.0527 10.0779L16.8121 10.0779L16.8121 0.0908203L18.0527 0.0908203Z" fill="white"/>
-                        <path d="M20.5312 2.38599L20.5312 11.0704L19.2906 11.0704L19.2906 2.38599L20.5312 2.38599Z" fill="white"/>
-                        <path d="M15.5703 2.38599L15.5703 11.0704L14.3297 11.0704L14.3297 2.38599L15.5703 2.38599Z" fill="white"/>
-                    </svg>
-                </i>
-                <span>Ankaufabwicklung</span>
-            </div>
-        </div>
-    </div>
-    <div class="section calc-section show-mob">
-        <div class="container">
-            <div class="row calc-wrap">
-                <div class="col-xs-12">
-                    <div class="calc-right">
-                        <div class="row calc-right__wrap">
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="calc-right__title-wrap">
-                                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M25.9405 0.790797L29.7342 17.6145L39.6508 3.50452L34.5243 19.9711L50.1673 12.7098L37.4944 24.4071L54.6723 25.9401L37.8486 29.7338L51.9585 39.6503L35.4919 34.5239L42.7533 50.1669L31.056 37.494L29.523 54.6718L25.7293 37.8481L15.8127 51.9581L20.9392 35.4915L5.2962 42.7528L17.9691 31.0555L0.791235 29.5225L17.6149 25.7289L3.50496 15.8123L19.9716 20.9387L12.7102 5.29576L24.4075 17.9687L25.9405 0.790797Z" fill="#CC950C"/>
-                                    </svg>
-                                    <div>Uhren Ankauf</div>
-                                    <span>Machen Sie Ihre Luxusuhren schnell zu Geld.</span>
-                                </div>
-                                <div class="calc-right__watch-wrap">
-                                    <img src="../../images/watch.png" class="lazy" alt="">
-                                    <span>Wir kaufen auch reparaturreife Uhren</span>
-                                    <a href="javascript:void(0)" class="btn btn-tr">mehr erfahren</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <a href="javascript:void(0)" class="calc-right__chart-wrap" rel="nofollow" target="_blank">
-
-                                </a>
-                                <div class="calc-right__contact-wrap">
-                                    <div>Unser Team freut sich auf Ihre Kontaktaufnahme</div>
-                                    <span>Sie können Ihre Wertgegenstände persönlich vorbeibringen oder per Post zusenden</span>
-                                    <a href="javascript:void(0)" class="btn">Kontakt</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-trading">
-        <div class="container">
-            <span class="trading-title">Ihr Edelmetallhandel in der Schweiz</span>
-            <div class="trading-descr">Vertrauen Sie auf unsere Expertise und verkaufen Sie Ihre Edelmetalle zu fairen und tagesaktuellen Preisen. Berechnen Sie vorab den Ankaufswert Ihrer Edelmetalle mit unserem Goldpreisrechner. Sie möchten eine Offerte für Ihre Wertgegenstände bekommen? Nutzen Sie unseren einfachen und sicheren Versand oder besuchen Sie uns in Teufen in unserem Ladengeschäft. Dabei legen wir vom Schweizer Edelmetallhandel großen Wert auf eine nachvollziehbare und sichere Abwicklung.</div>
-            <a href="javascript:void(0)" class="btn btn-tr">Jetzt Versandtasche anfordern</a>
-        </div>
-    </div>
-    <div class="section-order">
+    <!--<div class="section-order">
         <div class="container">
             <div class="row order-wrapper">
                 <div class="col-lg-7 col-md-12">
@@ -687,44 +1032,35 @@ ${require('../parts/header.html')}
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section-tips">
+    </div>-->
+    <div class="section-news">
         <div class="container">
-            <span class="tips-title">Tipps für den Edelmetallverkauf</span>
-            <div class="tips-descr">Damit Sie den besten Erlös für Ihre Wertgegenstände unter fairen Bedingungen erhalten, haben wir Ihnen einige Tipps aufgelistet.</div>
-            <div class="tips-wrapper">
-                <div class="tips-item">
-                    <i>
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.4169 34.8918C21.3442 34.4227 21.1068 33.9951 20.7471 33.6856C20.3874 33.376 19.9294 33.2048 19.4547 33.2027H16.5248V32.5793C16.9847 32.411 17.3552 32.0608 17.549 31.611C17.7425 31.1612 17.7425 30.6515 17.549 30.2017C17.3553 29.7519 16.9847 29.4018 16.5248 29.2335V15.243C16.955 15.1264 17.3438 14.8913 17.6468 14.5642C17.9497 14.2372 18.1544 13.8316 18.2376 13.3935C20.7431 13.7439 22.824 14.6313 24.4241 16.0503C24.8993 16.4691 25.5042 16.7111 26.1368 16.736C26.6229 16.7365 27.0976 16.5907 27.4997 16.3175C27.9015 16.0442 28.2119 15.6564 28.39 15.2043C28.4544 14.9204 28.3033 14.6318 28.0335 14.5228C27.7637 14.4136 27.4546 14.5162 27.3035 14.7651C27.2129 14.9967 27.0544 15.1955 26.849 15.336C26.6436 15.4762 26.4005 15.5515 26.1517 15.5518C25.809 15.5268 25.4835 15.3901 25.2256 15.1627C23.3941 13.539 21.0132 12.5413 18.1608 12.1941C17.9024 11.4533 17.2946 10.8877 16.5371 10.6833V9.89054C16.8491 9.76888 17.117 9.55578 17.306 9.27934C17.495 9.00289 17.5965 8.67582 17.5968 8.34108C17.5968 7.63154 16.8011 6.47378 16.4568 6.01076C16.3465 5.8618 16.1732 5.77274 15.9879 5.77036C15.8024 5.76399 15.6253 5.84828 15.513 5.99591C15.1448 6.46187 14.2901 7.6228 14.2901 8.34394H14.2898C14.2903 8.67896 14.3916 9.00576 14.5806 9.2822C14.7695 9.55864 15.0378 9.77174 15.3497 9.8934V10.6772C14.592 10.8762 13.981 11.436 13.7171 12.1734C10.8644 12.5296 8.48342 13.527 6.65229 15.1419C6.39413 15.3693 6.06891 15.5058 5.72597 15.5307C5.47708 15.5307 5.2343 15.4555 5.02892 15.3153C4.82324 15.1748 4.66501 14.9757 4.57436 14.7441C4.44184 14.4576 4.10841 14.3248 3.81523 14.4417C3.52209 14.5588 3.3718 14.8845 3.47279 15.1836C3.65116 15.6355 3.96153 16.0235 4.36335 16.2967C4.76516 16.57 5.24014 16.7158 5.72596 16.7152C6.35889 16.6903 6.96372 16.4481 7.43896 16.0296C9.03905 14.6105 11.1229 13.7232 13.6255 13.3728H13.6252C13.7084 13.8106 13.9133 14.2165 14.216 14.5435C14.5189 14.8706 14.9077 15.1057 15.3382 15.222V29.2335C14.8781 29.4018 14.5078 29.752 14.314 30.2018C14.1203 30.6516 14.1203 31.1613 14.314 31.6111C14.5078 32.0609 14.8781 32.411 15.3382 32.5793V33.2027H12.5062C12.0325 33.2046 11.575 33.375 11.2156 33.6832C10.856 33.9918 10.6179 34.4179 10.544 34.8858C9.90576 34.9295 9.30806 35.2142 8.87204 35.6822C8.43604 36.1503 8.19432 36.7665 8.19591 37.4061C8.19591 37.5635 8.25846 37.7146 8.36978 37.8259C8.4811 37.9372 8.63218 37.9998 8.78962 37.9998H23.0773C23.2347 37.9998 23.3858 37.9372 23.4971 37.8259C23.6084 37.7146 23.671 37.5635 23.671 37.4061C23.6723 36.7827 23.443 36.1807 23.0269 35.7167C22.6108 35.2523 22.0378 34.9584 21.4178 34.8919L21.4169 34.8918ZM15.3523 30.9078C15.3523 30.6677 15.497 30.4512 15.7189 30.3595C15.9407 30.2675 16.1959 30.3184 16.3658 30.488C16.5355 30.6579 16.5864 30.9131 16.4944 31.135C16.4027 31.3568 16.1861 31.5016 15.946 31.5016C15.6181 31.5016 15.3523 31.2357 15.3523 30.9078ZM15.946 7.40314V7.4034C16.1445 7.69072 16.2951 8.00851 16.3913 8.34431C16.3913 8.60168 16.1827 8.81027 15.9251 8.81027C15.6677 8.81027 15.4591 8.60168 15.4591 8.34431C15.5702 8.00558 15.7366 7.68752 15.9518 7.4034L15.946 7.40314ZM14.7586 12.9601V12.9604C14.7655 12.6542 14.8935 12.3632 15.114 12.1509C15.3348 11.9383 15.6303 11.8217 15.9367 11.8265C16.2429 11.8312 16.5349 11.9566 16.7489 12.1758C16.963 12.3947 17.082 12.6895 17.0796 12.9959C17.0773 13.302 16.954 13.5949 16.7367 13.8109C16.5193 14.0267 16.2257 14.1478 15.9192 14.1478C15.6091 14.1422 15.3136 14.0139 15.0981 13.7905C14.8829 13.5673 14.7649 13.2676 14.7705 12.9575L14.7586 12.9601ZM9.51911 36.8129C9.62751 36.59 9.79608 36.4021 10.006 36.2703C10.2159 36.1386 10.4587 36.0684 10.7065 36.0678H12.0572C12.385 36.0678 12.6509 35.802 12.6509 35.4741C12.6509 35.1463 12.385 34.8804 12.0572 34.8804H11.7603C11.8857 34.5865 12.1738 34.3951 12.4935 34.3935H19.4402C19.762 34.3927 20.053 34.5844 20.1794 34.8804H18.1608C17.833 34.8804 17.5671 35.1463 17.5671 35.4741C17.5671 35.802 17.833 36.0678 18.1608 36.0678H21.1591C21.4069 36.0681 21.6497 36.1381 21.8599 36.2698C22.0698 36.4015 22.2384 36.5897 22.3465 36.8129H9.51911Z" fill="white"/>
-                            <path d="M11.3778 29.204C11.4833 29.0214 11.4838 28.7964 11.3794 28.6132C11.2749 28.4301 11.0812 28.3159 10.8702 28.3135H0.587182C0.376202 28.3159 0.182457 28.4301 0.0780256 28.6132C-0.0266705 28.7964 -0.0258698 29.0214 0.0796159 29.204C1.09184 30.8842 3.30952 31.9706 5.71984 31.9706C8.13015 31.9708 10.3656 30.8754 11.3778 29.204H11.3778ZM5.73754 30.7832V30.7834C4.33992 30.8155 2.97521 30.3588 1.87844 29.4921H9.59664C8.4975 30.3607 7.12906 30.8176 5.72852 30.7834L5.73754 30.7832Z" fill="white"/>
-                            <path d="M1.40076 27.6866C1.6992 27.8205 2.0496 27.6877 2.18452 27.3898L5.72872 19.3513L9.27027 27.3843C9.3307 27.5328 9.44865 27.6504 9.59734 27.7106C9.74577 27.7708 9.91248 27.7684 10.0593 27.7037C10.2059 27.6393 10.3204 27.5182 10.3763 27.3679C10.4325 27.2176 10.4254 27.0512 10.3567 26.9064L6.27206 17.6412C6.17718 17.426 5.96407 17.2871 5.72871 17.2871C5.49362 17.2871 5.28052 17.426 5.18563 17.6412L1.0978 26.9031C1.03393 27.0472 1.02995 27.2108 1.08694 27.3579C1.14366 27.5047 1.25657 27.6232 1.40075 27.6868L1.40076 27.6866Z" fill="white"/>
-                            <path d="M31.8867 28.6015C31.7801 28.4171 31.5829 28.3039 31.3701 28.3047H21.0871C20.8761 28.3071 20.6824 28.421 20.5779 28.6042C20.4735 28.7876 20.474 29.0126 20.5795 29.1953C21.5917 30.8754 23.8094 31.9618 26.2197 31.9618C28.6301 31.9618 30.8565 30.8753 31.86 29.1953C31.9745 29.0163 31.9845 28.79 31.8867 28.6015H31.8867ZM26.2287 30.7805C24.8311 30.8126 23.4663 30.3556 22.3696 29.4892H30.0878C28.991 30.3557 27.626 30.8126 26.2287 30.7805Z" fill="white"/>
-                            <path d="M26.2291 17.2852C25.994 17.2852 25.7809 17.4235 25.6857 17.6385L21.5982 26.9003C21.5295 27.0453 21.5224 27.2117 21.5786 27.362C21.6345 27.512 21.749 27.6332 21.8956 27.6978C22.0424 27.7625 22.2091 27.7649 22.3575 27.7047C22.5062 27.6446 22.6242 27.5269 22.6846 27.3782L26.2291 19.3485L29.7735 27.3816L29.7733 27.3818C29.9061 27.6835 30.2583 27.8202 30.56 27.6874C30.7049 27.6238 30.8186 27.5051 30.8759 27.3575C30.9331 27.2101 30.9297 27.0458 30.8658 26.9008L26.7722 17.6389C26.677 17.424 26.4639 17.2856 26.2291 17.2856L26.2291 17.2852Z" fill="white"/>
-                            <path d="M37.9912 8.4303C37.9809 8.37968 37.9639 8.33091 37.9409 8.28479L37.9231 8.25219H37.9228C37.8971 8.20554 37.8653 8.16261 37.8279 8.12444L29.875 0.177579C29.8379 0.140472 29.796 0.108669 29.7504 0.0824301L29.7178 0.0646718C29.6722 0.0376367 29.6232 0.0166982 29.5723 0.00238543C29.5368 -0.000795144 29.501 -0.000795144 29.4655 0.00238543H11.6543C11.3261 0.00238543 11.0605 0.268231 11.0605 0.596093V11.2828C11.0605 11.6107 11.3261 11.8765 11.6543 11.8765C11.9821 11.8765 12.248 11.6107 12.248 11.2828V1.1898H28.8718V8.53956C28.8718 8.697 28.9343 8.84808 29.0456 8.9594C29.157 9.07071 29.308 9.13327 29.4655 9.13327H36.8037V36.8123H11.657C11.3291 36.8123 11.0633 37.0781 11.0633 37.406C11.0633 37.7338 11.3291 37.9997 11.657 37.9997H37.3974C37.5549 37.9997 37.7059 37.9371 37.8173 37.8258C37.9286 37.7145 37.9911 37.5634 37.9911 37.406V8.53956C37.9946 8.50299 37.9946 8.46641 37.9911 8.42983L37.9912 8.4303ZM30.0593 7.94633V2.03022L35.9757 7.9466L30.0593 7.94633Z" fill="white"/>
-                            <path d="M11.6562 32.805C11.8136 32.805 11.9647 32.7424 12.076 32.6311C12.1874 32.5198 12.2499 32.3687 12.2499 32.2113V30.727C12.2499 30.3991 11.9841 30.1333 11.6562 30.1333C11.3283 30.1333 11.0625 30.3991 11.0625 30.727V32.2113C11.0625 32.3687 11.1251 32.5198 11.2364 32.6311C11.3477 32.7424 11.4988 32.805 11.6562 32.805Z" fill="white"/>
-                            <path d="M11.6562 27.7757C11.8136 27.7757 11.9647 27.7131 12.076 27.6018C12.1874 27.4905 12.2499 27.3394 12.2499 27.1819V15.1416C12.2499 14.8137 11.9841 14.5479 11.6562 14.5479C11.3283 14.5479 11.0625 14.8137 11.0625 15.1416V27.1819C11.0625 27.3394 11.1251 27.4905 11.2364 27.6018C11.3477 27.7131 11.4988 27.7757 11.6562 27.7757Z" fill="white"/>
+            <span class="section-title">Nachrichten und Artikel</span>
+            <a href="javascript:void(0)" class="news-link">
+                Alles Nachrinten
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#CC950C"/>
+                </svg>
+            </a>
+            <a href="javascript:void(0)" class="news-item">
+                <div class="news-item__text">
+                    <span class="news-item__date">23/09/19</span>
+                    <span class="news-item__title">Steven Lovatt Ballon-Hundeskulptur aus Edelstahl</span>
+                    <div class="news-item__descr">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vitae nibh porttitor, lacinia diam</p>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vitae nibh porttitor, lacinia diam nt taciti sociosqu ad litora torquent per cont taciti sociosqu ad litora torquent</p>
+                    </div>
+                    <div class="news-item__more">
+                        LESEN MEHR
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.14563 14.5195L9.29266 10.3725L5.14563 6.22546L6.06719 5.3039L11.1358 10.3725L6.06719 15.4411L5.14563 14.5195ZM9.75344 14.5195L13.9005 10.3725L9.75344 6.22546L10.675 5.3039L15.7436 10.3725L10.675 15.4411L9.75344 14.5195Z" fill="#000"/>
                         </svg>
-                    </i>
-                    <span>Preise vergleichen</span>
-                    <div>Verkaufen Sie Ihre Edelmetalle nicht an den Erstbesten. Beobachten Sie stattdessen die aktuelle Marktsituation und die tagesaktuellen Ankaufspreise, zum Beispiel im Börsenfenster auf unserer Internetseite.</div>
+                    </div>
                 </div>
-                <div class="tips-item">
-                    <i>
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.05984 21.4713C9.35613 21.2663 9.50678 20.9078 9.44568 20.5526L8.96972 17.6724L10.9824 15.638C11.2293 15.3889 11.3155 15.0223 11.2058 14.6892C11.0959 14.3558 10.8088 14.1125 10.4621 14.0587L7.704 13.643L6.46527 11.0403C6.31211 10.7167 5.98625 10.5103 5.62829 10.5103C5.27035 10.51 4.94421 10.7164 4.79131 11.0401L3.55258 13.643L0.794516 14.0587H0.794237C0.447731 14.1122 0.160376 14.3558 0.0507449 14.6889C-0.0589006 15.022 0.0273101 15.3886 0.274214 15.638L2.28686 17.6724L1.81062 20.5527C1.74952 20.9033 1.8946 21.2579 2.18391 21.4652C2.4735 21.6725 2.856 21.6956 3.16845 21.5246L5.62826 20.1838L8.08807 21.5246H8.08779C8.39551 21.694 8.7727 21.6733 9.05976 21.4713L9.05984 21.4713ZM5.62828 18.9002C5.47372 18.9002 5.32139 18.9392 5.18553 19.0132L3.14782 20.1241L3.54426 17.7265L3.54454 17.7268C3.59336 17.4308 3.49767 17.1295 3.28731 16.916L1.58049 15.1908L3.91281 14.8395C4.21775 14.7932 4.47972 14.5985 4.61196 14.3198L5.62828 12.1841L6.6446 14.3198C6.77684 14.5985 7.03881 14.7932 7.34403 14.8395L9.67578 15.191L7.96917 16.9157C7.75882 17.1292 7.66312 17.4305 7.71194 17.7262L8.10839 20.1244L6.06982 19.0129H6.0701C5.93451 18.939 5.78274 18.9002 5.62818 18.9002L5.62828 18.9002Z" fill="white"/>
-                            <path d="M39.949 14.6808C39.8388 14.3505 39.5526 14.11 39.2083 14.0587L36.4503 13.643L35.2115 11.0403H35.2113C35.0584 10.7167 34.7325 10.5103 34.3743 10.5103C34.0163 10.51 33.6905 10.7164 33.5373 11.0401L32.2986 13.643L29.5405 14.0587C29.194 14.1122 28.9066 14.3558 28.797 14.6889C28.6871 15.022 28.7733 15.3886 29.0202 15.638L31.0328 17.6727L30.5566 20.5526H30.5569C30.4955 20.9033 30.6406 21.2579 30.9302 21.4652C31.2195 21.6725 31.6023 21.6956 31.9144 21.5246L34.3742 20.1838L36.8341 21.5246C37.1465 21.694 37.5282 21.6703 37.8172 21.4632C38.106 21.2565 38.2516 20.9028 38.1919 20.5526L37.7157 17.6724L39.7283 15.638C39.978 15.3869 40.0637 15.0159 39.949 14.6808L39.949 14.6808ZM36.7153 16.9158C36.505 17.1292 36.4095 17.4305 36.4581 17.7263L36.8545 20.1245L34.816 19.013H34.8162C34.5406 18.8623 34.2072 18.8626 33.9318 19.0133L31.8941 20.1242L32.2906 17.7266V17.7269C32.3394 17.4309 32.2437 17.1296 32.0333 16.9161L30.3267 15.1909L32.659 14.8394V14.8396C32.9637 14.7933 33.2257 14.5986 33.3579 14.3199L34.3742 12.1843L35.3906 14.3199C35.5228 14.5986 35.785 14.7933 36.09 14.8396L38.4217 15.1912L36.7153 16.9158Z" fill="white"/>
-                            <path d="M16.6599 7.16243L16.1837 10.0424C16.1226 10.3931 16.2677 10.748 16.557 10.9552C16.8466 11.1625 17.2291 11.1854 17.5415 11.0147L20.0013 9.6736L22.4612 11.0144V11.0147C22.7733 11.184 23.1553 11.16 23.4441 10.9533C23.7331 10.7463 23.8787 10.3928 23.819 10.0424L23.3428 7.1624L25.3554 5.12776C25.6023 4.87862 25.6885 4.51203 25.5789 4.17893C25.4692 3.84582 25.1819 3.60227 24.8351 3.54842L22.077 3.13273L20.8383 0.530079C20.6854 0.206457 20.3593 0 20.0013 0C19.6434 0 19.3175 0.206449 19.1644 0.529801L17.9256 3.13274L15.1676 3.54843C14.8208 3.60227 14.5337 3.84583 14.4238 4.17894C14.3141 4.51206 14.4004 4.87864 14.6473 5.12777L16.6599 7.16243ZM18.2859 4.32931H18.2862C18.5908 4.28299 18.8528 4.08826 18.9851 3.80983L20.0014 1.67392L21.0177 3.80955C21.1499 4.08825 21.4122 4.28327 21.7171 4.3293L24.0489 4.68055L22.3423 6.40551V6.40579C22.1319 6.61921 22.0362 6.92024 22.085 7.21598L22.4815 9.61416L20.4429 8.50271H20.4432C20.1676 8.35233 19.8342 8.35233 19.5585 8.50326L17.5208 9.61422L17.9172 7.21661H17.9175C17.9663 6.92089 17.8706 6.61958 17.6603 6.40584L15.9537 4.6806L18.2859 4.32931Z" fill="white"/>
-                            <path d="M3.28975 5.40376L3.01105 7.0883C2.96027 7.39547 3.08917 7.70458 3.34276 7.88479C3.59664 8.06529 3.93087 8.0851 4.20424 7.93612L5.62845 7.1597L7.05322 7.93641H7.05294C7.32635 8.0851 7.66086 8.06502 7.91443 7.88451C8.16803 7.70429 8.29664 7.39489 8.24558 7.08774L7.96716 5.40378L9.14253 4.21583V4.21555C9.35791 3.99766 9.43296 3.6771 9.33614 3.38614C9.23961 3.09544 8.98797 2.88313 8.68471 2.83737L7.08445 2.59605L6.36353 1.08142C6.2285 0.79769 5.94254 0.617188 5.62839 0.617188C5.31425 0.616909 5.02801 0.79769 4.89297 1.08142L4.17233 2.59633L2.57207 2.83766H2.57179C2.26881 2.88341 2.01689 3.09545 1.92036 3.38643C1.82382 3.67741 1.89887 3.99797 2.11453 4.21613L3.28975 5.40376ZM4.59069 3.78394C4.85852 3.74404 5.08896 3.5733 5.2053 3.32863L5.62853 2.43922L6.05203 3.32891H6.05175C6.16781 3.57331 6.39798 3.74377 6.66553 3.78394L7.67099 3.93544L6.92357 4.69093C6.74056 4.87674 6.65742 5.13898 6.69955 5.39649L6.86973 6.42459L6.01825 5.96036C5.77553 5.82728 5.48148 5.82728 5.23876 5.96036L4.38728 6.42459L4.55746 5.39649V5.39621C4.59959 5.1387 4.51617 4.87618 4.33288 4.69037L3.58603 3.93545L4.59069 3.78394Z" fill="white"/>
-                            <path d="M32.0357 5.40406L31.757 7.08859C31.7062 7.39576 31.8351 7.70488 32.089 7.88508C32.3426 8.06558 32.6771 8.08539 32.9503 7.93641L34.3745 7.16L35.7993 7.9367C36.0727 8.0854 36.4069 8.06531 36.6605 7.88481C36.9141 7.70458 37.0427 7.39518 36.992 7.08803L36.7133 5.40379L37.8886 4.21584C38.1043 3.99795 38.1791 3.67739 38.0825 3.38643C37.986 3.09544 37.7341 2.88341 37.4311 2.83766L35.8308 2.59633L35.1099 1.08142V1.0817C34.9749 0.797968 34.6886 0.617466 34.3745 0.617188C34.0603 0.617188 33.7744 0.797968 33.6393 1.0817L32.9184 2.59661L31.3182 2.83794V2.83766C31.0149 2.88369 30.7633 3.09572 30.6664 3.38671C30.5699 3.67769 30.645 3.99825 30.8606 4.2164L32.0357 5.40406ZM33.3367 3.78423C33.6048 3.74433 33.8352 3.57359 33.9513 3.32892L34.3745 2.43952L34.798 3.32921C34.9141 3.5736 35.144 3.74406 35.4115 3.78424L36.417 3.93573L35.6695 4.69122H35.6698C35.4868 4.87703 35.4034 5.13927 35.4455 5.39678L35.6157 6.42488L34.7642 5.96065C34.5215 5.82757 34.2274 5.82757 33.985 5.96065L33.1335 6.42488L33.3037 5.39678L33.3034 5.3965C33.3456 5.13899 33.2621 4.87647 33.0788 4.69066L32.332 3.93574L33.3367 3.78423Z" fill="white"/>
-                            <path d="M28.3832 17.198L23.3025 16.4871L21.0335 12.0601C20.901 11.8082 20.6806 11.6135 20.4141 11.5128C20.148 11.4118 19.8539 11.4118 19.5878 11.5128C19.3214 11.6135 19.101 11.8082 18.9684 12.0601L16.6994 16.4871L11.6187 17.198C11.405 17.2256 11.2033 17.3132 11.0373 17.4507C10.8713 17.5885 10.748 17.7704 10.6813 17.9755C10.6158 18.1764 10.6093 18.392 10.6629 18.5965C10.7162 18.801 10.8272 18.9857 10.9826 19.1291L14.6485 22.5702L14.2889 24.5895C14.4532 24.7273 14.6033 24.8813 14.7364 25.0495L15.7279 23.6345L15.8903 22.7225V22.7222C15.9564 22.3509 15.8292 21.9711 15.5527 21.7145L12.0124 18.3918L16.9209 17.7049C17.2931 17.6544 17.617 17.4262 17.79 17.0931L20.001 12.7796L22.2119 17.0931C22.3846 17.4262 22.7088 17.6544 23.0807 17.7049L27.9893 18.3918L24.4495 21.7143C24.1727 21.971 24.0455 22.3504 24.1114 22.722L24.9508 27.4346L22.2756 26.0801C22.5273 26.5089 22.671 26.9927 22.6941 27.4895C22.8696 27.617 23.0311 27.7632 23.1759 27.925L24.5491 28.6203H24.5489C24.7419 28.7188 24.9587 28.7617 25.1746 28.7442C25.3906 28.7269 25.5973 28.6499 25.7722 28.5215C25.9424 28.3993 26.0746 28.2317 26.1536 28.0375C26.2325 27.8433 26.2549 27.6307 26.218 27.4243L25.3535 22.5699L29.0197 19.1288V19.1291C29.1751 18.9857 29.2858 18.801 29.3391 18.5965C29.3927 18.392 29.3863 18.1763 29.3207 17.9755C29.254 17.7704 29.1307 17.5885 28.9647 17.4507C28.7987 17.3131 28.597 17.2255 28.3833 17.1979L28.3832 17.198Z" fill="white"/>
-                            <path d="M23.2902 31.1922C23.0873 31.0474 22.8569 30.9459 22.6133 30.8937C22.7846 30.4116 22.747 29.8799 22.5093 29.4271C22.2716 28.974 21.8556 28.6409 21.3615 28.5081C21.5245 28.0313 21.4843 27.5085 21.2499 27.0627C21.0156 26.6166 20.608 26.2868 20.1231 26.1504L21.5368 24.1051L21.5365 24.1054C21.8046 23.709 21.9064 23.2235 21.8208 22.7528C21.7348 22.2822 21.4681 21.864 21.0776 21.5878C20.6842 21.3049 20.1934 21.1925 19.7161 21.2759C19.2505 21.3563 18.8373 21.6213 18.5695 22.0105L14.3894 28.057C14.3774 27.3855 14.1855 26.7293 13.8331 26.1576C13.5561 25.7553 13.1276 25.4827 12.646 25.4018C12.2398 25.2928 11.806 25.3678 11.4601 25.6069C10.7258 26.1046 10.357 27.2206 10.3321 29.0181L9.82772 35.3314H9.828C9.59114 35.2371 9.33084 35.2187 9.08308 35.2786C8.83562 35.3383 8.61243 35.4734 8.44447 35.665L7.504 36.7311H7.50428C7.28137 36.9841 7.16977 37.3164 7.19489 37.6525C7.21999 37.9887 7.37957 38.3006 7.63764 38.5177L9.11848 39.7608C9.38324 39.9818 9.7769 39.9463 9.99782 39.6816C10.2188 39.4168 10.1833 39.0232 9.91886 38.8022L8.43802 37.5591L9.37849 36.4928L13.3803 39.8521H13.38C13.6448 40.0727 14.0381 40.0373 14.2591 39.7728C14.4801 39.5086 14.4449 39.115 14.1804 38.894L11.0066 36.2296L11.5763 29.0967C11.5774 29.0828 11.5783 29.0686 11.5783 29.0546C11.6006 27.217 12.0132 26.7541 12.1393 26.6562C12.3514 26.4913 12.6892 26.7025 12.817 26.8824C13.2904 27.5475 13.1858 29.2307 13.0067 30.1477L13.007 30.1474C12.957 30.4404 13.1141 30.7297 13.387 30.8474C13.7086 30.9537 14.0596 30.8086 14.2127 30.5065L19.5936 22.723C19.7741 22.4837 20.1125 22.4323 20.3561 22.607C20.6133 22.783 20.6825 23.1323 20.512 23.3932L15.0495 31.2966C14.8533 31.5804 14.9237 31.9693 15.2068 32.1665C15.5132 32.3576 15.9149 32.2837 16.1334 31.9961L19.2042 27.5554C19.2826 27.441 19.4042 27.3632 19.5409 27.3398C19.6902 27.3141 19.8436 27.3504 19.9658 27.4396C20.223 27.616 20.292 27.9652 20.1212 28.2261L17.0138 32.7094C16.9193 32.8453 16.8821 33.0132 16.9114 33.1762C16.9407 33.3394 17.0334 33.4839 17.1695 33.5785C17.3054 33.6731 17.4736 33.7096 17.6365 33.6803C17.7995 33.6507 17.9443 33.5578 18.0386 33.4217L20.4948 29.8802V29.8799C20.5724 29.7873 20.6803 29.7248 20.7994 29.7036C20.949 29.6779 21.1024 29.7139 21.2252 29.8032C21.4824 29.9798 21.5516 30.3299 21.3806 30.591L18.9865 34.0525C18.8814 34.2332 18.8616 34.4509 18.9316 34.6475C19.0019 34.8445 19.1551 35.0002 19.3506 35.0736C19.6146 35.1528 19.8997 35.059 20.0654 34.8389L21.8063 32.3269C21.885 32.2131 22.0063 32.1355 22.1428 32.1124C22.2923 32.0867 22.446 32.1227 22.5688 32.212C22.8271 32.3897 22.8949 32.7418 22.7214 33.0029L18.6403 39.0217V39.022C18.5471 39.1587 18.512 39.3267 18.5427 39.4893C18.5733 39.652 18.6676 39.7957 18.8043 39.8888C19.0889 40.0827 19.477 40.0094 19.6712 39.7248L23.7492 33.7104C24.017 33.3139 24.1191 32.8284 24.0332 32.3578C23.9475 31.8871 23.6808 31.4687 23.2903 31.1925L23.2902 31.1922Z" fill="white"/>
-                        </svg>
-                    </i>
-                    <span>Darstellung der Ankaufspreise beachten</span>
-                    <div>Achten Sie auf konkrete Ankaufspreise. Undurchsichtige „bis zu“-Angaben sollten Sie vermeiden. Nur so erhalten Sie den Erlös, der Ihnen tatsächlich zusteht.</div>
+                <div class="news-item__pic">
+                    <img src="../../images/news-pic-01.jpg" class="lazy" alt="">
                 </div>
-            </div>
+            </a>
         </div>
     </div>
     <div class="section-benefits">

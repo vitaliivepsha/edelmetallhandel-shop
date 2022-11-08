@@ -1,120 +1,132 @@
-.section-purchase{
-  background-color: #F5F5F5;
-  padding-top: 50px;
-  padding-bottom: 85px;
-  @include bp(xs) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+.categories-section{
+  background: #F9F9F9;
+  padding-top: 92px;
+  padding-bottom: 105px;
+  margin-bottom: 50px;
+}
+
+.categories-section__title{
+  position: relative;
+  width: 528px;
+  height: 137px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%/50%;
+  border: 1px solid $main;
+  margin: 0 auto 94px;
+  >svg{
+    position: absolute;
+    right: 118px;
+    top: -21px;
+  }
+  .section-title{
+    &:before{
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1px solid $main;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 28px);
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 65px;
+      background-color: $main;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 37px);
+    }
   }
 }
 
-.purchase-title__wrapper{
-  margin-bottom: 28px;
-  @include bp(xs) {
-    margin-bottom: 13px;
-  }
-  >i{
-    width: 87px;
-    height: 87px;
-    border-radius: 50%;
+.categories-slider__wrapper{
+  margin: 0 -10px;
+  position: relative;
+  .slider-nav{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $main;
-    margin: 0 auto 24px;
-    @include bp(xs) {
+    position: absolute;
+    right: 10px;
+    bottom: calc(100% + 45px);
+    .slider-arrow{
       width: 45px;
       height: 45px;
-      margin-bottom: 14px;
-    }
-    svg{
-      margin-top: -3px;
-      @include bp(xs) {
-        width: 18px;
-        height: 22px;
-        margin-top: -1px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1px solid $main;
+      transition: linear .2s;
+      &:hover{
+        background-color: $main;
+        svg{
+          line{
+            stroke: #fff;
+          }
+          path{
+            fill: #fff;
+          }
+        }
+      }
+      &.slick-disabled{
+        opacity: .5;
+        pointer-events: none;
+      }
+      &.slick-hidden{
+        display: none;
+      }
+      +.slider-arrow{
+        margin-left: 20px;
       }
     }
   }
-  >span{
-    display: block;
-    font-size: 48px;
-    line-height: 100%;
-    text-align: center;
-    font-family: $title;
-    @include bp(xs) {
-      font-size: 28px;
+}
+
+.categories-slider{
+  .slide{
+    padding: 0 10px;
+  }
+}
+
+.categories-slider__item{
+  display: block;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    .categories-slider__pic{
+      opacity: .8;
+    }
+    .categories-slider__title{
+      color: $main;
     }
   }
 }
 
-.purchase-wrapper{
-  display: flex;
-  justify-content: center;
-  @include bp(lg) {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.purchase-block{
-  background: #fff;
-  border: 1px solid $main;
+.categories-slider__pic{
+  width: 100%;
+  height: 120px;
   border-radius: 3px;
-  width: 400px;
-  height: 200px;
-  margin: 0 10px;
-  position: relative;
-  padding: 40px 45px;
-  @include bp(xs) {
+  overflow: hidden;
+  transition: linear .2s;
+  img{
     width: 100%;
-    border: none;
-    padding: 40px 43px 50px;
+    height: 100%;
+    object-fit: cover;
   }
-  +.purchase-block{
-    @include bp(lg) {
-      margin-top: 20px;
-    }
-  }
-  >span{
-    display: block;
-    font-family: $title;
-    font-size: 21px;
-    line-height: 100%;
-    color: $main;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 16px;
-  }
-  >div{
-    font-size: 16px;
-    line-height: 140%;
-    text-transform: uppercase;
-    width: 167px;
-    position: relative;
-    z-index: 1;
-    a{
-      color: #000;
-      text-decoration: underline;
-      &:hover, &:focus{
-        color: $main;
-        text-decoration: none
-      }
-    }
-  }
-  >img{
-    position: absolute;
-    right: 30px;
-    bottom: 40px;
-    max-width: 122px;
-    object-fit: contain;
-    @include bp(xs) {
-      bottom: auto;
-      top: 25px;
-      right: 13px;
-      width: 82px;
-      max-width: 82px;
-      height: 67px;
-    }
-  }
+}
+
+.categories-slider__title{
+  display: block;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
 }
