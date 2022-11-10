@@ -71,11 +71,17 @@
   height: 100%;
   border-radius: 3px;
   background: #F9F9F9;
+  @include bp(xl) {
+    padding: 50px 30px;
+  }
 }
 
 .services-block{
   +.services-block{
     margin-top: 80px;
+    @include bp(xl) {
+      margin-top: 45px;
+    }
   }
 }
 
@@ -138,12 +144,18 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: -24px;
+  margin: 0 -24px -24px;
+  @include bp(lg) {
+    margin: 0 -15px -15px;
+  }
 }
 
 .services-item{
   padding: 0 24px 24px;
   text-decoration: none;
+  @include bp(lg) {
+    padding: 0 15px 15px;
+  }
   &:hover{
     text-decoration: none;
     >span{
@@ -175,6 +187,9 @@
     text-transform: uppercase;
     color: #000;
     transition: linear .2s;
+    @include bp(lg) {
+      font-size: 18px;
+    }
     svg{
       position: relative;
     }

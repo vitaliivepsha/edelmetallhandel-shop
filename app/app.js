@@ -68,15 +68,17 @@ $(function () {
     var header = $('.header'),
         scrollPrev = 0;
 
-    $(window).scroll(function () {
-        var scrolled = $(window).scrollTop();
-        if (scrolled > 200) {
-            header.addClass('fixed');
-        } else {
-            header.removeClass('fixed');
-        }
-        scrollPrev = scrolled;
-    });
+    if ($(window).width() > 1439) {
+        $(window).scroll(function () {
+            var scrolled = $(window).scrollTop();
+            if (scrolled > 200) {
+                header.addClass('fixed');
+            } else {
+                header.removeClass('fixed');
+            }
+            scrollPrev = scrolled;
+        });
+    }
 
     // truncate text
 
@@ -98,7 +100,6 @@ $(function () {
             $wrap.removeClass('filled');
         }
     });
-
 
     // checkbox change
 
@@ -129,6 +130,18 @@ $(function () {
         var files = $("#upload-files")[0].files;
         for (var i = 0; i < files.length; i++) {
             $("#upload-preview").prepend('<div class="file"><span>' + files[i].name + '</span></div>');
+        }
+    });
+
+    // fixed controls
+
+    $(window).on('scroll', function() {
+        var wh = $(window).height();
+        if ($(this).scrollTop() > wh){
+            $('.fixed-controls').addClass('active');
+        }
+        else{
+            $('.fixed-controls').removeClass('active');
         }
     });
 

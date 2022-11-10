@@ -110,6 +110,9 @@
   border-radius: 3px;
   overflow: hidden;
   transition: linear .2s;
+  @include bp(xxxl) {
+    height: calc(26vw - 50px);
+  }
   img{
     width: 100%;
     height: 100%;

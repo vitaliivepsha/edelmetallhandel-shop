@@ -1,15 +1,15 @@
 
 @mixin bp($point) {
   @if $point == xxxl {
-    @media only screen and (max-width: 1919px) {
+    @media only screen and (max-width: 1739px) {
       @content;
     }
   } @else if $point == xxl {
-    @media only screen and (max-width: 1439px) {
+    @media only screen and (max-width: 1599px) {
       @content;
     }
   } @else if $point == xl {
-    @media only screen and (max-width: 1249px) {
+    @media only screen and (max-width: 1439px) {
       @content;
     }
   } @else if $point == lg {

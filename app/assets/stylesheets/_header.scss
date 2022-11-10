@@ -10,19 +10,28 @@
   @include bp(md) {
     box-shadow: 0 0 20px rgba(70, 70, 70, 0.2);
   }
-  /*@media only screen and (max-height: 859px) {
+  @media only screen and (max-height: 859px) {
     .header-main{
       height: 100px;
       @include bp(md) {
         height: 55px;
       }
     }
-  }*/
+  }
   &.fixed {
     .header-main{
       height: 100px;
       @include bp(md) {
         height: 55px;
+      }
+      .header-logo{
+        margin-right: 72px;
+        @include bp(xl) {
+          margin-right: 30px;
+        }
+        @include bp(lg) {
+          margin-right: 25px;
+        }
       }
       .header-text{
         top: 18px;
@@ -33,6 +42,14 @@
           display: block;
           font-size: 32px;
           line-height: 34px;
+          @include bp(xl) {
+            font-size: 24px;
+            line-height: 30px;
+          }
+          @include bp(lg) {
+            font-size: 18px;
+            line-height: 22px;
+          }
           @include bp(md) {
             font-size: 11px;
             line-height: 13px;
@@ -53,17 +70,12 @@
         }
       }
     }
-    /*+.header-spacer{
+    +.header-spacer{
       height: 150px;
       @include bp(md) {
         height: 55px;
       }
-    }*/
-   /* &.top{
-      +.header-spacer{
-        height: 50px;
-      }
-    }*/
+    }
   }
 }
 
@@ -71,8 +83,11 @@
   height: 160px;
   position: relative;
   transition: linear .3s;
-  @include bp(xxl) {
+  @include bp(xxxl) {
     height: 140px;
+  }
+  @include bp(xl) {
+    height: 100px;
   }
   @include bp(md) {
     height: 55px;
@@ -82,7 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: inherit;
+    height: 100%;
     z-index: 1;
   }
 }
@@ -102,17 +117,25 @@
 .header-left{
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .header-logo{
   display: flex;
   height: 136px;
   max-width: 178px;
-  max-height: calc(100% - 24px);
-  left: 15px;
-  top: 13px;
+  max-height: calc(100% - 10px);
   transition: linear .3s;
   margin-right: 122px;
+  @include bp(xxxl) {
+    margin-right: 72px;
+  }
+  @include bp(xl) {
+    margin-right: 30px;
+  }
+  @include bp(lg) {
+    margin-right: 25px;
+  }
   @include bp(md) {
     width: 68px;
     height: 52px;
@@ -137,8 +160,17 @@
     min-width: max-content;
     font-weight: 700;
     color: $text;
+    @include bp(xxl) {
+      font-size: 30px;
+      line-height: 34px;
+    }
+    @include bp(xl) {
+      font-size: 24px;
+      line-height: 30px;
+    }
     @include bp(lg) {
-      font-size: 36px;
+      font-size: 18px;
+      line-height: 22px;
     }
     @include bp(md) {
       font-size: 11px;
@@ -154,6 +186,10 @@
     transition: linear .3s;
     font-size: 21px;
     line-height: 25px;
+    @include bp(xl) {
+      font-size: 16px;
+      line-height: 20px;
+    }
     @include bp(md) {
       margin: 2px 0 0;
       justify-content: flex-start;
@@ -198,8 +234,17 @@
   color: #000;
   text-decoration: underline;
   text-transform: uppercase;
+  @include bp(lg) {
+    font-size: 13px;
+  }
+  @include bp(md) {
+    display: none;
+  }
   svg{
     margin-right: 5px;
+    @include bp(lg) {
+      margin-right: 3px;
+    }
   }
   &:hover{
     color: $main;
@@ -214,6 +259,15 @@
 .header-info__wrapper{
   position: relative;
   margin-left: 72px;
+  @include bp(xxl) {
+    margin-left: 30px;
+  }
+  @include bp(lg) {
+    margin-left: 25px;
+  }
+  @include bp(md) {
+    display: none;
+  }
 }
 
 .header-info{
@@ -247,10 +301,14 @@
 .header-search__wrapper{
   position: relative;
   margin-left: 26px;
+  @include bp(lg) {
+    margin-left: 22px;
+  }
 }
 
 .header-search__btn{
   cursor: pointer;
+  display: flex;
   &:hover{
     svg{
       path{
@@ -267,6 +325,7 @@
 
 .header-cart__btn{
   cursor: pointer;
+  display: flex;
   &:hover{
     svg{
       path{
@@ -295,6 +354,9 @@
       font-size: 18px;
       line-height: 140%;
       text-transform: uppercase;
+      @include bp(xl) {
+        font-size: 16px;
+      }
       >li{
         display: flex;
         position: relative;
@@ -323,6 +385,63 @@
             }
           }
         }
+
+        &.menu-item-has-children {
+          transition: all linear 0.2s;
+          >a {
+            position: relative;
+            padding-right: 40px;
+            cursor: default;
+            &:after {
+              content: '';
+              position: absolute;
+              top: 19px;
+              right: 18px;
+              width: 9px;
+              height: 9px;
+              -webkit-mask: url('../images/icons/arrow-down-sm.svg');
+              mask: url('../images/icons/arrow-down-sm.svg');
+              -webkit-mask-position: center;
+              mask-position: center;
+              -webkit-mask-repeat: no-repeat;
+              mask-repeat: no-repeat;
+              -webkit-mask-size: contain;
+              mask-size: contain;
+              background: $text;
+            }
+          }
+          &:hover {
+            background-color: #cc950c;
+            > a{
+              &:after {
+                background: #fff;
+                transform: scale(1, -1);
+              }
+            }
+          }
+        }
+        &.more{
+          display: none;
+          @include bp(lg) {
+            display: flex;
+            flex: 1 0 auto;
+          }
+          >ul{
+            left: auto;
+            right: 0;
+            >li{
+              display: none;
+              &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3){
+                display: block;
+              }
+            }
+          }
+        }
+        &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4){
+          @include bp(lg) {
+            display: none;
+          }
+        }
         >a{
           display: flex;
           align-items: center;
@@ -331,6 +450,9 @@
           height: 50px;
           padding: 0 15px;
           color: #000;
+          @include bp(xl) {
+            padding: 0 10px;
+          }
           &:hover{
             background-color: $main;
             color: #fff;
@@ -347,6 +469,10 @@
           text-transform: uppercase;
           padding: 10px 0;
           min-width: 200px;
+          box-shadow: 0 2px 10px 1px rgba(#000, 0.15);
+          @include bp(xl) {
+            font-size: 16px;
+          }
           >li{
             &.current-menu-item{
               >a{
@@ -377,6 +503,9 @@
   display: flex;
   padding: 0 15px;
   align-items: center;
+  @include bp(xl) {
+    padding: 0 10px;
+  }
   span{
     margin: 0 5px;
     font-size: 18px;
@@ -384,6 +513,9 @@
     color: #000;
     transition: linear .2s;
     text-transform: uppercase;
+    @include bp(xl) {
+      font-size: 16px;
+    }
     +svg{
       position: relative;
       top: -2px;
@@ -405,15 +537,18 @@
   width: 100%;
   height: 210px;
   transition: linear .3s;
-  /*@media only screen and (max-height: 859px) {
+  @media only screen and (max-height: 859px) {
     height: 150px;
   }
-  @include bp(xxl) {
+  @include bp(xxxl) {
     height: 190px;
     @media only screen and (max-height: 859px) {
       height: 150px;
     }
-  }*/
+  }
+  @include bp(xl) {
+    height: 150px;
+  }
   @include bp(md) {
     height: 55px;
   }
@@ -432,7 +567,7 @@
   position: relative;
   background-color: transparent;
   border: none;
-  margin-left: -5px;
+  margin-left: 25px;
   @include bp(md) {
     display: flex;
   }

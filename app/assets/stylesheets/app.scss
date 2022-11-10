@@ -30,7 +30,6 @@ body {
       display: block;
     }
   }
-
   &.hidden-header {
     .investment-chart {
       top: 20px;
@@ -39,6 +38,7 @@ body {
       }
     }
   }
+
 }
 
 ol,
@@ -592,6 +592,7 @@ textarea:-webkit-autofill:hover {
 @import "main/section-6";
 @import "main/section-7";
 @import "main/section-8";
+@import "main/section-9";
 
 // Footer
 @import "footer";
