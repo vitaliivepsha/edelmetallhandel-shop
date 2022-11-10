@@ -31,6 +31,9 @@
   justify-content: space-between;
   padding: 70px 0;
   position: relative;
+  @include bp(lg) {
+    padding: 45px 0;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -62,6 +65,9 @@
   max-width: 50%;
   position: relative;
   padding: 47px 70px 0;
+  @include bp(lg) {
+    padding: 24px 45px 0;
+  }
   .section-title{
     margin-bottom: 30px;
   }

@@ -28,14 +28,6 @@ body {
       display: block;
     }
   }
-  &.hidden-header{
-    .investment-chart{
-      top: 20px;
-      @include bp(md) {
-        top: 20px;
-      }
-    }
-  }
 }
 
 ol,
@@ -544,6 +536,7 @@ textarea:-webkit-autofill:hover {
 @import "main/section-6";
 @import "main/section-7";
 @import "main/section-8";
+@import "main/section-9";
 
 // Footer
 @import "footer";

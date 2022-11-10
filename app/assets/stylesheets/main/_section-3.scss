@@ -114,6 +114,15 @@
   border-radius: 3px;
   overflow: hidden;
   transition: linear .2s;
+  @include bp(xxxl) {
+    height: calc(8.6vw - 30px);
+  }
+  @include bp(xxl) {
+    height: calc(10.4vw - 32px);
+  }
+  @include bp(lg) {
+    height: calc(13.2vw - 35px);
+  }
   img{
     width: 100%;
     height: 100%;

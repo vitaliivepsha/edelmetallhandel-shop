@@ -7,10 +7,28 @@
   justify-content: space-between;
   margin-top: 20px;
   height: 680px;
+  @include bp(xxxl) {
+    height: calc(47.1vw - 140px);
+  }
+  @include bp(xxl) {
+    height: calc(48.2vw - 140px);
+  }
+  @include bp(lg) {
+    height: calc(50.9vw - 140px);
+  }
+  @include bp(md) {
+    height: auto;
+    flex-direction: column;
+  }
 }
 
 .main-left{
   width: calc(41.5% - 10px);
+  @include bp(md) {
+    width: 100%;
+    margin-bottom: 20px;
+    height: calc(60vw - 140px);
+  }
 }
 
 .main-right{
@@ -18,6 +36,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include bp(md) {
+    width: 100%;
+  }
 }
 
 .main-item{
@@ -55,6 +76,12 @@
     color: #fff;
     font-family: $title;
     transition: linear .2s;
+    @include bp(xl) {
+      font-size: 54px;
+    }
+    @include bp(lg) {
+      font-size: 44px;
+    }
     svg{
       margin-left: 10px;
       position: relative;
@@ -67,22 +94,49 @@
     span{
       right: 40px;
       bottom: 40px;
+      @include bp(lg) {
+        right: 20px;
+        bottom: 20px;
+      }
     }
   }
   &.right-top{
     width: 100%;
     height: calc(50% - 10px);
+    @include bp(md) {
+      margin-bottom: 20px;
+      height: calc(60vw - 140px);
+    }
     span{
       right: 40px;
       top: 40px;
+      @include bp(lg) {
+        right: 20px;
+        top: 20px;
+      }
+      @include bp(md) {
+        top: auto;
+        bottom: 20px;
+      }
     }
   }
   &.right-bot{
     width: 100%;
     height: calc(50% - 10px);
+    @include bp(md) {
+      height: calc(60vw - 140px);
+    }
     span{
       right: 40px;
       top: 40px;
+      @include bp(lg) {
+        right: 20px;
+        top: 20px;
+      }
+      @include bp(md) {
+        top: auto;
+        bottom: 20px;
+      }
     }
   }
 }
@@ -96,6 +150,9 @@
   background: #F9F9F9;
   border-radius: 3px;
   margin-top: 20px;
+  @include bp(md) {
+    gap: 60px;
+  }
 }
 
 .main-bot__item{
@@ -113,10 +170,6 @@
     line-height: 100%;
     text-transform: uppercase;
   }
-}
-
-.section-title{
-
 }
 
 .main-form{
