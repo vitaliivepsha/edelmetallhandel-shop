@@ -62,6 +62,7 @@ $(function () {
         e.preventDefault();
     });
 
+
     // fixed header
 
     var header = $('.header'),
@@ -283,20 +284,46 @@ $(function () {
 
     // shop =====
 
+    // слацдер на странице товара
     $(window).resize(function () {
         $(".lightgallery").lightGallery({
             tumbnail: true
         });
+        if ($(window).width() >= 768) {
+            $('.product-pic__main .slick-arrow').html('<svg width="20" height="8" viewBox="0 0 20 8" fill="none"' +
+                ' xmlns="http://www.w3.org/2000/svg">\n' +
+                '<line y1="4.10001" x2="13.0769" y2="4.10001" stroke="black"/>\n' +
+                '<path d="M19 4L13 -2.62268e-07L13 8L19 4Z" fill="black"/>\n' +
+                '</svg>');
+            $('.product-pic__small .slick-arrow').html('<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<path d="M0.146606 9.51952L4.29363 5.37249L0.146606 1.22546L1.06817 0.303903L6.13675 5.37249L1.06817 10.4411L0.146606 9.51952ZM4.75441 9.51952L8.90144 5.37249L4.75441 1.22546L5.67597 0.303903L10.7446 5.37249L5.67597 10.4411L4.75441 9.51952Z" fill="white"/>\n' +
+                '</svg>\n');
+        } else {
+            $('.product-pic__main .slick-arrow').html('<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<line y1="5.86523" x2="7.84607" y2="5.86523" stroke="black"/>\n' +
+                '<g clip-path="url(#clip0_1290_858)">\n' +
+                '<path d="M10.9614 6.0772L7.49992 3.76953L7.49992 8.38487L10.9614 6.0772Z" fill="black"/>\n' +
+                '</g>\n' +
+                '<defs>\n' +
+                '<clipPath id="clip0_1290_858">\n' +
+                '<rect width="11" height="8" fill="white" transform="translate(11) rotate(90)"/>\n' +
+                '</clipPath>\n' +
+                '</defs>\n' +
+                '</svg>\n');
+            $('.product-pic__small .slick-arrow').html('<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<line y1="5.86523" x2="7.84607" y2="5.86523" stroke="black"/>\n' +
+                '<g clip-path="url(#clip0_1290_858)">\n' +
+                '<path d="M10.9614 6.0772L7.49992 3.76953L7.49992 8.38487L10.9614 6.0772Z" fill="black"/>\n' +
+                '</g>\n' +
+                '<defs>\n' +
+                '<clipPath id="clip0_1290_858">\n' +
+                '<rect width="11" height="8" fill="white" transform="translate(11) rotate(90)"/>\n' +
+                '</clipPath>\n' +
+                '</defs>\n' +
+                '</svg>\n');
+        }
     });
 
-    $('.product-pic__main .slick-arrow').append('<svg width="20" height="8" viewBox="0 0 20 8" fill="none"' +
-        ' xmlns="http://www.w3.org/2000/svg">\n' +
-        '<line y1="4.10001" x2="13.0769" y2="4.10001" stroke="black"/>\n' +
-        '<path d="M19 4L13 -2.62268e-07L13 8L19 4Z" fill="black"/>\n' +
-        '</svg>');
-    $('.product-pic__small .slick-arrow').append('<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-        '<path d="M0.146606 9.51952L4.29363 5.37249L0.146606 1.22546L1.06817 0.303903L6.13675 5.37249L1.06817 10.4411L0.146606 9.51952ZM4.75441 9.51952L8.90144 5.37249L4.75441 1.22546L5.67597 0.303903L10.7446 5.37249L5.67597 10.4411L4.75441 9.51952Z" fill="white"/>\n' +
-        '</svg>\n');
 
     // spoiler product-details
 
@@ -305,7 +332,7 @@ $(function () {
     });
 
 
-    // zoom product
+// zoom product
 
     $(window).resize(function () {
         if ($(window).width() > 991) {
@@ -333,3 +360,4 @@ $(function () {
         }
     });
 });
+
