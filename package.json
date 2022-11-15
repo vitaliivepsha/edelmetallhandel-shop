@@ -105,6 +105,7 @@
     "ez-plus": "^1.2.1",
     "jquery-asRange": "^0.3.4",
     "jquery.nicescroll": "^3.7.6",
+    "mark.js": "^8.11.1",
     "owl.carousel": "^2.3.4",
     "perfect-scrollbar": "^1.5.0",
     "pg-calendar": "^1.4.30",
