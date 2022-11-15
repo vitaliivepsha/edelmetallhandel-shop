@@ -2,6 +2,10 @@
   padding-top: 130px;
   padding-bottom: 80px;
   position: relative;
+  @include bp(xs) {
+    padding-top: 53px;
+    padding-bottom: 20px;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -13,6 +17,9 @@
     left: 50%;
     transform: translateX(-50%);
     top: 65px;
+    @include bp(xs) {
+      top: 30px;
+    }
   }
   &:after{
     position: absolute;
@@ -23,12 +30,18 @@
     left: 50%;
     transform: translateX(-50%);
     top: 0;
+    @include bp(xs) {
+      height: 30px;
+    }
   }
 }
 
 .services-title{
   text-align: center;
   margin-bottom: 50px;
+  @include bp(xs) {
+    margin-bottom: 20px;
+  }
   >i{
     display: flex;
     align-items: center;
@@ -38,17 +51,36 @@
     border-radius: 50%;
     background-color: $main;
     margin: 0 auto 20px;
+    @include bp(xs) {
+      width: 45px;
+      height: 45px;
+      padding: 11px;
+      margin-bottom: 15px;
+    }
     svg{
       position: relative;
       top: -2px;
+      @include bp(xs) {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 }
 
 .services-wrapper{
   display: flex;
-  .col-md-5, .col-md-5{
+  .col-md-5{
     height: inherit;
+    @include bp(md) {
+      display: none;
+    }
+  }
+  .col-md-7{
+    height: inherit;
+    @include bp(md) {
+      width: 100%;
+    }
   }
 }
 
@@ -74,6 +106,9 @@
   @include bp(xl) {
     padding: 50px 30px;
   }
+  @include bp(xs) {
+    padding: 40px 15px 47px;
+  }
 }
 
 .services-block{
@@ -81,6 +116,9 @@
     margin-top: 80px;
     @include bp(xl) {
       margin-top: 45px;
+    }
+    @include bp(xs) {
+      margin-top: 60px;
     }
   }
 }
@@ -96,16 +134,28 @@
   border-radius: 50%/50%;
   border: 1px solid $main;
   margin: 0 auto 37px;
+  @include bp(xs) {
+    width: calc(100vw - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 42px;
+  }
   >svg{
     position: absolute;
     top: -11px;
     right: 103px;
+    @include bp(xs) {
+      right: 80px;
+    }
   }
   >span{
     font-family: $title;
     font-size: 24px;
     line-height: 100%;
     position: relative;
+    @include bp(xs) {
+      font-size: 18px;
+    }
     &:before{
       position: absolute;
       content: '';
@@ -117,6 +167,11 @@
       left: 50%;
       transform: translateX(-50%);
       top: calc(100% + 12px);
+      @include bp(xs) {
+        width: 7px;
+        height: 7px;
+        top: calc(100% + 15px);
+      }
     }
     &:after{
       position: absolute;
@@ -127,6 +182,10 @@
       left: 50%;
       transform: translateX(-50%);
       top: calc(100% + 17px);
+      @include bp(xs) {
+        top: calc(100% + 22px);
+        height: 30px;
+      }
     }
   }
 }
@@ -138,6 +197,9 @@
   text-align: center;
   max-width: 750px;
   margin: 0 auto 20px;
+  @include bp(xs) {
+    font-size: 14px;
+  }
 }
 
 .services-items{
@@ -148,6 +210,12 @@
   @include bp(lg) {
     margin: 0 -15px -15px;
   }
+  @include bp(xs) {
+    margin: 0 10vw -30px;
+  }
+  @include bp(xxs) {
+    margin: 0 3vw -30px;
+  }
 }
 
 .services-item{
@@ -155,6 +223,10 @@
   text-decoration: none;
   @include bp(lg) {
     padding: 0 15px 15px;
+  }
+  @include bp(xs) {
+    width: 120px;
+    padding: 0 15px 30px;
   }
   &:hover{
     text-decoration: none;
@@ -173,6 +245,9 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 14px;
+    @include bp(xs) {
+      margin-bottom: 10px;
+    }
     img{
       max-height: 100%;
       object-fit: contain;
@@ -190,8 +265,17 @@
     @include bp(lg) {
       font-size: 18px;
     }
+    @include bp(xs) {
+      font-size: 12px;
+      justify-content: center;
+    }
     svg{
       position: relative;
+      @include bp(xs) {
+        width: 15px;
+        height: 15px;
+        top: -1px;
+      }
     }
   }
 }
@@ -199,7 +283,7 @@
 .section-marquee{
   margin-bottom: 100px;
   @include bp(xs) {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 

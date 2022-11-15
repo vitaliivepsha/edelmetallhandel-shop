@@ -3,6 +3,11 @@
   padding-bottom: 100px;
   margin-bottom: 70px;
   background: #FAF6ED;
+  @include bp(xs) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+  }
 }
 
 .reviews-title{
@@ -16,13 +21,27 @@
   border-radius: 50%/50%;
   border: 1px solid $main;
   margin: 0 auto 94px;
+  @include bp(xs) {
+    width: 100%;
+    height: 104px;
+    margin-bottom: 35px;
+  }
   >svg{
     position: absolute;
     right: 118px;
     top: -21px;
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+      top: 11px;
+      right: 13px;
+    }
   }
   .section-title{
     margin-bottom: 8px;
+    @include bp(xs) {
+      margin-bottom: 4px;
+    }
     &:before{
       position: absolute;
       content: '';
@@ -33,6 +52,9 @@
       left: 50%;
       transform: translateX(-50%);
       top: calc(100% + 38px);
+      @include bp(xs) {
+        top: calc(100% + 35px);
+      }
     }
     &:after{
       position: absolute;
@@ -43,6 +65,10 @@
       left: 50%;
       transform: translateX(-50%);
       top: calc(100% + 47px);
+      @include bp(xs) {
+        height: 30px;
+        top: calc(100% + 44px);
+      }
     }
   }
   >a{
@@ -52,6 +78,9 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    @include bp(xs) {
+      font-size: 12px;
+    }
     &:hover{
       color: $main;
       >svg{
@@ -64,17 +93,32 @@
       margin-left: 1px;
       position: relative;
       top: -1px;
+      @include bp(xs) {
+        margin-left: 2px;
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }
 
 .reviews-slider__wrapper{
   position: relative;
+  overflow: hidden;
   .slider-nav{
     display: flex;
     position: absolute;
+    z-index: 2;
     right: 10px;
     bottom: calc(100% + 45px);
+    @include bp(sm) {
+      justify-content: space-between;
+      width: calc(100vw - 14px);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: auto;
+      top: 115px;
+    }
     .slider-arrow{
       width: 45px;
       height: 45px;
@@ -85,6 +129,23 @@
       cursor: pointer;
       border: 1px solid $main;
       transition: linear .2s;
+      position: relative;
+      @include bp(sm) {
+        width: 20px;
+        height: 20px;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 40px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include bp(sm) {
+          display: block;
+        }
+      }
       &:hover{
         background-color: $main;
         svg{
@@ -105,6 +166,15 @@
       }
       +.slider-arrow{
         margin-left: 20px;
+        @include bp(sm) {
+          margin-left: 0;
+        }
+      }
+      svg{
+        @include bp(sm) {
+          width: 8px;
+          height: 4px;
+        }
       }
     }
   }
@@ -120,32 +190,56 @@
   border: 1px solid $main;
   border-radius: 3px;
   padding: 30px 25px 25px 40px;
+  @include bp(sm) {
+    padding: 25px 20px;
+  }
+  @include bp(xs) {
+    padding: 30px 15px 35px;
+  }
 }
 
 .reviews-item__top{
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+  @include bp(xs) {
+    margin-bottom: 33px;
+  }
 }
 
 .reviews-item__date{
   font-size: 16px;
   line-height: 140%;
   color: $text;
+  @include bp(xs) {
+    font-size: 14px;
+  }
 }
 
 .rating-stars{
   display: flex;
+  @include bp(xs) {
+    margin-right: -8px;
+  }
 }
 
 .rating-star{
   display: flex;
   margin-right: 8px;
+  @include bp(xs) {
+    height: 12px;
+  }
   &.active{
     svg{
       path{
         fill: $main;
       }
+    }
+  }
+  svg{
+    @include bp(xs) {
+      width: 12px;
+      height: 12px;
     }
   }
 }
@@ -156,6 +250,11 @@
   font-size: 16px;
   line-height: 150%;
   color: $text;
+  @include bp(xs) {
+    font-size: 14px;
+    min-height: 94px;
+    margin-bottom: 15px;
+  }
 }
 
 .reviews-item__author{
@@ -165,9 +264,15 @@
   font-size: 16px;
   line-height: 140%;
   color: $text;
+  @include bp(xs) {
+    font-size: 14px;
+  }
 }
 
 .reviews-btn{
   width: 260px;
   margin: 40px auto 0;
+  @include bp(xs) {
+    width: 100%;
+  }
 }

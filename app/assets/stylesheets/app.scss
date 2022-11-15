@@ -93,6 +93,7 @@ main {
   @include bp(sm) {
     width: 750px;
     max-width: 100%;
+    padding: 0 15px;
   }
 }
 

@@ -3,6 +3,10 @@
   padding-top: 92px;
   padding-bottom: 105px;
   margin-bottom: 50px;
+  @include bp(xs) {
+    padding-top: 50px;
+    padding-bottom: 24px;
+  }
 }
 
 .categories-section__title{
@@ -15,10 +19,21 @@
   border-radius: 50%/50%;
   border: 1px solid $main;
   margin: 0 auto 94px;
+  @include bp(xs) {
+    max-width: 100%;
+    height: 104px;
+    margin-bottom: 30px;
+  }
   >svg{
     position: absolute;
     right: 118px;
     top: -21px;
+    @include bp(xs) {
+      top: 11px;
+      right: 13px;
+      width: 25px;
+      height: 25px;
+    }
   }
   .section-title{
     &:before{
@@ -31,6 +46,9 @@
       left: 50%;
       transform: translateX(-50%);
       top: calc(100% + 28px);
+      @include bp(xs) {
+        top: calc(100% + 15px);
+      }
     }
     &:after{
       position: absolute;
@@ -41,6 +59,10 @@
       left: 50%;
       transform: translateX(-50%);
       top: calc(100% + 37px);
+      @include bp(xs) {
+        top: calc(100% + 24px);
+        height: 30px;
+      }
     }
   }
 }
@@ -48,11 +70,23 @@
 .categories-slider__wrapper{
   margin: 0 -10px;
   position: relative;
+  @include bp(sm) {
+    margin: 0 -7px;
+  }
+  @include bp(xs) {
+    margin: 0 -5px;
+  }
   .slider-nav{
     display: flex;
     position: absolute;
     right: 10px;
     bottom: calc(100% + 45px);
+    @include bp(sm) {
+      bottom: calc(100% + 30px);
+    }
+    @include bp(xs) {
+      display: none;
+    }
     .slider-arrow{
       width: 45px;
       height: 45px;
@@ -63,6 +97,10 @@
       cursor: pointer;
       border: 1px solid $main;
       transition: linear .2s;
+      @include bp(sm) {
+        width: 35px;
+        height: 35px;
+      }
       &:hover{
         background-color: $main;
         svg{
@@ -83,20 +121,43 @@
       }
       +.slider-arrow{
         margin-left: 20px;
+        @include bp(sm) {
+          margin-left: 15px;
+        }
+      }
+      svg{
+        @include bp(sm) {
+          width: 16px;
+          height: 8px;
+        }
       }
     }
   }
 }
 
 .categories-slider{
+  @include bp(xs) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .slide{
     padding: 0 10px;
+    @include bp(sm) {
+      padding: 0 7px;
+    }
+    @include bp(xs) {
+      width: 33.33333%;
+      padding: 0 5px;
+    }
   }
 }
 
 .categories-slider__item{
   display: block;
   text-decoration: none;
+  @include bp(xs) {
+    margin-bottom: 15px;
+  }
   &:hover{
     text-decoration: none;
     .categories-slider__pic{
@@ -123,6 +184,15 @@
   @include bp(lg) {
     height: calc(13.2vw - 35px);
   }
+  @include bp(lg) {
+    height: calc(17.5vw - 37px);
+  }
+  @include bp(sm) {
+    height: calc(20vw - 17px);
+  }
+  @include bp(xs) {
+    height: calc(33.3vw - 16.7px);
+  }
   img{
     width: 100%;
     height: 100%;
@@ -138,4 +208,12 @@
   text-align: center;
   text-transform: uppercase;
   color: #000;
+  @include bp(md) {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  @include bp(xs) {
+    font-size: 12px;
+    padding: 5px 0;
+  }
 }

@@ -92,6 +92,9 @@
   @include bp(md) {
     height: 55px;
   }
+  @include bp(xs) {
+    padding: 0 5px;
+  }
   >.container{
     position: relative;
     display: flex;
@@ -150,6 +153,9 @@
 }
 
 .header-text{
+  @include bp(xs) {
+    display: none;
+  }
   >span{
     display: block;
     font-family: $playfair;
@@ -316,11 +322,20 @@
       }
     }
   }
+  svg{
+    @include bp(md) {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .header-cart__wrapper{
   position: relative;
   margin-left: 20px;
+  @include bp(md) {
+    margin-left: 14px;
+  }
 }
 
 .header-cart__btn{
@@ -331,6 +346,12 @@
       path{
         fill: $main;
       }
+    }
+  }
+  svg{
+    @include bp(md) {
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -560,14 +581,23 @@
   justify-content: center;
   overflow: hidden;
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   transition: background 0.3s;
   position: relative;
   background-color: transparent;
   border: none;
-  margin-left: 25px;
+  margin-left: 38px;
+  &:before{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
   @include bp(md) {
     display: flex;
   }
