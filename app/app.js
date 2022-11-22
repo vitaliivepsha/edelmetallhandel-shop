@@ -4,6 +4,7 @@
 
 if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/index.html');
+    require('./assets/templates/layouts/categories.html');
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/404.html');
@@ -62,7 +63,6 @@ $(function () {
     $(document).on("click", 'a[href*="#"]', function (e) {
         e.preventDefault();
     });
-
 
     // fixed header
 
@@ -343,6 +343,24 @@ $(function () {
 
     // filters
 
+    $('.categories-filters__list li').on('click', function () {
+        var left_pos = $(this).find('span').width(),
+            top_pos = $(this).offset().top - $('.categories-filters__main').offset().top;
+        console.log(top_pos);
+        $('.categories-filters__submit').css({
+            "left": left_pos + 85,
+            "top": top_pos - 24,
+            "display": "block"
+        });
+    });
+
+    $('.categories-filter__head').on('click', function () {
+        $(this).parent().toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+    // filters
+
     $('.btn-filters').on('click', function () {
         var btn_txt = $(this).find('span');
         btn_txt.html() == 'Скрыть фильтры' ? btn_txt.html('Отобразить фильтры') : btn_txt.html('Скрыть фильтры');
@@ -375,10 +393,6 @@ $(function () {
 
     $(document).on('click', '.btn-filters__mob', function (e) {
         e.stopPropagation();
-    });
-
-    $('.categories-filter__head').on('click', function () {
-        $(this).toggleClass('active').next().slideToggle();
     });
 
     $(window).resize(function () {

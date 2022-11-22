@@ -604,7 +604,14 @@ textarea:-webkit-autofill:hover {
 // Footer
 @import "footer";
 
+// Breadcrumbs
+@import "breadcrumbs";
+
+// Pagination
+@import "pagination";
+
 // Pages
+@import "categories";
 @import "contacts";
 @import "404";
 @import "about";
