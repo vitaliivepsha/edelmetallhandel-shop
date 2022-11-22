@@ -376,14 +376,17 @@
   @include bp(lg) {
     margin-left: 22px;
   }
+  @include bp(md) {
+    position: static;
+  }
   &.show{
     .header-search{
       display: block;
     }
     .header-search__form{
       width: 425px;
-      @include bp(xs) {
-        width: calc(100vw - 26px);
+      @include bp(md) {
+        width: calc(100vw - 30px);
       }
     }
   }
@@ -439,10 +442,26 @@
   right: -14px;
   top: -11px;
   border-radius: 5px;
-  @include bp(xs) {
-    right: 13px;
-    left: 13px;
-    top: 8px;
+  @include bp(md) {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    z-index: -1;
+    background-color: #fff;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -6px;
+    height: 55px;
+    display: none;
+    @include bp(md) {
+      display: block;
+    }
   }
 }
 
@@ -465,6 +484,14 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: $text;
+    @include bp(md) {
+      height: 43px;
+      padding-left: 14px;
+      font-size: 12px;
+      @supports (-webkit-touch-callout: none) {
+        font-size: 16px;
+      }
+    }
     &::placeholder{
       color: $text;
     }
@@ -496,12 +523,24 @@
     border: none;
     border-radius: 3px;
     transition: linear .2s;
+    @include bp(md) {
+      width: 40px;
+      height: 35px;
+      right: 4px;
+      top: 4px;
+    }
     &:hover{
       background-color: $accent;
       svg{
         path{
           fill: #fff;
         }
+      }
+    }
+    svg{
+      @include bp(md) {
+        width: 18px;
+        height: 18px;
       }
     }
   }
@@ -550,6 +589,9 @@
         line-height: 140%;
         text-decoration: underline;
         color: $main;
+        @include bp(xs) {
+          padding: 14px 15px 10px;
+        }
         &:hover{
           color: $accent;
           text-decoration: none;
@@ -563,6 +605,9 @@
           position: relative;
           top: -1px;
           margin-left: 9px;
+          @include bp(xs) {
+            margin-left: 7px;
+          }
         }
       }
       span{
@@ -626,6 +671,11 @@
     text-overflow: ellipsis;
     max-height: 34px;
     transition: linear .2s;
+    @include bp(xs) {
+      font-size: 10px;
+      max-height: 42px;
+      -webkit-line-clamp: 3;
+    }
     .mark, mark{
       padding: 0;
       background: transparent;
@@ -640,6 +690,10 @@
     line-height: 140%;
     text-transform: uppercase;
     margin-top: 2px;
+    @include bp(xs) {
+      font-size: 12px;
+      margin-top: 0;
+    }
   }
 }
 
@@ -710,8 +764,8 @@
 }
 
 .header-cart__main{
-  /*opacity: 0;
-  visibility: hidden;*/
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   background-color: #fff;
   width: 450px;

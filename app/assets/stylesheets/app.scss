@@ -391,6 +391,9 @@ main {
     height: 35px;
     padding: 0 10px;
     font-size: 12px;
+    @supports (-webkit-touch-callout: none) {
+      font-size: 16px;
+    }
   }
 
   &::placeholder {
@@ -422,6 +425,9 @@ main {
     font-size: 12px;
     padding: 10px;
     height: 76px;
+    @supports (-webkit-touch-callout: none) {
+      font-size: 16px;
+    }
   }
 
   &::placeholder {
