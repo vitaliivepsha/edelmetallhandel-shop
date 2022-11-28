@@ -21,11 +21,21 @@ body {
   @include bp(md) {
     display: block;
   }
-
+  &.open-filters{
+    height: 100vh;
+    overflow: hidden;
+    .overlay{
+      opacity: 1;
+      visibility: visible;
+      z-index: 20;
+    }
+    .catalog-filters__mob{
+      transform: translateX(0);
+    }
+  }
   &.menu-opened {
     height: 100vh;
     overflow: hidden;
-
     .mobile-menu__wrapper {
       display: block;
     }
@@ -38,7 +48,6 @@ body {
       }
     }
   }
-
 }
 
 ol,
@@ -550,15 +559,15 @@ textarea:-webkit-autofill:hover {
 }
 
 .overlay {
-  background: rgba(0, 49, 116, 0.5);
-  backdrop-filter: blur(10px);
+  background: rgba(204, 149, 12, 0.2);
+  backdrop-filter: blur(15px);
   position: fixed;
   left: 0;
-  top: 0;
+  top: 55px;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 55px);
   z-index: -1;
   opacity: 0;
   visibility: hidden;

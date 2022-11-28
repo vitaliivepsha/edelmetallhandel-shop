@@ -4,11 +4,17 @@
   display: flex;
   justify-content: center;
   margin: 0;
+  @include bp(xs) {
+    padding: 40px 0;
+  }
   ul{
     display: flex;
     justify-content: center;
     li{
       margin-right: 10px;
+      @include bp(xs) {
+        margin-right: 9px;
+      }
       &:last-child{
         margin-right: 0;
       }
@@ -24,26 +30,34 @@
         border-radius: 2px;
         color: rgba($text, .5);
         text-decoration: none;
+        @include bp(xs) {
+          width: 26px;
+          height: 26px;
+          font-size: 12px;
+        }
         &:hover{
           border: 1px solid $text;
           color: $text;
           text-decoration: none;
         }
       }
-      &.prev{
+      &.prev, &.next{
         a, span{
-
-        }
-      }
-      &.next{
-        a, span{
-
+          svg{
+            @include bp(xs) {
+              width: 5px;
+              height: 10px;
+            }
+          }
         }
       }
       &.more{
         a, span{
           width: 24px;
           border-color: transparent;
+          @include bp(xs) {
+            width: 12px;
+          }
           &:hover{
             border-color: transparent;
           }

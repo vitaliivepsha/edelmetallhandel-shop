@@ -5,6 +5,7 @@
 if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/index.html');
     require('./assets/templates/layouts/categories.html');
+    require('./assets/templates/layouts/categories-filters-checked.html');
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/404.html');
@@ -357,6 +358,26 @@ $(function () {
     $('.categories-filter__head').on('click', function () {
         $(this).parent().toggleClass('active');
         $(this).next().slideToggle();
+    });
+
+    $('.categories-filters__btn').on('click', function () {
+        $('body').addClass('open-filters');
+    });
+
+    $('.filters-close').on('click', function () {
+        $('body').removeClass('open-filters');
+    });
+
+    $(document).click(function () {
+        $('body').removeClass('open-filters');
+    });
+
+    $(document).on('click', '.categories-filters__btn', function (e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.catalog-filters__mob', function (e) {
+        e.stopPropagation();
     });
 
     // filters

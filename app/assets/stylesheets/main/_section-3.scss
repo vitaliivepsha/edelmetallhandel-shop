@@ -179,6 +179,12 @@
       left: -10px;
       height: calc(100% + 5px);
       top: -10px;
+      @include bp(sm) {
+        width: calc(100% + 10px);
+        left: -5px;
+        height: 100%;
+        top: -5px;
+      }
     }
     .categories-slider__pic{
       filter: drop-shadow(5px 4px 15px rgba(0, 0, 0, 0.3));
@@ -204,7 +210,7 @@
   @include bp(lg) {
     height: calc(13.2vw - 35px);
   }
-  @include bp(lg) {
+  @include bp(md) {
     height: calc(17.5vw - 37px);
   }
   @include bp(sm) {
