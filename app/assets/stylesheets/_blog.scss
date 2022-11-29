@@ -1,0 +1,148 @@
+.blog-main{
+  padding: 45px 0 70px;
+  @include bp(xs) {
+    padding: 30px 0;
+  }
+}
+
+.blog-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  @include bp(xs) {
+    margin-bottom: -30px;
+  }
+  .col-xs-12{
+    margin-bottom: 45px;
+    @include bp(md) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.blog-item{
+  text-decoration: none;
+  display: block;
+  &:hover, &:focus{
+    text-decoration: none;
+  }
+  &:hover, &:focus{
+    .blog-item__pic{
+      img{
+        transform: scale(1.2);
+      }
+    }
+    .blog-item__more{
+      color: $main;
+      svg{
+        path{
+          fill: $main;
+        }
+      }
+    }
+  }
+}
+
+.blog-item__pic{
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 3px 3px 0 0;
+  @include bp(xxxl) {
+    height: calc(26.5vw - 60px);
+  }
+  @include bp(lg) {
+    height: calc(40.6vw - 80px);
+  }
+  @include bp(sm) {
+    height: calc(75.3vw - 30px);
+  }
+  @include bp(xs) {
+    height: calc(65.6vw - 30px);
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: linear .3s;
+  }
+}
+
+.blog-item__info{
+  padding: 20px 0;
+  min-height: 358px;
+  @include bp(xxxl) {
+    min-height: unset;
+  }
+  @include bp(xs) {
+    padding: 10px 0;
+  }
+}
+
+.blog-item__date{
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  display: block;
+  margin-bottom: 10px;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}
+
+.blog-item__title{
+  display: block;
+  font-family: $title;
+  color: #000;
+  font-size: 30px;
+  line-height: 100%;
+  margin-bottom: 20px;
+  @include bp(md) {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  @include bp(xs) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.blog-item__text{
+  font-size: 14px;
+  line-height: 150%;
+  color: $text;
+  margin-bottom: 32px;
+  @include bp(md) {
+    margin-bottom: 24px;
+  }
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+.blog-item__more{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: linear .2s;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000;
+  text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 12px;
+  }
+  svg{
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    @include bp(xs) {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      top: -1px;
+    }
+  }
+}
