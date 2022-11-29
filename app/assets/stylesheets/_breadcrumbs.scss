@@ -2,6 +2,10 @@
   font-size: 12px;
   line-height: 14px;
   padding: 15px 0;
+  @include bp(xs) {
+    font-size: 11px;
+    line-height: 13px;
+  }
   *{
     &:after{
       content: '/';

@@ -217,12 +217,14 @@ main {
         left: 10px;
         top: 10px;
       }
-
+      @include bp(xxs) {
+        font-size: 10px;
+        top: 11px;
+      }
       span {
         color: $main;
       }
     }
-
     &:focus {
       + label {
         opacity: 0;
@@ -230,12 +232,10 @@ main {
       }
     }
   }
-
   &.select-wrapper {
     select {
       display: none;
     }
-
     &.required-select {
       .SumoSelect {
         > .CaptionCont {
@@ -244,13 +244,11 @@ main {
             @include bp(xs) {
               font-size: 12px;
             }
-
             &.placeholder {
               font-size: 16px;
               @include bp(xs) {
                 font-size: 12px;
               }
-
               &:after {
                 content: ' *';
                 color: $main;
@@ -260,7 +258,6 @@ main {
         }
       }
     }
-
     &.chosen {
       .SumoSelect {
         > .CaptionCont {
@@ -270,23 +267,19 @@ main {
         }
       }
     }
-
     .SumoSelect {
       display: flex;
       width: 100%;
-
       &:hover, &:focus, &.open {
         > .CaptionCont {
           box-shadow: none;
         }
       }
-
       &.open {
         > .optWrapper {
           top: calc(100% + 1px);
         }
       }
-
       > .CaptionCont {
         border: 1px solid $border;
         border-radius: 3px;
@@ -302,16 +295,13 @@ main {
           padding: 0 10px;
           font-size: 12px;
         }
-
         span {
           color: $text;
           cursor: pointer;
-
           &.placeholder {
             font-style: normal;
           }
         }
-
         > label {
           margin-bottom: 0;
           width: 44px;
@@ -319,7 +309,6 @@ main {
           @include bp(xs) {
             width: 29px;
           }
-
           > i {
             width: 8px;
             height: 8px;
@@ -339,7 +328,6 @@ main {
           }
         }
       }
-
       > .optWrapper {
         &.isFloating {
           position: absolute;
@@ -347,7 +335,6 @@ main {
           width: 100%;
           max-height: unset;
         }
-
         > .options {
           li {
             &.opt {
@@ -355,11 +342,9 @@ main {
                 font-size: 12px;
                 padding: 5px 10px;
               }
-
               &.disabled {
                 display: none;
               }
-
               label {
                 font-weight: 400;
                 margin-bottom: 0;
@@ -370,12 +355,10 @@ main {
       }
     }
   }
-
   &.err {
     .input, .textarea {
       border-color: #FEA362;
     }
-
     .SumoSelect {
       > .CaptionCont {
         border-color: #FEA362;
@@ -558,6 +541,44 @@ textarea:-webkit-autofill:hover {
   }
 }
 
+.validate-form{
+  .input-wrapper{
+    overflow: hidden;
+    label{
+      position: absolute;
+    }
+    &.error{
+      .input{
+        border-color: #FEA362;
+        +label{
+          &.error{
+            color: #FEA362;
+          }
+          +label{
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+    &.filled{
+      .input{
+        +label{
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+          +label{
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
 .overlay {
   background: rgba(204, 149, 12, 0.2);
   backdrop-filter: blur(15px);
@@ -621,6 +642,7 @@ textarea:-webkit-autofill:hover {
 
 // Pages
 @import "categories";
+@import "reviews";
 @import "contacts";
 @import "404";
 @import "about";

@@ -6,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/index.html');
     require('./assets/templates/layouts/categories.html');
     require('./assets/templates/layouts/categories-filters-checked.html');
+    require('./assets/templates/layouts/reviews.html');
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/404.html');
@@ -32,6 +33,7 @@ require('../node_modules/sumoselect/jquery.sumoselect.min');
 //require('../node_modules/ez-plus/src/jquery.ez-plus');
 require('../node_modules/sweetalert2/dist/sweetalert2');
 require('../node_modules/mark.js/dist/jquery.mark.min');
+require('../node_modules/jquery-validation/dist/jquery.validate.min');
 require('_modules/succinct');
 
 // Stylesheet entrypoint
@@ -380,46 +382,305 @@ $(function () {
         e.stopPropagation();
     });
 
-    // filters
-
-    $('.btn-filters').on('click', function () {
-        var btn_txt = $(this).find('span');
-        btn_txt.html() == 'Скрыть фильтры' ? btn_txt.html('Отобразить фильтры') : btn_txt.html('Скрыть фильтры');
-        $('.categories-main').toggleClass('opened-filters');
-    });
-
-    $(window).resize(function () {
-        var btn_txt = $('.btn-filters').find('span');
-        if ($(window).width() < 991) {
-            btn_txt.html('Отобразить фильтры');
-            $('.categories-main').removeClass('opened-filters');
-        }
-    });
-
-    $('.btn-filters__mob').on('click', function () {
-        $('body').toggleClass('filters-opened');
-    });
-
-    $('.mobile-filters__close').click(function () {
-        $('body').removeClass('filters-opened');
-    });
-
-    $(document).click(function () {
-        $('body').removeClass('filters-opened');
-    });
-
-    $(document).on('click', '.mobile-filters__wrapper', function (e) {
-        e.stopPropagation();
-    });
-
-    $(document).on('click', '.btn-filters__mob', function (e) {
-        e.stopPropagation();
-    });
-
     $(window).resize(function () {
         if ($(window).width() > 991) {
             $('body').removeClass('filters-opened');
         }
+    });
+
+    // reviews
+
+    $('.reviews-btn__open').on('click', function () {
+        $('.review-form__top').slideToggle();
+    });
+
+    // validation
+
+    $('.validate-form').each(function () {
+        $(this).validate({
+            highlight: function (element) {
+                $(element).parent().addClass('error');
+            },
+            unhighlight: function (element) {
+                $(element).parent().removeClass('error');
+            },
+            rules: {
+                name: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                },
+                educational_establishment: {
+                    required: true,
+                },
+                educational_establishment_name: {
+                    required: true,
+                },
+                university_sitе: {
+                    required: true,
+                },
+                faculty: {
+                    required: true,
+                },
+                speciality: {
+                    required: true,
+                },
+                admission_date: {
+                    required: true,
+                },
+                graduation_date: {
+                    required: true,
+                },
+                start_of_vacation: {
+                    required: true,
+                },
+                end_of_vacation: {
+                    required: true,
+                },
+                country_of_residence: {
+                    required: true,
+                },
+                city_of_residence: {
+                    required: true,
+                },
+                registration_address: {
+                    required: true,
+                },
+                registration_address_city: {
+                    required: true,
+                },
+                zip: {
+                    required: true,
+                },
+                region: {
+                    required: true,
+                },
+                country: {
+                    required: true,
+                },
+                german_level: {
+                    required: true,
+                },
+                english_level: {
+                    required: true,
+                },
+                driving_license: {
+                    required: true,
+                },
+                growth: {
+                    required: true,
+                },
+                shoe_size: {
+                    required: true,
+                },
+                tshirt_size: {
+                    required: true,
+                },
+                pants_size: {
+                    required: true,
+                },
+                new_password: {
+                    required: true,
+                },
+                re_password: {
+                    required: true,
+                    equalTo: '#new_password'
+                },
+                start_of_work: {
+                    required: true,
+                    time: true
+                },
+                end_of_work: {
+                    required: true,
+                    time: true
+                },
+                first_name: {
+                    required: true,
+                },
+                last_name: {
+                    required: true,
+                },
+                name_en: {
+                    required: true,
+                    onlylatinletters: true
+                },
+                host_country: {
+                    required: true,
+                },
+                host_city: {
+                    required: true,
+                },
+                date_germany: {
+                    required: true,
+                },
+            },
+            messages: {
+                name: {
+                    required: 'Dieses Feld ist erforderlich'
+                },
+                email: {
+                    required: 'Dieses Feld ist erforderlich',
+                },
+                educational_establishment: {
+                    required: 'Заполните эту информацию',
+                },
+                educational_establishment_name: {
+                    required: 'Заполните эту информацию',
+                },
+                university_sitе: {
+                    required: 'Заполните эту информацию',
+                },
+                faculty: {
+                    required: 'Заполните эту информацию',
+                },
+                speciality: {
+                    required: 'Заполните эту информацию',
+                },
+                admission_date: {
+                    required: 'Заполните эту информацию',
+                },
+                graduation_date: {
+                    required: 'Заполните эту информацию',
+                },
+                start_of_vacation: {
+                    required: 'Заполните эту информацию',
+                },
+                end_of_vacation: {
+                    required: 'Заполните эту информацию',
+                },
+                country_of_residence: {
+                    required: 'Заполните эту информацию',
+                },
+                city_of_residence: {
+                    required: 'Заполните эту информацию',
+                },
+                registration_address: {
+                    required: 'Заполните эту информацию',
+                },
+                registration_address_city: {
+                    required: 'Заполните эту информацию',
+                },
+                zip: {
+                    required: 'Заполните эту информацию',
+                },
+                region: {
+                    required: 'Заполните эту информацию',
+                },
+                country: {
+                    required: 'Заполните эту информацию',
+                },
+                german_level: {
+                    required: 'Заполните эту информацию',
+                },
+                english_level: {
+                    required: 'Заполните эту информацию',
+                },
+                driving_license: {
+                    required: 'Заполните эту информацию',
+                },
+                growth: {
+                    required: 'Заполните эту информацию',
+                },
+                shoe_size: {
+                    required: 'Заполните эту информацию',
+                },
+                tshirt_size: {
+                    required: 'Заполните эту информацию',
+                },
+                pants_size: {
+                    required: 'Заполните эту информацию',
+                },
+                new_password: {
+                    required: 'Введите новый пароль',
+                },
+                re_password: {
+                    required: 'Подтвердите новый пароль',
+                    equalTo: 'Введенные пароли не совпадают, попробуйте ещё раз'
+                },
+                start_of_work: {
+                    required: 'Заполните эту информацию',
+                },
+                end_of_work: {
+                    required: 'Заполните эту информацию',
+                },
+                first_name: {
+                    required: 'Заполните эту информацию',
+                },
+                last_name: {
+                    required: 'Заполните эту информацию',
+                },
+                name_en: {
+                    required: 'Заполните эту информацию',
+                },
+                host_country: {
+                    required: 'Заполните эту информацию',
+                },
+                host_city: {
+                    required: 'Заполните эту информацию',
+                },
+                date_germany: {
+                    required: 'Заполните эту информацию',
+                }
+            },
+            submitHandler: function () {
+                if ($('#refugees-form')) {
+                    $.ajax({
+                        data: $('#refugees-form').serialize(),
+                        success: function (data) {
+                            $.magnificPopup.open({
+                                items: {
+                                    src: '#refugees-form-success'
+                                }
+                            });
+                            $('html, body').animate({
+                                scrollTop: $('#refugees-form-success').offset().top - 200
+                            }, 200);
+                        }
+                    });
+                }
+                if ($('#employer-review-form').length) {
+                    var $input01 = $('input[name=grade01]:checked'),
+                        $input02 = $('input[name=grade02]:checked'),
+                        $input03 = $('input[name=grade03]:checked'),
+                        $input04 = $('input[name=grade04]:checked'),
+                        $input05 = $('input[name=grade05]:checked'),
+                        $input06 = $('input[name=grade06]:checked'),
+                        $input07 = $('input[name=grade07]:checked'),
+                        $input08 = $('input[name=grade08]:checked');
+
+                    if ($input01.val() == 0 || $input01.val() == 1 || $input01.val() == 2 || $input01.val() == 3 || $input01.val() == 4
+                        || $input02.val() == 0 || $input02.val() == 1 || $input02.val() == 2 || $input02.val() == 3 || $input02.val() == 4
+                        || $input03.val() == 0 || $input03.val() == 1 || $input03.val() == 2 || $input03.val() == 3 || $input03.val() == 4
+                        || $input04.val() == 0 || $input04.val() == 1 || $input04.val() == 2 || $input04.val() == 3 || $input04.val() == 4) {
+                        $('#alert01').show();
+                        $('html, body').animate({
+                            scrollTop: $('#alert01').offset().top - 20
+                        }, 200);
+                    }
+                    else if ($input05.val() == 0 || $input05.val() == 1 || $input05.val() == 2 || $input05.val() == 3 || $input05.val() == 4
+                        || $input06.val() == 0 || $input06.val() == 1 || $input06.val() == 2 || $input06.val() == 3 || $input06.val() == 4
+                        || $input07.val() == 0 || $input07.val() == 1 || $input07.val() == 2 || $input07.val() == 3 || $input07.val() == 4
+                        || $input08.val() == 0 || $input08.val() == 1 || $input08.val() == 2 || $input08.val() == 3 || $input08.val() == 4) {
+                        $('#alert02').show();
+                        $('html, body').animate({
+                            scrollTop: $('#alert02').offset().top - 20
+                        }, 200);
+                    }
+                    else {
+                        $.ajax({
+                            success: function () {
+                                $.magnificPopup.open({
+                                    items: {
+                                        src: '#review-success-popup'
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
+            }
+        });
     });
 
     // tabs

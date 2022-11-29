@@ -104,6 +104,7 @@
   "dependencies": {
     "ez-plus": "^1.2.1",
     "jquery-asRange": "^0.3.4",
+    "jquery-validation": "^1.19.5",
     "jquery.nicescroll": "^3.7.6",
     "mark.js": "^8.11.1",
     "owl.carousel": "^2.3.4",
