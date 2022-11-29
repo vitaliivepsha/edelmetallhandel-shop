@@ -1,0 +1,288 @@
+.article-main{
+  margin-top: 3px;
+  padding-bottom: 100px;
+  @include bp(xs) {
+    margin-top: 10px;
+    padding-bottom: 50px;
+  }
+  >img{
+    width: 100%;
+    height: 33.9vw;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 47px;
+    @include bp(sm) {
+      display: none;
+    }
+    @include bp(xs) {
+      margin-bottom: 28px;
+    }
+    +img{
+      display: none;
+      height: 62.3vw;
+      @include bp(sm) {
+        display: block;
+      }
+    }
+  }
+}
+
+.article-wrapper{
+  display: flex;
+  @include bp(xl) {
+    flex-direction: column;
+  }
+}
+
+.article-info{
+  width: calc(100% - 680px);
+  padding-right: 75px;
+  @include bp(xl) {
+    width: 100%;
+  }
+  @include bp(sm) {
+    padding-right: 0;
+  }
+}
+
+.article-date{
+  display: block;
+  font-size: 21px;
+  line-height: 140%;
+  margin-bottom: 20px;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+}
+
+.article-title{
+  margin-top: 0;
+  font-family: $title;
+  font-size: 42px;
+  line-height: 100%;
+  margin-bottom: 30px;
+  @include bp(xs) {
+    font-size: 28px;
+    margin-bottom: 21px;
+  }
+}
+
+.article-text{
+  font-size: 16px;
+  line-height: 140%;
+  color: $text;
+  margin-bottom: 60px;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 35px;
+  }
+  *{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  h1{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 28px;
+    color: #000;
+    font-family: $title;
+    font-size: 30px;
+    line-height: 100%;
+    @include bp(xs) {
+      font-size: 21px;
+      margin-bottom: 16px;
+    }
+  }
+  h2, h3{
+    display: block;
+    text-align: center;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    color: #000;
+    font-family: $title;
+    font-size: 24px;
+    line-height: 100%;
+    @include bp(xs) {
+      font-size: 18px;
+    }
+  }
+  p{
+    margin-bottom: 16px;
+    @include bp(xs) {
+      margin-bottom: 14px;
+    }
+  }
+  ul{
+    padding-left: 18px;
+    list-style-type: disc;
+    margin-bottom: 16px;
+    @include bp(xs) {
+      margin-bottom: 14px;
+    }
+  }
+  ol{
+    padding-left: 18px;
+    list-style-type: decimal;
+    margin-bottom: 16px;
+    @include bp(xs) {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.article-back{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 140%;
+  color: $text;
+  text-decoration: none;
+  @include bp(xs) {
+    font-size: 12px;
+  }
+  svg{
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    @include bp(xs) {
+      width: 9px;
+      height: 9px;
+    }
+  }
+  &:hover, &:focus{
+    color: $main;
+    text-decoration: none;
+    svg{
+      path{
+        fill: $main;
+      }
+    }
+  }
+}
+
+.article-sidebar{
+  width: 680px;
+  padding-top: 70px;
+  @include bp(xl) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include bp(lg) {
+    flex-direction: column;
+    width: 680px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  @include bp(xs) {
+    padding-top: 50px;
+  }
+  .blog-item{
+    display: flex;
+    @include bp(xl) {
+      width: calc(50% - 15px);
+    }
+    @include bp(lg) {
+      width: 100%;
+    }
+    @include bp(sm) {
+      flex-direction: column;
+    }
+    +.blog-item{
+      margin-top: 30px;
+      @include bp(xl) {
+        margin-top: 0;
+      }
+      @include bp(lg) {
+        margin-top: 30px;
+      }
+    }
+  }
+  .blog-item__pic{
+    width: 400px;
+    height: 300px;
+    border-radius: 3px 0 0 3px;
+    @include bp(xl) {
+      width: 55%;
+    }
+    @include bp(lg) {
+      width: 400px;
+    }
+    @include bp(sm) {
+      width: 100%;
+      height: calc(65.6vw - 30px);
+      border-radius: 3px 3px 0 0;
+    }
+  }
+  .blog-item__info{
+    width: calc(100% - 400px);
+    height: 300px;
+    min-height: unset;
+    background: #F9F9F9;
+    border-radius: 0 3px 3px 0;
+    position: relative;
+    padding: 35px 30px 30px 40px;
+    @include bp(xl) {
+      width: 45%;
+    }
+    @include bp(lg) {
+      width: calc(100% - 400px);
+    }
+    @include bp(sm) {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      background-color: #fff;
+      padding: 20px 0;
+    }
+    @include bp(sm) {
+      padding: 10px 0;
+    }
+  }
+  .blog-item__date{
+    margin-bottom: 25px;
+    @include bp(sm) {
+      margin-bottom: 10px;
+    }
+    @include bp(xs) {
+      margin-bottom: 5px;
+    }
+  }
+  .blog-item__title{
+    font-size: 21px;
+    margin-bottom: 10px;
+    @include bp(sm) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    @include bp(xs) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  .blog-item__text{
+    font-size: 12px;
+    line-height: 150%;
+    @include bp(sm) {
+      font-size: 12px;
+    }
+    @include bp(xs) {
+      font-size: 12px;
+    }
+  }
+  .blog-item__more{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    @include bp(sm) {
+      position: static;
+      right: auto;
+      bottom: auto;
+    }
+  }
+}

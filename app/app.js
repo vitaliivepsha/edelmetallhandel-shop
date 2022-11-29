@@ -7,10 +7,12 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/categories.html');
     require('./assets/templates/layouts/categories-filters-checked.html');
     require('./assets/templates/layouts/reviews.html');
+    require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/blog.html');
+    require('./assets/templates/layouts/article.html');
+
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/about.html');
-    require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/impresum.html');
     require('./assets/templates/layouts/privacy.html');
     require('./assets/templates/layouts/shipping.html');
@@ -100,6 +102,18 @@ $(function () {
     }
     else{
         $('.blog-item__text').succinct({
+            size: 340,
+            omission: ' .....'
+        });
+    }
+    if ($(window).width() > 767) {
+        $('.article-sidebar .blog-item__text').succinct({
+            size: 120,
+            omission: ' .....'
+        });
+    }
+    else{
+        $('.article-sidebar .blog-item__text').succinct({
             size: 340,
             omission: ' .....'
         });
