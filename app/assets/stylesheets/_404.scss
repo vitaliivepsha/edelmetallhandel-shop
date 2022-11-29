@@ -1,384 +1,119 @@
-.nf {
-  padding-bottom: 226px;
-  @include bp(sm) {
-    padding-bottom: 70px;
-  }
-}
-
-.nf.nf-search {
-  padding-top: 133px;
-  padding-bottom: 130px;
-  @include bp(sm) {
-    padding-top: 50px;
-  }
-
-  .nf__form {
-    margin-bottom: 47px;
-  }
-}
-
-.page__title {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 624px;
-  min-height: 160px;
-  margin: 71px auto;
-  padding: 50px;
-  font-family: $title;
-  border: 1px solid $main;
-  border-radius: 50% / 50%;
-  font-weight: 400 !important;
-  font-size: 42px !important;
-  line-height: 1 !important;
-  text-align: center;
-
-  &.page__title--product {
-    padding: 57px;
-    padding-top: 65px;
+.nf{
+  padding-top: 57px;
+  padding-bottom: 107px;
+  @include bp(xs) {
+    padding-top: 13px;
     padding-bottom: 50px;
-    @include bp(sm) {
-      margin-top: 9px;
-      margin-bottom: 55px;
-      padding: 20px;
-      padding-top: 32px;
-      padding-bottom: 30px;
-    }
-
-    &::after {
-      @media (max-width: 420px) {
-        top: calc(100% - 26px);
-      }
-    }
-
   }
+}
 
-  &.page__title--shipping {
-    margin-top: 82px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 59px;
-    padding-top: 47px;
-    padding-bottom: 39px;
-    @include bp(lg) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    @include bp(xs) {
-      padding: 16px;
-      margin-top: 19px;
-      margin-bottom: 49px;
-      padding-top: 34px;
-      padding-bottom: 26px;
-    }
-
-    &::after {
-      @include bp(xs) {
-        top: calc(100% - 30px);
-      }
-    }
-
+.nf-title{
+  position: relative;
+  width: 624px;
+  max-width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%/50%;
+  border: 1px solid $main;
+  margin: 0 auto 60px;
+  @include bp(xs) {
+    height: 100px;
+    margin-bottom: 42px;
   }
-
-  @include bp(sm) {
-    min-height: 100px;
-    max-width: 400px;
-    margin-top: 18px;
-    margin-bottom: 52px;
-    font-size: 28px !important;
-  }
-  @media (max-width: 420px) {
-    max-width: 290px;
-  }
-
-  &::before {
-    content: "";
+  >svg{
     position: absolute;
+    right: 65px;
     top: -4px;
-    right: 69px;
-    width: 54px;
-    height: 54px;
-    @media (max-width: 420px) {
-      top: -17px;
-      right: 34px;
+    @include bp(xs) {
+      top: -2px;
+      right: 44px;
+      width: 35px;
+      height: 35px;
     }
-
-
+    @media only screen and (max-width: 424px){
+      top: -6px;
+    }
+    @include bp(xxs) {
+      top: -10px;
+    }
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(100% - 31px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 74px;
-    @media (max-width: 420px) {
-      top: calc(100% - 37px);
+  >div{
+    position: relative;
+    font-family: $title;
+    font-size: 100px;
+    line-height: 100%;
+    text-align: center;
+    @include bp(xs) {
+      top: -6px;
+      font-size: 48px;
+    }
+    span{
+      color: $main;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1px solid $main;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 2px);
+      @include bp(xs) {
+        width: 7px;
+        height: 7px;
+        top: calc(100% + 7px);
+      }
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 65px;
+      background-color: $main;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 11px);
+      @include bp(xs) {
+        height: 45px;
+        top: calc(100% + 14px);
+      }
     }
   }
 }
 
-.nf__title {
-  display: block;
-  margin-bottom: 23px;
+.nf-descr{
+  max-width: 700px;
+  margin: 0 auto 24px;
   font-family: $title;
-  font-weight: 400;
   font-size: 42px;
   line-height: 100%;
   text-align: center;
-  @include bp(sm) {
-    margin-bottom: 19px;
+  @include bp(xs) {
     font-size: 28px;
+    margin-bottom: 15px;
   }
 }
 
-.nf__text {
-  display: block;
-  margin-bottom: 51px;
-  font-family: $default;
-  font-weight: 400;
+.nf-descr__sm{
+  max-width: 610px;
+  margin: 0 auto 50px;
   font-size: 16px;
-  line-height: 100%;
-  text-align: center;
+  line-height: 140%;
   color: $main;
-  @include bp(sm) {
-    margin-bottom: 30px;
-  }
-
-}
-
-.nf__form {
-  margin-bottom: 90px;
-
-  @include bp(sm) {
-    margin-bottom: 44px;
+  text-align: center;
+  @include bp(xs) {
+    margin-bottom: 36px;
   }
 }
 
-.form-search {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  & form {
-    flex-grow: 1;
-  }
-}
-
-.form-search__inner {
-  position: relative;
-  max-width: 624px;
+.nf-back{
+  width: 310px;
   margin: 0 auto;
-  border-radius: 3px;
-  overflow: hidden;
-  @include bp(sm) {
-    max-width: 410px;
-  }
-
-  & .input {
-    width: 100%;
-    padding-right: 96px;
-    padding-left: 19px;
-    @include bp(xs) {
-      padding-left: 10px;
-      padding-right: 74px;
-      height: 35px;
-      font-size: 12px;
-    }
-  }
-
-  & button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 85px;
-    background-color: $main;
-    border: 1px solid $main;
-    border-radius: 3px;
-    transition: opacity linear 0.1s;
-
-    &:hover {
-      opacity: 0.9;
-    }
-
-    @include bp(xs) {
-      width: 60px;
-      & svg {
-        width: 20px;
-      }
-    }
+  @include bp(xs) {
+    width: 260px;
   }
 }
-
-.nf__bot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &.nf__bot-search-nf {
-    padding: 0 15px;
-    border-top: 1px solid #D9D9D9;
-    margin-top: 26px;
-    padding-top: 39px;
-  }
-
-  & > span {
-    margin-bottom: 29px;
-    font-family: $title;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 100%;
-    text-align: center;
-    @include bp(sm) {
-      margin-bottom: 30px;
-      font-size: 24px;
-    }
-  }
-
-  & > ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (max-width: 360px) {
-      display: block;
-      max-width: 290px
-    }
-
-    & li {
-      display: flex;
-      justify-content: center;
-      @include bp(sm) {
-        display: block;
-        margin-bottom: 0;
-        text-align: center;
-      }
-
-      & > span {
-        position: relative;
-        padding-left: 20px;
-        font-family: $default;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-        text-align: center;
-        color: $text;
-        @include bp(sm) {
-          padding-left: 15px;
-          font-size: 12px;
-        }
-
-        &:before {
-          content: "";
-          position: absolute;
-          top: -4px;
-          left: -20px;
-          width: 24px;
-          height: 24px;
-          background-size: contain;
-          @include bp(sm) {
-            left: -7px;
-            width: 16px;
-            height: 16px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.nf-search__found {
-  & > span {
-    display: block;
-    margin-bottom: 53px;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    @include bp(sm) {
-      margin-bottom: 32px;
-      font-size: 18px;
-    }
-  }
-
-  & > div {
-    max-width: 850px;
-    margin: 0 auto;
-    margin-top: -16px;
-
-    & p {
-      max-width: 840px;
-      margin: 0 auto;
-      font-family: $title;
-      font-weight: 400;
-      font-size: 30px;
-      line-height: 100%;
-      text-align: center;
-      @include bp(sm) {
-        font-size: 25px;
-      }
-
-      & + p {
-        margin-top: 9px;
-      }
-    }
-  }
-
-  & ol {
-    counter-reset: number;
-    max-width: 540px;
-    margin: 0 auto;
-
-    & li {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 15px;
-      @include bp(sm) {
-        gap: 10px;
-        margin-bottom: 7px;
-      }
-
-      &:before {
-        counter-increment: number;
-        content: counter(number) ".";
-        font-family: $title;
-        font-weight: 400;
-        font-size: 21px;
-        line-height: 100%;
-        color: $main;
-        @include bp(sm) {
-          font-size: 18px;
-        }
-      }
-
-      & a {
-        font-family: $default;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-        text-decoration-line: underline;
-        color: $text;
-        @include bp(sm) {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-}
-
-
-
-
-
-
-
-
-

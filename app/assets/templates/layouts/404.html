@@ -17,35 +17,25 @@
 <body>
   ${require('../parts/header.html')}
   <main class="main">
-      <div class="nf">
-          <div class="container">
-              <span class="page__title">404</span>
-              <span class="nf__title">Es konnte leider nichts gefunden werden</span>
-              <span class="nf__text">Entschuldigung, aber der gesuchte Eintrag ist nicht verfügbar. Willst Du eine neue Suche starten?</span>
-              <div class="nf__form form-search">
-                  <form class="ajax_form clear-styles">
-                      <div class="form-search__inner">
-                          <input class="input" type="search" placeholder="Suche">
-                          <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M21 21L16.514 16.506M19 10.5C19 12.7543 18.1045 14.9163 16.5104 16.5104C14.9163 18.1045 12.7543 19 10.5 19C8.24566 19 6.08365 18.1045 4.48959 16.5104C2.89553 14.9163 2 12.7543 2 10.5C2 8.24566 2.89553 6.08365 4.48959 4.48959C6.08365 2.89553 8.24566 2 10.5 2C12.7543 2 14.9163 2.89553 16.5104 4.48959C18.1045 6.08365 19 8.24566 19 10.5V10.5Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                          </svg>
-                          </button>
-                      </div>
-                  </form>
-              </div>
-              <div class="nf__bot">
-                  <span>Um die besten Suchergebnisse zu erhalten, beachte bitte folgende Hinweise:</span>
-                  <ul class="nf__list">
-                      <li><span>Überprüfe die Rechtschreibung immer sorgfältig.</span></li>
-                      <li><span>Versuche es mit einem ähnlichen Suchbegriff: z.B.&nbsp;Tablet anstelle von Laptop
-                         margin-bottom: 15px; .</span></li>
-                      <li><span>Versuche mehr als einen Suchbegriff zu verwenden.</span></li>
-                  </ul>
-              </div>
+      <div class="container">
+          <div class="breadcrumbs">
+              <a href="javascript:void(0)">Startseite</a>
+              <span>404</span>
           </div>
       </div>
-
-
+      <div class="nf">
+          <div class="container">
+              <div class="nf-title">
+                  <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M25.9405 0.791285L29.7342 17.615L39.6508 3.50501L34.5243 19.9716L50.1673 12.7103L37.4944 24.4076L54.6723 25.9406L37.8486 29.7343L51.9585 39.6508L35.4919 34.5244L42.7533 50.1674L31.056 37.4944L29.523 54.6723L25.7293 37.8486L15.8127 51.9586L20.9392 35.492L5.2962 42.7533L17.9691 31.056L0.791235 29.523L17.6149 25.7293L3.50496 15.8128L19.9716 20.9392L12.7102 5.29625L24.4075 17.9692L25.9405 0.791285Z" fill="#CC950C"></path>
+                  </svg>
+                  <div>4<span>0</span>4</div>
+              </div>
+              <div class="nf-descr">Entschuldigung, die von Ihnen gesuchte Seite existiert nicht</div>
+              <div class="nf-descr__sm">Wir können die Seite, die Sie suchen, nicht finden. Bitte überprüfen Sie die URL oder gehen Sie zur Hauptseite und ob Sie finden können, wonach Sie suchen.</div>
+              <a href="" class="btn nf-back">ZUR STARTSEITE</a>
+          </div>
+      </div>
   </main>
   ${require('../parts/footer.html')}
 
