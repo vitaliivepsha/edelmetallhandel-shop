@@ -40,6 +40,11 @@ body {
       display: block;
     }
   }
+  &.fixed-header{
+    .cart-main__info-wrapper{
+      top: 170px;
+    }
+  }
   &.hidden-header {
     .investment-chart {
       top: 20px;
@@ -581,7 +586,8 @@ textarea:-webkit-autofill:hover {
 
 .overlay {
   background: rgba(204, 149, 12, 0.2);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   position: fixed;
   left: 0;
   top: 55px;
@@ -646,6 +652,8 @@ textarea:-webkit-autofill:hover {
 @import "404";
 @import "blog";
 @import "article";
+@import "cart";
+
 @import "contacts";
 @import "about";
 @import "impresum";

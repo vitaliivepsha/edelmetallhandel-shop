@@ -1,17 +1,13 @@
 .mfp-bg {
-  background: rgba(204, 149, 12, 0.4);
-  backdrop-filter: blur(30px);
-  z-index: 10005;
+  background: rgba(204, 149, 12, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   opacity: 1;
 }
 
-.mfp-wrap {
-  z-index: 10006;
-}
-
 .mfp-container {
+  padding: 0;
 }
-
 
 .popup {
   position: relative;
@@ -137,6 +133,113 @@
     max-width: 461px;
   }
 
+}
+
+.popup-title{
+  display: block;
+  text-align: center;
+  font-family: $title;
+  font-size: 30px;
+  line-height: 100%;
+  @include bp(xs) {
+    font-size: 24px;
+  }
+}
+
+.del-popup{
+  position: relative;
+  margin: 0 auto;
+  width: 540px;
+  max-width: calc(100vw - 30px);
+  padding: 30px 38px 59px;
+  background: #fff;
+  border-radius: 3px;
+  @include bp(xs) {
+    padding: 30px 20px 60px;
+  }
+  .mfp-close {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    top: 20px;
+    right: 20px;
+    opacity: 1;
+    @include bp(xs) {
+      width: 10px;
+      height: 10px;
+      top: 12px;
+      right: 13px;
+    }
+    &:after{
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include bp(xs) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &:hover{
+      svg{
+        path{
+          fill: $accent;
+        }
+      }
+    }
+    svg {
+      pointer-events: none;
+    }
+  }
+  .popup-title{
+    margin-bottom: 18px;
+    @include bp(xs) {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.del-popup__descr{
+  font-size: 16px;
+  line-height: 140%;
+  color: $main;
+  text-align: center;
+  margin: 0 auto 18px;
+  max-width: 400px;
+  @include bp(xs) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.del-popup__item-name{
+  display: block;
+  font-size: 21px;
+  line-height: 140%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  @include bp(xs) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.del-popup__footer{
+  display: flex;
+  justify-content: space-between;
+  width: 456px;
+  max-width: 100%;
+  margin: 0 auto;
+  .btn{
+    width: calc(50% - 3px);
+    @include bp(xs) {
+      height: 40px;
+      width: calc(50% - 5px);
+    }
+  }
 }
 
 .swal2-container.swal2-shown {

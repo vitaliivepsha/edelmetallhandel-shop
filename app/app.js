@@ -11,6 +11,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/article.html');
     require('./assets/templates/layouts/search-results.html');
+    require('./assets/templates/layouts/cart.html');
+    require('./assets/templates/layouts/cart-empty.html');
 
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/about.html');
@@ -77,10 +79,12 @@ $(function () {
     if ($(window).width() > 1439) {
         $(window).scroll(function () {
             var scrolled = $(window).scrollTop();
-            if (scrolled > 200) {
+            if (scrolled > 210) {
                 header.addClass('fixed');
+                $('body').addClass('fixed-header');
             } else {
                 header.removeClass('fixed');
+                $('body').removeClass('fixed-header');
             }
             scrollPrev = scrolled;
         });
@@ -418,6 +422,12 @@ $(function () {
 
     $('.reviews-btn__open').on('click', function () {
         $('.review-form__top').slideToggle();
+    });
+
+    // remove from cart
+
+    $('.del-popup__cancel').on('click', function () {
+        $(this).closest('.del-popup').find('.mfp-close').trigger('click');
     });
 
     // validation
