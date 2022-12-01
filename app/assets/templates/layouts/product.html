@@ -180,7 +180,7 @@ ${require('../parts/header.html')}
                             <div class="product-about__top-buy">
                                 <span>19900.00 CHF</span>
                                 <div>
-                                    <a href="javascript:void(0)" class="popup-btn btn btn-tr">Buy at 1 click</a>
+                                    <a href="javascript:void(0)" class="popup-btn btn btn-tr" data-mfp-src="#oneclick-popup">Buy at 1 click</a>
                                     <a href="javascript:void(0)" class="popup-btn btn">In den Warenkorb</a>
                                 </div>
                             </div>
@@ -898,7 +898,38 @@ ${require('../parts/header.html')}
     </div>
 </main>
 ${require('../parts/footer.html')}
-
+<div class="mfp-hide">
+    <div class="oneclick-popup" id="oneclick-popup">
+        <button title="Close (Esc)" type="button" class="mfp-close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 1.4L14.6 0L8 6.6L1.4 0L0 1.4L6.6 8L0 14.6L1.4 16L8 9.4L14.6 16L16 14.6L9.4 8L16 1.4Z" fill="#B7A882"/>
+            </svg>
+        </button>
+        <span class="popup-title">Remove product?</span>
+        <div class="oneclick-item">
+            <div class="oneclick-item__pic">
+                <img src="../../images/cat-item-01.jpg" alt="">
+            </div>
+            <div class="oneclick-item__info">
+                <div class="oneclick-item__id">Herstellerkürzel: <span>3284</span></div>
+                <span class="oneclick-item__title">Schöner Herz- Anhänger aus 585/- Weißgold mit Diamanten Nr.183823 neuwertig</span>
+                <div class="oneclick-item__price">3454.00 CHF</div>
+            </div>
+        </div>
+        <form class="oneclick-form ajax_form clear-styles" data-error-title="Fehler senden!"
+              data-error-message="Versuchen Sie es nach einer Weile erneut."
+              data-success-title="Danke für die Nachricht."
+              data-success-message="Unser Manager wird sich bald mit Ihnen in Verbindung setzen.">
+            <div class="input-wrapper">
+                <input class="input" type="text" name="telefon" data-title="Telefon"
+                       data-validate-required="Dieses Feld ist erforderlich">
+                <label>Telefon <span>*</span></label>
+            </div>
+            <span class="oneclick-descr">Der Manager wird Ihnen helfen, schnell eine Bestellung aufzugeben!</span>
+            <button class="btn oneclick-btn" type="submit">Ruf mich zurück</button>
+        </form>
+    </div>
+</div>
 </body>
 
 </html>
