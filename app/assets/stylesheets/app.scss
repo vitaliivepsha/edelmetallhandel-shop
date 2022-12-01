@@ -549,6 +549,9 @@ textarea:-webkit-autofill:hover {
 .validate-form{
   .input-wrapper{
     overflow: hidden;
+    &.select-wrapper{
+      overflow: visible;
+    }
     label{
       position: absolute;
     }
@@ -653,6 +656,7 @@ textarea:-webkit-autofill:hover {
 @import "blog";
 @import "article";
 @import "cart";
+@import "checkout";
 
 @import "contacts";
 @import "about";
