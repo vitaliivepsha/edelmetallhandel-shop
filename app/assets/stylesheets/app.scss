@@ -45,6 +45,16 @@ body {
       top: 170px;
     }
   }
+  &.product-body{
+    .fixed-controls {
+      @include bp(md) {
+        bottom: 110px;
+      }
+      @include bp(xs) {
+        bottom: 90px;
+      }
+    }
+  }
   &.hidden-header {
     .investment-chart {
       top: 20px;
@@ -94,6 +104,9 @@ svg {
 main {
   flex: 1 0 auto;
   position: relative;
+  @include bp(xs) {
+    overflow-x: hidden;
+  }
 }
 
 .section {
