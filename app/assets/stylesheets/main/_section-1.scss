@@ -350,3 +350,14 @@
     }
   }
 }
+
+.main-page__top{
+  .page-top__wrapper{
+    .btn{
+      margin-top: 0;
+      @include bp(xs) {
+        display: flex;
+      }
+    }
+  }
+}
